@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="system-domain" />
         <module name="hospital-commons" />
         <module name="system-interface" />
       </profile>
@@ -21,6 +22,7 @@
       <module name="hospital-system" options="-parameters" />
       <module name="hospitalcommons" options="-parameters" />
       <module name="online-hospital" options="-parameters" />
+      <module name="system-domain" options="-parameters" />
       <module name="system-interface" options="-parameters" />
     </option>
   </component>
