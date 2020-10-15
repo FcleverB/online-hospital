@@ -3,27 +3,26 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>online-hospital</artifactId>
+        <artifactId>hospital-system</artifactId>
         <groupId>com.fclever</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hospital-system</artifactId>
-    <packaging>pom</packaging>
-    <description>系统模块</description>
-    <modules>
-        <module>system-interface</module>
-        <module>system-domain</module>
-        <module>system-mapper</module>
-        <module>system-service</module>
-    </modules>
+    <artifactId>system-service</artifactId>
+    <description>系统模块中业务逻辑子模块</description>
 
     <dependencies>
-        <!--依赖公共模块-->
+        <!--数据访问模块 其实该模块也需要依赖domain，但是mapper已经依赖domain了，所以只需要依赖一个mapper就可以了-->
         <dependency>
             <groupId>com.fclever</groupId>
-            <artifactId>hospital-commons</artifactId>
+            <artifactId>system-mapper</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!--接口模块-->
+        <dependency>
+            <groupId>com.fclever</groupId>
+            <artifactId>system-interface</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>
