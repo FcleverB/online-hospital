@@ -15,6 +15,7 @@
     <modules>
         <module>system-interface</module>
         <module>system-domain</module>
+        <module>system-mapper</module>
     </modules>
 
     <dependencies>
