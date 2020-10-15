@@ -6,7 +6,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>hospital-commons</module>
-        <module>hospital-commons</module>
     </modules>
     <!--依赖SpringBoot-->
     <parent>
