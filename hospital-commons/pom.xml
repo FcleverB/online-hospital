@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>hospital-commons</artifactId>
+    <description>公共模块</description>
 
     <dependencies>
         <!--hutool  工具类-->

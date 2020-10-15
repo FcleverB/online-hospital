@@ -10,6 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>hospital-system</artifactId>
+    <description>系统模块</description>
 
-
+    <dependencies>
+        <!--依赖公共模块-->
+        <dependency>
+            <groupId>com.fclever</groupId>
+            <artifactId>hospital-commons</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>
