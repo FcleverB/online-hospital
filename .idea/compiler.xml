@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="system-web" />
         <module name="system-mapper" />
+        <module name="erp-domain" />
         <module name="erp-interface" />
         <module name="system-service" />
         <module name="system-interface" />
@@ -17,7 +18,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="erp-domain" target="1.8" />
       <module name="hospital-commons" target="1.8" />
       <module name="hospitalcommons" target="1.8" />
       <module name="system-service" target="1.8" />
