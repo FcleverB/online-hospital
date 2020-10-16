@@ -4,7 +4,6 @@
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital-erp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-erp/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,6 +18,7 @@
     <ignored path="$PROJECT_DIR$/hospital-erp/target/" />
     <ignored path="$PROJECT_DIR$/hospital-erp/erp-interface/target/" />
     <ignored path="$PROJECT_DIR$/hospital-erp/erp-domain/target/" />
+    <ignored path="$PROJECT_DIR$/hospital-erp/erp-mapper/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +31,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hospital-erp/erp-domain/pom.xml">
+        <entry file="file://$PROJECT_DIR$/hospital-erp/erp-mapper/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="158">
-              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -83,6 +83,7 @@
         <option value="$PROJECT_DIR$/hospital-erp/erp-interface/pom.xml" />
         <option value="$PROJECT_DIR$/hospital-erp/pom.xml" />
         <option value="$PROJECT_DIR$/hospital-erp/erp-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-erp/erp-mapper/pom.xml" />
       </list>
     </option>
   </component>
@@ -156,12 +157,6 @@
               <item name="hospital-erp" type="462c0819:PsiDirectoryNode" />
               <item name="erp-domain" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-erp" type="462c0819:PsiDirectoryNode" />
-              <item name="erp-interface" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -212,7 +207,7 @@
       <workItem from="1602716424564" duration="11679000" />
       <workItem from="1602801718767" duration="1291000" />
       <workItem from="1602806011189" duration="10584000" />
-      <workItem from="1602889489748" duration="846000" />
+      <workItem from="1602889489748" duration="1064000" />
     </task>
     <task id="LOCAL-00001" summary="顶级父项目online-hospital的创建">
       <created>1602638346112</created>
@@ -312,11 +307,18 @@
       <option name="project" value="LOCAL" />
       <updated>1602889939248</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="进销存模块下实体模块erp-domain创建并配置">
+      <created>1602890449669</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1602890449669</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33226000" />
+    <option name="totallyTimeSpent" value="33444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="805" y="5" width="735" height="832" extended-state="0" />
@@ -329,7 +331,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.28803545" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.28803545" />
       <window_info anchor="bottom" id="Java Enterprise" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -340,7 +342,7 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.41871166" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.41871166" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="13" />
@@ -414,7 +416,8 @@
     <MESSAGE value="进销存模块hospital-erp的创建" />
     <MESSAGE value="进销存模块hospital-erp的配置" />
     <MESSAGE value="进销存模块下接口模块erp-interface创建并配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="进销存模块下接口模块erp-interface创建并配置" />
+    <MESSAGE value="进销存模块下实体模块erp-domain创建并配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="进销存模块下实体模块erp-domain创建并配置" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
@@ -531,8 +534,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hospital-erp/erp-domain/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-mapper/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

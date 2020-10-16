@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="system-web" />
         <module name="system-mapper" />
+        <module name="erp-mapper" />
         <module name="erp-domain" />
         <module name="erp-interface" />
         <module name="system-service" />
@@ -28,6 +29,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="erp-domain" options="-parameters" />
       <module name="erp-interface" options="-parameters" />
+      <module name="erp-mapper" options="-parameters" />
       <module name="hospital-commons" options="-parameters" />
       <module name="hospital-erp" options="-parameters" />
       <module name="hospital-system" options="-parameters" />
