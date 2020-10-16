@@ -1,0 +1,4 @@
+# 设置启动哪个配置文件的内容，配置dev即表示使用application-dev.yml中的内容
+spring:
+  profiles:
+    active: dev

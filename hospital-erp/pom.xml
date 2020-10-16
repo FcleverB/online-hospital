@@ -16,6 +16,7 @@
         <module>erp-interface</module>
         <module>erp-domain</module>
         <module>erp-mapper</module>
+        <module>erp-service</module>
     </modules>
 
     <dependencies>
