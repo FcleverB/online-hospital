@@ -3,25 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>online-hospital</artifactId>
+        <artifactId>hospital-erp</artifactId>
         <groupId>com.fclever</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hospital-erp</artifactId>
-    <packaging>pom</packaging>
-    <description>进销存模块</description>
-    <modules>
-        <module>erp-interface</module>
-    </modules>
+    <artifactId>erp-interface</artifactId>
+    <description>进销存模块下接口子模块</description>
 
     <dependencies>
-        <!--依赖公共模块-->
         <dependency>
             <groupId>com.fclever</groupId>
-            <artifactId>hospital-commons</artifactId>
+            <artifactId>erp-domain</artifactId>
             <version>1.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
