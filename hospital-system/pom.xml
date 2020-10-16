@@ -17,6 +17,7 @@
         <module>system-domain</module>
         <module>system-mapper</module>
         <module>system-service</module>
+        <module>system-web</module>
     </modules>
 
     <dependencies>

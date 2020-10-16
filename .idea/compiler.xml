@@ -2,15 +2,17 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="system-mapper" />
-        <module name="system-domain" />
-        <module name="system-service" />
-        <module name="hospital-commons" />
         <module name="system-interface" />
+        <module name="hospital-commons" />
+        <module name="system-web" />
+        <module name="system-domain" />
+        <module name="system-mapper" />
+        <module name="system-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +32,7 @@
       <module name="system-interface" options="-parameters" />
       <module name="system-mapper" options="-parameters" />
       <module name="system-service" options="-parameters" />
+      <module name="system-web" options="-parameters" />
       <module name="systemservice" options="-parameters" />
     </option>
   </component>
