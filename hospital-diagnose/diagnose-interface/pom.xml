@@ -3,24 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>online-hospital</artifactId>
+        <artifactId>hospital-diagnose</artifactId>
         <groupId>com.fclever</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hospital-diagnose</artifactId>
-    <packaging>pom</packaging>
-    <description>就诊模块</description>
-    <modules>
-        <module>diagnose-interface</module>
-    </modules>
+    <artifactId>diagnose-interface</artifactId>
+    <description>就诊模块下接口子模块</description>
 
     <dependencies>
-        <!--依赖公共模块-->
+        <!--依赖实体模块-->
         <dependency>
             <groupId>com.fclever</groupId>
-            <artifactId>hospital-commons</artifactId>
+            <artifactId>diagnose-domain</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

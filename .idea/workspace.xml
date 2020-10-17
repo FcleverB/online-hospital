@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hospital-diagnose/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital-diagnose/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,6 +22,7 @@
     <ignored path="$PROJECT_DIR$/hospital-erp/erp-mapper/target/" />
     <ignored path="$PROJECT_DIR$/hospital-erp/erp-service/target/" />
     <ignored path="$PROJECT_DIR$/hospital-diagnose/target/" />
+    <ignored path="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +35,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hospital-diagnose/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-interface/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -86,6 +92,8 @@
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-prod.yml" />
         <option value="$PROJECT_DIR$/hospital-erp/erp-service/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/hospital-erp/erp-service/src/main/resources/application-prod.yml" />
+        <option value="$PROJECT_DIR$/hospital-diagnose/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/pom.xml" />
       </list>
     </option>
   </component>
@@ -203,7 +211,7 @@
       <workItem from="1602716424564" duration="11679000" />
       <workItem from="1602801718767" duration="1291000" />
       <workItem from="1602806011189" duration="10584000" />
-      <workItem from="1602889489748" duration="4460000" />
+      <workItem from="1602889489748" duration="5442000" />
     </task>
     <task id="LOCAL-00001" summary="顶级父项目online-hospital的创建">
       <created>1602638346112</created>
@@ -324,14 +332,29 @@
       <option name="project" value="LOCAL" />
       <updated>1602892794736</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="就诊模块下hospital-diagnose的创建">
+      <created>1602894002774</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1602894002774</updated>
+    </task>
+    <task id="LOCAL-00019" summary="就诊模块下hospital-diagnose的配置">
+      <created>1602894122032</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1602894122032</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36840000" />
+    <option name="totallyTimeSpent" value="37822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="850" y="0" width="690" height="832" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -340,7 +363,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.3971519" />
+      <window_info content_ui="combo" id="Project" order="7" weight="0.3971519" />
       <window_info anchor="bottom" id="Java Enterprise" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -351,7 +374,7 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.5291411" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.5291411" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="13" />
@@ -428,7 +451,9 @@
     <MESSAGE value="进销存模块下实体模块erp-domain创建并配置" />
     <MESSAGE value="进销存模块下数据访问模块erp-mapper创建并配置" />
     <MESSAGE value="进销存模块下业务逻辑模块erp-service创建并配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="进销存模块下业务逻辑模块erp-service创建并配置" />
+    <MESSAGE value="就诊模块下hospital-diagnose的创建" />
+    <MESSAGE value="就诊模块下hospital-diagnose的配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="就诊模块下hospital-diagnose的配置" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
@@ -557,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-erp/erp-service/src/main/java/com/fclever/ErpApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -602,8 +620,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-diagnose/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="18" column="40" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-interface/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
