@@ -20,6 +20,7 @@
         <module name="erp-service" />
         <module name="diagnose-service" />
         <module name="statistics-domain" />
+        <module name="statistics-service" />
         <module name="system-interface" />
         <module name="diagnose-mapper" />
         <module name="diagnose-domain" />
@@ -54,6 +55,7 @@
       <module name="statistics-domain" options="-parameters" />
       <module name="statistics-interface" options="-parameters" />
       <module name="statistics-mapper" options="-parameters" />
+      <module name="statistics-service" options="-parameters" />
       <module name="system-domain" options="-parameters" />
       <module name="system-interface" options="-parameters" />
       <module name="system-mapper" options="-parameters" />

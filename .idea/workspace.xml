@@ -4,6 +4,7 @@
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital-statistics/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-statistics/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,6 +30,7 @@
     <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-interface/target/" />
     <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-domain/target/" />
     <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-mapper/target/" />
+    <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,20 +42,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-mapper/pom.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-service/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <state relative-caret-position="85">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-domain/pom.xml">
+        <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/java/com/fclever/StatisticsApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="16" column="19" selection-end-line="22" selection-end-column="10" />
+            <state relative-caret-position="147">
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#484#485#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="15" lean-forward="true" selection-end-line="3" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/resources/application-dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="36" column="16" selection-end-line="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/resources/application-prod.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -119,6 +153,10 @@
         <option value="$PROJECT_DIR$/hospital-statistics/statistics-interface/pom.xml" />
         <option value="$PROJECT_DIR$/hospital-statistics/statistics-domain/pom.xml" />
         <option value="$PROJECT_DIR$/hospital-statistics/statistics-mapper/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-statistics/statistics-service/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/java/com/fclever/StatisticsApplication.java" />
+        <option value="$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/resources/application-prod.yml" />
       </list>
     </option>
   </component>
@@ -189,7 +227,50 @@
               <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
               <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
               <item name="hospital-statistics" type="462c0819:PsiDirectoryNode" />
-              <item name="statistics-domain" type="462c0819:PsiDirectoryNode" />
+              <item name="statistics-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="statistics-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="statistics-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="statistics-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="statistics-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fclever" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="statistics-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -202,7 +283,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -212,6 +293,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-statistics\statistics-service\src\main\resources" />
       <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-diagnose\diagnose-service\src\main\resources" />
       <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-erp\erp-service\src\main\resources" />
       <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-system\system-web\src\main\resources" />
@@ -243,7 +325,7 @@
       <workItem from="1602716424564" duration="11679000" />
       <workItem from="1602801718767" duration="1291000" />
       <workItem from="1602806011189" duration="10584000" />
-      <workItem from="1602889489748" duration="10986000" />
+      <workItem from="1602889489748" duration="11542000" />
     </task>
     <task id="LOCAL-00001" summary="顶级父项目online-hospital的创建">
       <created>1602638346112</created>
@@ -434,11 +516,18 @@
       <option name="project" value="LOCAL" />
       <updated>1602908269203</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="统计分析模块下数据访问模块statistics-mapper创建并配置">
+      <created>1602908471939</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1602908471939</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43366000" />
+    <option name="totallyTimeSpent" value="43922000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="850" y="0" width="690" height="832" extended-state="0" />
@@ -451,7 +540,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.3227848" />
+      <window_info content_ui="combo" id="Project" order="7" weight="0.3227848" />
       <window_info anchor="bottom" id="Java Enterprise" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -522,7 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="公共模块hospital-commons创建" />
     <MESSAGE value="公共模块hospital-commons的配置" />
     <MESSAGE value="系统模块hospital-system的创建" />
     <MESSAGE value="系统模块hospital-system的配置" />
@@ -547,18 +635,12 @@
     <MESSAGE value="统计分析模块hospital-statistics的配置" />
     <MESSAGE value="统计分析模块下接口模块statistics-interface创建并配置" />
     <MESSAGE value="统计分析模块下实体模块statistics-domain创建并配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="统计分析模块下实体模块statistics-domain创建并配置" />
+    <MESSAGE value="统计分析模块下数据访问模块statistics-mapper创建并配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="统计分析模块下数据访问模块statistics-mapper创建并配置" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-interface/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-domain/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -814,6 +896,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-interface/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/java/com/fclever/StatisticsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/resources/application-prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="15" lean-forward="true" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="36" column="16" selection-end-line="41" />
         </state>
       </provider>
     </entry>
