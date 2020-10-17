@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/hospital-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-domain/pom.xml" />
         <option value="$PROJECT_DIR$/hospital-system/system-service/pom.xml" />
       </set>
     </option>

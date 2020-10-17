@@ -10,6 +10,7 @@
         <module name="system-web" />
         <module name="system-mapper" />
         <module name="erp-mapper" />
+        <module name="diagnose-domain" />
         <module name="erp-domain" />
         <module name="diagnose-interface" />
         <module name="erp-interface" />
@@ -21,6 +22,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="diagnose-domain" target="1.8" />
       <module name="hospital-commons" target="1.8" />
       <module name="hospitalcommons" target="1.8" />
       <module name="system-service" target="1.8" />
@@ -29,6 +31,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="diagnose-domain" options="-parameters" />
       <module name="diagnose-interface" options="-parameters" />
       <module name="erp-domain" options="-parameters" />
       <module name="erp-interface" options="-parameters" />
