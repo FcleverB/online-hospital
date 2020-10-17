@@ -15,6 +15,7 @@
     <modules>
         <module>diagnose-interface</module>
         <module>diagnose-domain</module>
+        <module>diagnose-mapper</module>
     </modules>
 
     <dependencies>
