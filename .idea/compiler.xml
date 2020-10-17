@@ -21,6 +21,7 @@
         <module name="diagnose-mapper" />
         <module name="diagnose-domain" />
         <module name="erp-domain" />
+        <module name="hospital-statistics" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -44,6 +45,7 @@
       <module name="hospital-commons" options="-parameters" />
       <module name="hospital-diagnose" options="-parameters" />
       <module name="hospital-erp" options="-parameters" />
+      <module name="hospital-statistics" options="-parameters" />
       <module name="hospital-system" options="-parameters" />
       <module name="hospitalcommons" options="-parameters" />
       <module name="online-hospital" options="-parameters" />
