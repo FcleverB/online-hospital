@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital-statistics/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-statistics/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,6 +26,8 @@
     <ignored path="$PROJECT_DIR$/hospital-diagnose/diagnose-mapper/target/" />
     <ignored path="$PROJECT_DIR$/hospital-diagnose/diagnose-service/target/" />
     <ignored path="$PROJECT_DIR$/hospital-statistics/target/" />
+    <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-interface/target/" />
+    <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-domain/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +39,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hospital-statistics/pom.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-interface/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+            <state relative-caret-position="260">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-domain/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -102,6 +115,8 @@
         <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/resources/application-prod.yml" />
         <option value="$PROJECT_DIR$/hospital-statistics/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-statistics/statistics-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-statistics/statistics-domain/pom.xml" />
       </list>
     </option>
   </component>
@@ -220,7 +235,7 @@
       <workItem from="1602716424564" duration="11679000" />
       <workItem from="1602801718767" duration="1291000" />
       <workItem from="1602806011189" duration="10584000" />
-      <workItem from="1602889489748" duration="10426000" />
+      <workItem from="1602889489748" duration="10741000" />
     </task>
     <task id="LOCAL-00001" summary="顶级父项目online-hospital的创建">
       <created>1602638346112</created>
@@ -390,11 +405,25 @@
       <option name="project" value="LOCAL" />
       <updated>1602905047490</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="统计分析模块hospital-statistics的配置">
+      <created>1602907919505</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1602907919505</updated>
+    </task>
+    <task id="LOCAL-00026" summary="统计分析模块下接口模块statistics-interface创建并配置">
+      <created>1602908112343</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1602908112343</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42806000" />
+    <option name="totallyTimeSpent" value="43121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="850" y="0" width="690" height="832" extended-state="0" />
@@ -418,7 +447,7 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.43711656" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.43711656" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="13" />
@@ -478,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="顶级父项目online-hospital的创建" />
     <MESSAGE value="顶级父项目online-hospital的配置及打包" />
     <MESSAGE value="公共模块hospital-commons创建" />
     <MESSAGE value="公共模块hospital-commons的配置" />
@@ -502,7 +530,9 @@
     <MESSAGE value="就诊模块下数据访问模块diagnose-mapper创建并配置" />
     <MESSAGE value="就诊模块下业务逻辑模块diagnose-service创建并配置" />
     <MESSAGE value="统计分析模块hospital-statistics的创建" />
-    <option name="LAST_COMMIT_MESSAGE" value="统计分析模块hospital-statistics的创建" />
+    <MESSAGE value="统计分析模块hospital-statistics的配置" />
+    <MESSAGE value="统计分析模块下接口模块statistics-interface创建并配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="统计分析模块下接口模块statistics-interface创建并配置" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
@@ -746,8 +776,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hospital-statistics/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        <state relative-caret-position="76">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-interface/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-domain/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
         </state>
       </provider>
     </entry>

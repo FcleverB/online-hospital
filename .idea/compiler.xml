@@ -18,6 +18,7 @@
         <module name="system-domain" />
         <module name="erp-service" />
         <module name="diagnose-service" />
+        <module name="statistics-domain" />
         <module name="system-interface" />
         <module name="diagnose-mapper" />
         <module name="diagnose-domain" />
@@ -49,6 +50,7 @@
       <module name="hospital-system" options="-parameters" />
       <module name="hospitalcommons" options="-parameters" />
       <module name="online-hospital" options="-parameters" />
+      <module name="statistics-domain" options="-parameters" />
       <module name="statistics-interface" options="-parameters" />
       <module name="system-domain" options="-parameters" />
       <module name="system-interface" options="-parameters" />
