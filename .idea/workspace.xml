@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital-statistics/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-statistics/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,6 +28,7 @@
     <ignored path="$PROJECT_DIR$/hospital-statistics/target/" />
     <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-interface/target/" />
     <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-domain/target/" />
+    <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-mapper/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,20 +40,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-interface/pom.xml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-mapper/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="209">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-domain/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="190">
+              <caret line="16" column="19" selection-end-line="22" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -117,6 +118,7 @@
         <option value="$PROJECT_DIR$/hospital-statistics/pom.xml" />
         <option value="$PROJECT_DIR$/hospital-statistics/statistics-interface/pom.xml" />
         <option value="$PROJECT_DIR$/hospital-statistics/statistics-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-statistics/statistics-mapper/pom.xml" />
       </list>
     </option>
   </component>
@@ -183,6 +185,12 @@
               <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
               <item name="hospital-statistics" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-statistics" type="462c0819:PsiDirectoryNode" />
+              <item name="statistics-domain" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -235,7 +243,7 @@
       <workItem from="1602716424564" duration="11679000" />
       <workItem from="1602801718767" duration="1291000" />
       <workItem from="1602806011189" duration="10584000" />
-      <workItem from="1602889489748" duration="10741000" />
+      <workItem from="1602889489748" duration="10986000" />
     </task>
     <task id="LOCAL-00001" summary="顶级父项目online-hospital的创建">
       <created>1602638346112</created>
@@ -419,11 +427,18 @@
       <option name="project" value="LOCAL" />
       <updated>1602908112343</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="统计分析模块下实体模块statistics-domain创建并配置">
+      <created>1602908269203</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1602908269203</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43121000" />
+    <option name="totallyTimeSpent" value="43366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="850" y="0" width="690" height="832" extended-state="0" />
@@ -447,7 +462,7 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.43711656" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.297546" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="13" />
@@ -507,7 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="顶级父项目online-hospital的配置及打包" />
     <MESSAGE value="公共模块hospital-commons创建" />
     <MESSAGE value="公共模块hospital-commons的配置" />
     <MESSAGE value="系统模块hospital-system的创建" />
@@ -532,7 +546,8 @@
     <MESSAGE value="统计分析模块hospital-statistics的创建" />
     <MESSAGE value="统计分析模块hospital-statistics的配置" />
     <MESSAGE value="统计分析模块下接口模块statistics-interface创建并配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="统计分析模块下接口模块statistics-interface创建并配置" />
+    <MESSAGE value="统计分析模块下实体模块statistics-domain创建并配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="统计分析模块下实体模块statistics-domain创建并配置" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
@@ -713,20 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-mapper/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-mapper/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-mapper/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -788,10 +789,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-mapper/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-mapper/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-domain/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="190">
+          <caret line="16" column="19" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-statistics/statistics-mapper/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
         </state>
       </provider>
     </entry>
