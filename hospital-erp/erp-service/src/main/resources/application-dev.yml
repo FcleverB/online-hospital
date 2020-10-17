@@ -33,6 +33,8 @@ mybatis-plus:
       id-type: auto # id自动生成
 # dubbo配置
 dubbo:
+  config-center:
+    timeout: 10000
   application:
     name: hospital-erp-service # 该项目部署在Zookeeper上的服务名称
   registry:
