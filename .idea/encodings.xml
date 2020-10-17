@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/hospital-diagnose/diagnose-domain" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hospital-diagnose/diagnose-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hospital-diagnose/diagnose-mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-diagnose/diagnose-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hospital-erp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hospital-erp/erp-domain" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hospital-erp/erp-domain" charset="UTF-8" />
