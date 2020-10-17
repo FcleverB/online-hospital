@@ -7,24 +7,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="statistics-domain" />
         <module name="system-mapper" />
+        <module name="erp-domain" />
         <module name="erp-mapper" />
         <module name="diagnose-interface" />
         <module name="hospital-commons" />
-        <module name="system-service" />
-        <module name="statistics-interface" />
+        <module name="statistics-service" />
         <module name="system-web" />
         <module name="erp-interface" />
-        <module name="statistics-mapper" />
-        <module name="system-domain" />
-        <module name="erp-service" />
         <module name="diagnose-service" />
-        <module name="statistics-domain" />
-        <module name="statistics-service" />
+        <module name="system-domain" />
+        <module name="statistics-interface" />
+        <module name="statistics-mapper" />
         <module name="system-interface" />
         <module name="diagnose-mapper" />
+        <module name="system-service" />
         <module name="diagnose-domain" />
-        <module name="erp-domain" />
+        <module name="erp-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
