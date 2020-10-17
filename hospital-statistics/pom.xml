@@ -12,4 +12,12 @@
     <artifactId>hospital-statistics</artifactId>
     <description>统计分析模块</description>
 
+    <dependencies>
+        <!--依赖公共模块-->
+        <dependency>
+            <groupId>com.fclever</groupId>
+            <artifactId>hospital-commons</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>

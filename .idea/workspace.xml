@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital-statistics/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-statistics/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hospital-statistics/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="152">
+              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -220,7 +220,7 @@
       <workItem from="1602716424564" duration="11679000" />
       <workItem from="1602801718767" duration="1291000" />
       <workItem from="1602806011189" duration="10584000" />
-      <workItem from="1602889489748" duration="9748000" />
+      <workItem from="1602889489748" duration="10426000" />
     </task>
     <task id="LOCAL-00001" summary="顶级父项目online-hospital的创建">
       <created>1602638346112</created>
@@ -383,11 +383,18 @@
       <option name="project" value="LOCAL" />
       <updated>1602904632050</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="统计分析模块hospital-statistics的创建">
+      <created>1602905047490</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1602905047490</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42128000" />
+    <option name="totallyTimeSpent" value="42806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="850" y="0" width="690" height="832" extended-state="0" />
@@ -411,7 +418,7 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.5291411" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.43711656" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="13" />
@@ -494,7 +501,8 @@
     <MESSAGE value="就诊模块下实体模块diagnose-domain创建并配置" />
     <MESSAGE value="就诊模块下数据访问模块diagnose-mapper创建并配置" />
     <MESSAGE value="就诊模块下业务逻辑模块diagnose-service创建并配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="就诊模块下业务逻辑模块diagnose-service创建并配置" />
+    <MESSAGE value="统计分析模块hospital-statistics的创建" />
+    <option name="LAST_COMMIT_MESSAGE" value="统计分析模块hospital-statistics的创建" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
@@ -738,8 +746,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hospital-statistics/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="152">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
         </state>
       </provider>
     </entry>
