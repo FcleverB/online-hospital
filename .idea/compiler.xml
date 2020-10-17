@@ -10,6 +10,7 @@
         <module name="system-web" />
         <module name="system-mapper" />
         <module name="erp-mapper" />
+        <module name="hospital-diagnose" />
         <module name="erp-domain" />
         <module name="erp-interface" />
         <module name="system-service" />
@@ -33,6 +34,7 @@
       <module name="erp-mapper" options="-parameters" />
       <module name="erp-service" options="-parameters" />
       <module name="hospital-commons" options="-parameters" />
+      <module name="hospital-diagnose" options="-parameters" />
       <module name="hospital-erp" options="-parameters" />
       <module name="hospital-system" options="-parameters" />
       <module name="hospitalcommons" options="-parameters" />

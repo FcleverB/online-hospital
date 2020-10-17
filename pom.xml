@@ -8,6 +8,7 @@
         <module>hospital-commons</module>
         <module>hospital-system</module>
         <module>hospital-erp</module>
+        <module>hospital-diagnose</module>
     </modules>
     <!--依赖SpringBoot-->
     <parent>
