@@ -33,7 +33,7 @@ public class Constants {
     public static final String DEL_FALSE = "0";
     public static final String DEL_TRUE = "1";
     /**
-     * 菜单类型 M目录 C菜单 F权限
+     * 菜单类型 M一级菜单 C二级菜单 F权限
      */
     public static final String MENU_TYPE_M = "M";
     public static final String MENU_TYPE_C = "C";
