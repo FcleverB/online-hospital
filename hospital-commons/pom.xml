@@ -13,6 +13,11 @@
     <description>公共模块</description>
 
     <dependencies>
+        <!--后端数据校验框架-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
         <!--hutool  工具类-->
         <dependency>
             <groupId>cn.hutool</groupId>
