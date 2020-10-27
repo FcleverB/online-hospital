@@ -1,5 +1,6 @@
 package com.fclever.config.shiro;
 
+
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
@@ -24,6 +25,7 @@ import javax.servlet.Filter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Shiro自动配置
@@ -42,8 +44,8 @@ public class ShiroAutoConfiguration {
 
     // Shiro过滤器名称
     public static final String SHIRO_FILTER_NAME = "shiroFilter";
-    
-    
+
+
     /**
      * 全参构造器
      * @param shiroProperties
@@ -111,10 +113,10 @@ public class ShiroAutoConfiguration {
         // 注入安全管理器
         bean.setSecurityManager(securityManager);
         // 处理用户未认证访问要认证的地址的跳转问题   默认是跳转到shiroProperties.getLoginUrl()现在改成以json串形式返回
-        HashMap<String, Filter> filters = new HashMap<>();
+        Map<String, Filter> filters = new HashMap<>();
         filters.put("authc", new ShiroLoginFilter());
         bean.setFilters(filters);
-        HashMap<String, String> map = new HashMap<>();
+        Map<String, String> map = new HashMap<>();
         // 配置顺序不能错，先配置不拦截，然后配合拦截
         // 配置不拦截的路径
         String[] anonUrls = shiroProperties.getAnonUrls();
@@ -190,7 +192,7 @@ public class ShiroAutoConfiguration {
      * @return
      */
     @Bean
-    public DefaultWebSessionManager defaultWebSecurityManager(RedisSessionDAO redisSessionDAO){
+    public DefaultWebSessionManager defaultWebSessionManager(RedisSessionDAO redisSessionDAO){
         DefaultWebSessionManager defaultWebSessionManager = new DefaultWebSessionManager();
         defaultWebSessionManager.setSessionDAO(redisSessionDAO);
         return defaultWebSessionManager;
