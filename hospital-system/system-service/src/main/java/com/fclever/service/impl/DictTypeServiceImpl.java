@@ -74,7 +74,7 @@ public class DictTypeServiceImpl implements DictTypeService{
      *      修改操作时，需要注意修改后的
      * @param dictId 字典类型主键id
      * @param dictType  字典类型
-     * @return 是否存在的标志
+     * @return 是否存在的标志 存在返回true，否则为false
      */
     @Override
     public Boolean checkDictTypeUnique(Long dictId, String dictType) {
@@ -86,16 +86,20 @@ public class DictTypeServiceImpl implements DictTypeService{
         // 执行查询
         DictType dbDictType = this.dictTypeMapper.selectOne(qw);
         /**
-         * 如果是添加操作，默认id为null，因为通过数据库自动递增，如果根据待添加的类型能在数据库查到数据
-         *      就说明该种字典类型已经存在了，不需要重复添加，返回false，停止该操作
-         *
-         *  如果是更新操作，默认id为对应记录的id，根据类型能查询到结果，并且id相同，就返回true，可以进行更新操作
-          */
-        // 如果能根据字典类型查询到一条结果，并且查询到的id不相等，那就说明数据库不存在
+         * 根据type能在数据库查询到
+         *         id  不等于 查id，表示想进行增加操作，因为数据库已经有该类型了---》false
+         *         id  等于   查id，表示想进行更新操作，数据库有该类型，但是可以进行更新--》true
+         * 根据type不能在数据库查询到
+         *         那就应该只能算是进行插入操作了，当然可以进行---》true
+         */
         if (null != dbDictType && dictId.longValue() != dbDictType.getDictId().longValue()){
-            return true; // 说明不存在
+            /**
+             * 根据type能查到，并且id不一样，想进行增加，但是不可以
+             */
+            return true;// 已经存在
         }
-        return false; // 说明存在
+        // 正常更新来说，type都会存在
+        return false; // 不存在
     }
 
     /**
