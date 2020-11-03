@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/exception/GlobalExceptionHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,49 +71,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/exception/GlobalExceptionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+            <state relative-caret-position="314">
+              <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3187#3188#0" expanded="true" />
-                <element signature="e#3267#3268#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/vo/AjaxResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="170" column="1" selection-start-line="170" selection-start-column="1" selection-end-line="170" selection-end-column="1" />
-              <folding>
-                <element signature="e#4656#4657#0" expanded="true" />
-                <element signature="e#4730#4731#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/DictTypeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="141" column="15" selection-start-line="141" selection-start-column="15" selection-end-line="141" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5346#5347#0" expanded="true" />
+                <element signature="e#1233#1234#0" expanded="true" />
+                <element signature="e#1291#1292#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -223,7 +188,6 @@
         <option value="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/dto/LoginBodyDto.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/LoginController.java" />
         <option value="$PROJECT_DIR$/hospital-commons/pom.xml" />
-        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/exception/GlobalExceptionHandler.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/domain/DictType.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/dto/DictTypeDto.java" />
         <option value="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/vo/DataGridView.java" />
@@ -232,6 +196,7 @@
         <option value="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/domain/SimpleUser.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java" />
+        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/exception/GlobalExceptionHandler.java" />
       </list>
     </option>
   </component>
@@ -287,7 +252,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="width" value="1000" />
     <option name="height" value="1040" />
@@ -395,6 +360,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config" />
     <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/com/fclever/hospital-commons/1.0/hospital-commons-1.0.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -402,6 +368,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15306123" />
     <property name="project.structure.side.proportion" value="0.47257385" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
@@ -431,7 +398,7 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.30645162" />
+    <option name="contentProportion" value="0.30252102" />
   </component>
   <component name="RunManager" selected="Spring Boot.SystemApplication">
     <configuration name="DiagnoseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -536,7 +503,7 @@
       <workItem from="1604018567232" duration="631000" />
       <workItem from="1604208952512" duration="1471000" />
       <workItem from="1604293588059" duration="10808000" />
-      <workItem from="1604366065322" duration="18258000" />
+      <workItem from="1604366065322" duration="24098000" />
     </task>
     <task id="LOCAL-00001" summary="顶级父项目online-hospital的创建">
       <created>1602638346112</created>
@@ -832,11 +799,18 @@
       <option name="project" value="LOCAL" />
       <updated>1604385971222</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="系统管理hospital-system中控制层方法映射代码编写">
+      <created>1604392799062</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1604392799062</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183797000" />
+    <option name="totallyTimeSpent" value="189637000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -858,7 +832,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49846625" weight="0.29514825" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49846625" weight="0.36657682" />
       <window_info anchor="bottom" id="Java Enterprise" order="0" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -869,12 +843,12 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32991204" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.4516129" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.45092025" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5153374" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50067025" side_tool="true" weight="0.48533726" />
       <window_info anchor="bottom" id="Spring" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32822084" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.35889572" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32551318" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.25460124" />
       <window_info anchor="right" id="Mybatis datasource" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -969,7 +943,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="就诊模块下hospital-diagnose的创建" />
     <MESSAGE value="就诊模块下hospital-diagnose的配置" />
     <MESSAGE value="就诊模块下接口模块diagnose-interface创建并配置" />
     <MESSAGE value="就诊模块下实体模块diagnose-domain创建并配置" />
@@ -994,7 +967,8 @@
     <MESSAGE value="系统管理hospital-system生成DictType字典类型表相关代码" />
     <MESSAGE value="系统管理hospital-system中接口及实现类编写" />
     <MESSAGE value="系统管理hospital-system中获取当前登录用户相关信息工具类" />
-    <option name="LAST_COMMIT_MESSAGE" value="系统管理hospital-system中获取当前登录用户相关信息工具类" />
+    <MESSAGE value="系统管理hospital-system中控制层方法映射代码编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="系统管理hospital-system中控制层方法映射代码编写" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1224,16 +1198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/exception/GlobalExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/constants/HttpStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1266,16 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/dto/DictTypeDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1412,14 +1366,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/dto/DictTypeDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-256">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        <state relative-caret-position="176">
+          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3187#3188#0" expanded="true" />
             <element signature="e#3267#3268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/exception/GlobalExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1233#1234#0" expanded="true" />
+            <element signature="e#1291#1292#0" expanded="true" />
           </folding>
         </state>
       </provider>
