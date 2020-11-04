@@ -43,8 +43,8 @@ public class DictDataController {
      * @param dictDataDto 待添加字典数据
      * @return 消息+code
      */
-    @PostMapping("listForPage")
-    public AjaxResult addDictType(@Validated DictDataDto dictDataDto){
+    @PostMapping("addDictData")
+    public AjaxResult addDictData(@Validated DictDataDto dictDataDto){
         // 设置登录用户信息
         dictDataDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         // 执行插入操作
@@ -57,7 +57,7 @@ public class DictDataController {
      * @return 消息+code
      */
     @PutMapping("updateDictData")
-    public AjaxResult updateDictType(@Validated DictDataDto dictDataDto){
+    public AjaxResult updateDictData(@Validated DictDataDto dictDataDto){
         // 设置登录用户信息
         dictDataDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         // 执行插入操作
@@ -80,7 +80,7 @@ public class DictDataController {
      * @return 消息+code
      */
     @DeleteMapping("deleteDictDataByIds/{dictCodeIds}")
-    public AjaxResult deleteDictTypeByIds(@PathVariable @Validated @NotBlank(message = "删除Id不能为空")Long[] dictCodeIds){
+    public AjaxResult deleteDictDataByIds(@PathVariable @Validated @NotBlank(message = "删除Id不能为空")Long[] dictCodeIds){
         // 大于0，就表示成功
         return AjaxResult.toAjax(this.dictDataService.deleteDictDataByIds(dictCodeIds));
     }
