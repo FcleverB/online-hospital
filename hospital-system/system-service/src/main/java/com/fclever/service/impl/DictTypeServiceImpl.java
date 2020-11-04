@@ -2,13 +2,18 @@ package com.fclever.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateUtil;
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fclever.constants.Constants;
+import com.fclever.domain.DictData;
 import com.fclever.dto.DictTypeDto;
+import com.fclever.mapper.DictDataMapper;
 import com.fclever.vo.DataGridView;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 import com.fclever.mapper.DictTypeMapper;
 import com.fclever.domain.DictType;
@@ -26,6 +31,12 @@ public class DictTypeServiceImpl implements DictTypeService{
 
     @Autowired
     private DictTypeMapper dictTypeMapper;
+
+    @Autowired
+    private DictDataMapper dictDataMapper;
+
+    @Autowired
+    private StringRedisTemplate redisTemplate;
 
     /**
      * 分页查询字典类型
@@ -158,4 +169,49 @@ public class DictTypeServiceImpl implements DictTypeService{
     public DictType selectDictTypeById(Long dictId) {
         return this.dictTypeMapper.selectById(dictId);
     }
+
+    /**
+     * 同步字典类型数据+字典数据到缓存，其他菜单模块查询字典数据直接从缓存获取
+     * 1. 先查询出所有可用的字典数据
+     * 2. 再根据字典的类型查询对应类型的字典数据
+     * 3. 把整个字典数据生成json，保存到redis中
+     * 保存到Redis中key的形式
+     *  dict:dictType
+     * 保存到Redis中value形式
+     *  对应字典类型的所有字典数据的数组，数组内容单条数据为一条对象
+     * 实际形式：dict:sys_user_sex   --->  [{},{},{}]
+     *
+     */
+    @Override
+    public void dictCacheAsync() {
+        // 封装查询结果
+        QueryWrapper<DictType> qwType = new QueryWrapper<>();
+        // 状态为可用
+        qwType.eq(DictType.COL_STATUS, Constants.STATUS_TRUE);
+        // 执行查询保存结果
+        List<DictType> dictTypeList = this.dictTypeMapper.selectList(qwType);
+        for (DictType dictType : dictTypeList) {
+            // 根据字典类型查询对应的字典数据
+            QueryWrapper<DictData> qwData = new QueryWrapper<>();
+            // 类型匹配
+            qwData.eq(DictData.COL_DICT_TYPE, dictType.getDictType());
+            // 并且为可用状态的字典数据
+            qwData.eq(DictData.COL_STATUS, dictType.getStatus());
+            qwData.orderByAsc(DictData.COL_DICT_SORT);
+            // 执行查询，并接收List集合
+            List<DictData> dictDataList = dictDataMapper.selectList(qwData);
+            // 转成json
+            String json = JSON.toJSONString(dictDataList);
+            // 保存内容(Reids保存格式）
+            // 获取Redis保存的键值对数据
+            ValueOperations<String, String> opsForValue = redisTemplate.opsForValue();
+            // 保存值
+            opsForValue.set(Constants.DICT_REDIS_PROFIX+dictType.getDictType(), json);
+        }
+    }
 }
+
+
+
+
+

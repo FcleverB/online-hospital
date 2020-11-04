@@ -3,7 +3,7 @@ package com.fclever.service.impl;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.StrUtil;
-import cn.hutool.json.JSON;
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -11,6 +11,8 @@ import com.fclever.constants.Constants;
 import com.fclever.dto.DictDataDto;
 import com.fclever.vo.DataGridView;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.Arrays;
@@ -28,6 +30,9 @@ public class DictDataServiceImpl implements DictDataService{
 
     @Autowired
     private DictDataMapper dictDataMapper;
+
+    @Autowired
+    private StringRedisTemplate redisTemplate;
 
     /**
      * 分页查询字典数据
@@ -117,14 +122,24 @@ public class DictDataServiceImpl implements DictDataService{
      */
     @Override
     public List<DictData> selectDictDataByDictType(String dictType) {
-        QueryWrapper<DictData> qw = new QueryWrapper<>();
-        // 既然根据类型去查，类型肯定不为空
-        qw.eq(DictData.COL_DICT_TYPE, dictType);
-        // 设置排序
-        qw.orderByAsc(DictData.COL_DICT_SORT);
-        // 有效  数据
-        qw.eq(DictData.COL_STATUS, Constants.STATUS_TRUE);
-        return this.dictDataMapper.selectList(qw);
+        // 之前是从数据库里面根据字典类型来获取对应的字典数据，现在在字典类型实现类中进行了缓存同步，就直接根据key从缓存中获取就可以了
+//        QueryWrapper<DictData> qw = new QueryWrapper<>();
+//        // 既然根据类型去查，类型肯定不为空
+//        qw.eq(DictData.COL_DICT_TYPE, dictType);
+//        // 设置排序
+//        qw.orderByAsc(DictData.COL_DICT_SORT);
+//        // 有效  数据
+//        qw.eq(DictData.COL_STATUS, Constants.STATUS_TRUE);
+//        return this.dictDataMapper.selectList(qw);
+        // 设置从Redis中获取的前缀
+        String key = Constants.DICT_REDIS_PROFIX + dictType;
+        // 获取Redis中保存的键值对数据
+        ValueOperations<String, String> opsForValue = redisTemplate.opsForValue();
+        // 根据key获取json值对象
+        String json = opsForValue.get(key);
+        // 将JSON对象转换为数组对象，根据DictData实体类进行解析
+        List<DictData> dictDataList = JSON.parseArray(json, DictData.class);
+        return dictDataList;
     }
 
     /**

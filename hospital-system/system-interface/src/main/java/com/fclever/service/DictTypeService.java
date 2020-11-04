@@ -66,4 +66,9 @@ public interface DictTypeService{
          * @return 查询到的字典类型
          */
         DictType selectDictTypeById(Long dictId);
+
+        /**
+         * 同步字典类型数据+字典数据到缓存，其他菜单模块查询字典数据直接从缓存获取
+         */
+        void dictCacheAsync();
 }

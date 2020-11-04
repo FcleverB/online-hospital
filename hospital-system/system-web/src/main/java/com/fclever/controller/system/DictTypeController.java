@@ -101,4 +101,20 @@ public class DictTypeController {
     public AjaxResult selectAllDictType(){
         return AjaxResult.success(this.dictTypeService.list());
     }
+
+    /**
+     * 同步字典数据到缓存（包括字典类型+对应类型数据），如果缓存原来有内容，则直接覆盖
+     * @return
+             */
+    @GetMapping("dictCacheAsync")
+    public AjaxResult dictCacheAsync(){
+        try{
+            this.dictTypeService.dictCacheAsync();
+            return AjaxResult.success();
+        }catch (Exception e){
+            e.printStackTrace();
+            // 出现异常则返回错误信息
+            return AjaxResult.error();
+        }
+    }
 }
