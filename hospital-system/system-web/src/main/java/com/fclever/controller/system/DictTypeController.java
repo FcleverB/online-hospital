@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -77,7 +78,7 @@ public class DictTypeController {
      * @return 消息+code+数据
      */
     @GetMapping("getOne/{dictId}")
-    public AjaxResult getOne(@PathVariable @Validated @NotNull(message = "字典主键ID不能为空")Long dictId){
+    public AjaxResult getOne(@PathVariable @Validated @NotBlank(message = "字典主键ID不能为空")Long dictId){
         return AjaxResult.success(this.dictTypeService.selectDictTypeById(dictId));
     }
 
@@ -87,7 +88,7 @@ public class DictTypeController {
      * @return 消息+code
      */
     @DeleteMapping("deleteDictTypeByIds/{dictIds}")
-    public AjaxResult deleteDictTypeByIds(@PathVariable @Validated @NotEmpty(message = "删除Id不能为空")Long[] dictIds){
+    public AjaxResult deleteDictTypeByIds(@PathVariable @Validated @NotBlank(message = "删除Id不能为空")Long[] dictIds){
         // 大于0，就表示成功
         return AjaxResult.toAjax(this.dictTypeService.deleteDictTypeByIds(dictIds));
     }
