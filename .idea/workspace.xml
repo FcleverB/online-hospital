@@ -1,14 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="系统管理hospital-system中字典数据控制层方法名修改">
+    <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="online-hospital系统详细文档提交">
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017072117176.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017072402608.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017081849263.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017082242435.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017084235165.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017085949702.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017091100603.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017112300003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017121235018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017121539816.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017121821257.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017122128275.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017162149402.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017164116222.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017164128025.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017164212650.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017164219822.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017164345005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017172558077.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017173844854.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017173902109.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017173903732.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017173929240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017174602345.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017174746799.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017175651571.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017185558930.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017190537507.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017190812581.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017190959665.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201017192119808.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018092532265.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018092537280.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018092641278.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018092900085.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018102158477.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018102230108.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018104429384.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018104443758.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018104621441.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018104707571.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018104920994.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018105142182.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018105206714.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018110546411.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018110548030.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018110824469.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018111022265.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018111025167.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018121754585.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018121840112.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018121918911.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018122030539.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018122054699.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018122110267.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018130511634.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018143924897.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018150824039.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018151246885.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018182819726.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018183753833.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018184302619.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018184316742.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018193005985.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018193947872.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018205159252.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018205334642.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018205343303.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018205458150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018210222661.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018210242475.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018210308198.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018210319069.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018210328031.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018210400250.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018210434217.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018210451598.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018210507457.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.assets/image-20201018210831338.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/环境搭建/环境搭建.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019082912418.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019082941214.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019082951596.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019083147456.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019083314017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019083355614.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019083509602.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019083528279.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019083623665.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019083707081.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019083757457.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019083822639.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201019085607806.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020085417746.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020112841432.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020114446369.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020122951375.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020123713212.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020124817822.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020125415387.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020125810930.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020125929225.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020130754822.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020130828768.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020131041136.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020131202933.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020131210205.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020131228519.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020144230413.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201020152320693.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201021084701223.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201021090142127.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201021090319722.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201021090326781.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201021090333652.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201021090344371.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201021124959184.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201021134839848.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201021134856670.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027081146118.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027081211879.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027081220776.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027082420154.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027083119633.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027083743731.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027084359349.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027084430879.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027085136077.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027085154074.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027132237598.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027153749699.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027154132494.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027155749991.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027155808951.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027160125840.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027160136023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201027165455453.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201028072146857.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201028073422076.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201028081650745.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201028082220261.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201028082232613.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201028151219139.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201029090140871.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201030083620594.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201030084728418.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201030085209722.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201030085234974.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201101133807181.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201101161744828.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201101172941298.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201101173124770.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201101173208984.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201102174300981.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201102174604022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201102174625051.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201102174633269.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201103175143676.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201103175159532.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201103175339883.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201103190120790.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201103200750268.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201103200957488.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201103201017328.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201104162603532.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201104162845402.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/onlinehospital.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/DictTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/DictTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-service/system-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-service/system-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -75,11 +237,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="209" selection-start-line="209" selection-end-line="209" />
+            <state relative-caret-position="2752">
+              <caret line="194" column="14" selection-start-line="194" selection-start-column="14" selection-end-line="194" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,11 +249,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictDataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="135" column="20" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="20" />
+            <state relative-caret-position="169">
+              <caret line="130" column="19" lean-forward="true" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -99,7 +261,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE-sources.jar!/org/springframework/data/redis/core/RedisTemplate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="19392">
               <caret line="1332" column="33" selection-start-line="1332" selection-start-column="33" selection-end-line="1332" selection-end-column="33" />
             </state>
           </provider>
@@ -218,8 +380,8 @@
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/DictTypeService.java" />
         <option value="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/constants/Constants.java" />
-        <option value="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictDataServiceImpl.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictDataServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -275,7 +437,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="width" value="1000" />
     <option name="height" value="1040" />
@@ -404,8 +566,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -568,14 +730,9 @@
       <workItem from="1604208952512" duration="1471000" />
       <workItem from="1604293588059" duration="10808000" />
       <workItem from="1604366065322" duration="32783000" />
-      <workItem from="1604449473306" duration="15808000" />
-    </task>
-    <task id="LOCAL-00001" summary="顶级父项目online-hospital的创建">
-      <created>1602638346112</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1602638346112</updated>
+      <workItem from="1604449473306" duration="17091000" />
+      <workItem from="1604534175290" duration="1672000" />
+      <workItem from="1604800085714" duration="976000" />
     </task>
     <task id="LOCAL-00002" summary="顶级父项目online-hospital的配置及打包">
       <created>1602722371668</created>
@@ -913,11 +1070,18 @@
       <option name="project" value="LOCAL" />
       <updated>1604454545335</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="系统管理hospital-system中字典类型和数据缓存到Redis处理">
+      <created>1604480276098</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1604480276099</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214130000" />
+    <option name="totallyTimeSpent" value="218061000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -929,8 +1093,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="800" height="832" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
       <window_info id="Structure" order="1" sideWeight="0.50153375" side_tool="true" weight="0.30592993" />
@@ -939,10 +1102,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49846625" weight="0.38274932" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.33742332" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49846625" visible="true" weight="0.15482573" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32551318" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.5153374" />
-      <window_info anchor="bottom" id="Run Dashboard" order="2" weight="0.2576687" />
+      <window_info anchor="bottom" id="Run Dashboard" order="2" visible="true" weight="0.3328446" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
@@ -1050,8 +1213,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="统计分析模块hospital-statistics的配置" />
-    <MESSAGE value="统计分析模块下接口模块statistics-interface创建并配置" />
     <MESSAGE value="统计分析模块下实体模块statistics-domain创建并配置" />
     <MESSAGE value="统计分析模块下数据访问模块statistics-mapper创建并配置" />
     <MESSAGE value="统计分析模块下业务逻辑模块statistics-service创建并配置" />
@@ -1075,7 +1236,9 @@
     <MESSAGE value="系统管理hospital-system中字典数据接口及实现类编写" />
     <MESSAGE value="系统管理hospital-system中字典数据控制层编写" />
     <MESSAGE value="系统管理hospital-system中字典数据控制层方法名修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="系统管理hospital-system中字典数据控制层方法名修改" />
+    <MESSAGE value="系统管理hospital-system中字典类型和数据缓存到Redis处理" />
+    <MESSAGE value="online-hospital系统详细文档提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="online-hospital系统详细文档提交" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1094,13 +1257,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.5.3/shiro-web-1.5.3.jar!/org/apache/shiro/web/mgt/DefaultWebSecurityManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/SystemApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1483,27 +1639,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2752">
+          <caret line="194" column="14" selection-start-line="194" selection-start-column="14" selection-end-line="194" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE-sources.jar!/org/springframework/data/redis/core/RedisTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="19392">
           <caret line="1332" column="33" selection-start-line="1332" selection-start-column="33" selection-end-line="1332" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/系统管理/系统管理.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictDataServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="135" column="20" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="209" selection-start-line="209" selection-end-line="209" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="169">
+          <caret line="130" column="19" lean-forward="true" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
         </state>
       </provider>
     </entry>
