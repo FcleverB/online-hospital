@@ -99,7 +99,7 @@ public class DictTypeController {
      */
     @GetMapping("selectAllDictType")
     public AjaxResult selectAllDictType(){
-        return AjaxResult.success(this.dictTypeService.list());
+        return AjaxResult.success(this.dictTypeService.list().getData());
     }
 
     /**

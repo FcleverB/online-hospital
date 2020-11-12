@@ -7,6 +7,20 @@
   - ![image-20201103113425692](onlinehospital.assets/image-20201103113425692.png)
 - SimpleUser类，原来是写的private Serializable userId;太奇怪了，先改成Long类型了，后续研究
   - ![image-20201103133733900](onlinehospital.assets/image-20201103133733900.png)
-
 - 11.8:编写字典类型前端时,发现调用根据字典类型获取字典数据的方法时,前端拿不到数据,this.getDataByType('sys_normal_disable'),原因在于之前修改了后端代码逻辑,该方法在后端的处理是从缓存中获取,但是没有处理缓存中无数据的情况,因此获取不到,后续看是否需要完善(缓存中无数据如何处理的情况)
+  - 补充:缓存是公用的,重新加载一下就可以了,为啥说是公用的呢?因为保存数据时与取出数据与当前登录用户无关
+  - ![image-20201108224415574](onlinehospital.assets/image-20201108224415574.png)
+  - ![image-20201108224430507](onlinehospital.assets/image-20201108224430507.png)
+- 字典类型数据列表每行数据进行解析的时候,log输出状态的字典全部数据,输出了好多空值,不知道为啥
+  - ![image-20201108231022487](onlinehospital.assets/image-20201108231022487.png)
+  - ![image-20201108231035453](onlinehospital.assets/image-20201108231035453.png)
+- 字典类型列表页面的修改按钮，原来是点击修改时，根据字典id进行了后台查询数据并填充到this.form中，但是修改操作调用的方法中，可以传递row值，而row值就是一整条数据，就没必要走后台了吧
+  - ![image-20201110203159832](onlinehospital.assets/image-20201110203159832.png)
+- 数据库数据的创建时间需要修改，时间不对
+- 字典数据类型列表执行查询操作时，没有恢复默认页数和默认条数
+- 删除字典类型的数据时，没有从缓存中将对应数据移除
+- 系统中用到的一些固定变量，可以设置为常量进行引用，比如字典管理这块使用到的在created方法中的获取状态码表的方法调用，可以参考深圳案件来改造
+  - ![image-20201112083557560](onlinehospital.assets/image-20201112083557560.png)
+- JS利用||和&&赋值
+  - ![image-20201112090615762](onlinehospital.assets/image-20201112090615762.png)
 

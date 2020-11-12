@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201108134326648.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/系统管理/系统管理.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/进一步改善记录/onlinehospital.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/进一步改善记录/onlinehospital.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,53 +73,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3268#3269#0" expanded="true" />
+                <element signature="e#3338#3339#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/vo/AjaxResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="59" column="11" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+              <folding>
+                <element signature="e#1725#1726#0" expanded="true" />
+                <element signature="e#1774#1775#0" expanded="true" />
+                <element signature="e#2196#2197#0" expanded="true" />
+                <element signature="e#2251#2252#0" expanded="true" />
+                <element signature="e#2479#2480#0" expanded="true" />
+                <element signature="e#2547#2548#0" expanded="true" />
+                <element signature="e#4656#4657#0" expanded="true" />
+                <element signature="e#4730#4731#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/DictTypeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2352">
-              <caret line="194" column="14" selection-start-line="194" selection-start-column="14" selection-end-line="194" selection-end-column="14" />
+            <state relative-caret-position="66">
+              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5643#5644#0" expanded="true" />
+                <element signature="e#5704#5705#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictDataServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictDataController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="95" column="74" selection-start-line="95" selection-start-column="74" selection-end-line="95" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/DictDataService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE-sources.jar!/org/springframework/data/redis/core/RedisTemplate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19392">
-              <caret line="1332" column="33" selection-start-line="1332" selection-start-column="33" selection-end-line="1332" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -231,11 +239,11 @@
         <option value="$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/DictDataService.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictDataController.java" />
         <option value="$PROJECT_DIR$/hospital-system/pom.xml" />
-        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/DictTypeService.java" />
         <option value="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/constants/Constants.java" />
-        <option value="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictDataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java" />
       </list>
     </option>
   </component>
@@ -292,8 +300,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="930" />
-    <option name="width" value="1000" />
+    <option name="x" value="-9" />
+    <option name="width" value="938" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -304,6 +312,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -371,7 +380,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -537,14 +545,11 @@
       <workItem from="1604366065322" duration="32783000" />
       <workItem from="1604449473306" duration="17091000" />
       <workItem from="1604534175290" duration="1672000" />
-      <workItem from="1604800085714" duration="5499000" />
-    </task>
-    <task id="LOCAL-00004" summary="公共模块hospital-commons的配置">
-      <created>1602737488957</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1602737488957</updated>
+      <workItem from="1604800085714" duration="6646000" />
+      <workItem from="1604881963214" duration="834000" />
+      <workItem from="1605009011102" duration="2902000" />
+      <workItem from="1605050276429" duration="2718000" />
+      <workItem from="1605140606237" duration="1546000" />
     </task>
     <task id="LOCAL-00005" summary="系统模块hospital-system的创建">
       <created>1602737666682</created>
@@ -882,11 +887,18 @@
       <option name="project" value="LOCAL" />
       <updated>1604801711329</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="online-hospital系统《进一步改善记录》文档提交">
+      <created>1604846287444</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1604846287444</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222584000" />
+    <option name="totallyTimeSpent" value="231731000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -898,7 +910,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
@@ -908,10 +920,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49846625" visible="true" weight="0.2580429" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49846625" weight="0.35040432" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.32551318" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.5153374" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="2" visible="true" weight="0.41348973" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="2" visible="true" weight="0.30645162" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
@@ -924,7 +936,7 @@
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50067025" side_tool="true" weight="0.48533726" />
       <window_info anchor="bottom" id="Spring" order="14" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.32515338" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.33742332" />
       <window_info anchor="right" id="Mybatis datasource" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -1019,7 +1031,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="统计分析模块下业务逻辑模块statistics-service创建并配置" />
     <MESSAGE value="修改yml配置中数据库表名" />
     <MESSAGE value="修改Zookeeper连接超时时间" />
     <MESSAGE value="修改公共模块目录类别" />
@@ -1044,7 +1055,8 @@
     <MESSAGE value="online-hospital系统详细文档提交" />
     <MESSAGE value="online-hospital系统《环境搭建》详细文档提交" />
     <MESSAGE value="online-hospital系统《系统管理》详细文档提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="online-hospital系统《系统管理》详细文档提交" />
+    <MESSAGE value="online-hospital系统《进一步改善记录》文档提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="online-hospital系统《进一步改善记录》文档提交" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1258,13 +1270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.3.1.tmp/mybatis-plus-core-3.3.1.tmp-sources.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="82" column="42" lean-forward="true" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-mapper/src/main/resources/mapper/DictTypeMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1340,19 +1345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/vo/AjaxResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-          <folding>
-            <element signature="e#2196#2197#0" expanded="true" />
-            <element signature="e#2251#2252#0" expanded="true" />
-            <element signature="e#4656#4657#0" expanded="true" />
-            <element signature="e#4730#4731#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar!/javax/validation/constraints/NotNull.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1398,25 +1390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/DictTypeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="67" column="28" lean-forward="true" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="104" column="4" lean-forward="true" selection-start-line="104" selection-start-column="4" selection-end-line="118" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3268#3269#0" expanded="true" />
-            <element signature="e#3338#3339#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1443,16 +1416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2352">
-          <caret line="194" column="14" selection-start-line="194" selection-start-column="14" selection-end-line="194" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictDataController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -1472,8 +1435,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictDataServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
+        <state relative-caret-position="209">
+          <caret line="127" column="50" lean-forward="true" selection-start-line="127" selection-start-column="50" selection-end-line="127" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.3.1.tmp/mybatis-plus-core-3.3.1.tmp-sources.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="139" column="6" selection-start-line="139" selection-start-column="6" selection-end-line="139" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/vo/AjaxResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="59" column="11" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+          <folding>
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1774#1775#0" expanded="true" />
+            <element signature="e#2196#2197#0" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
+            <element signature="e#2479#2480#0" expanded="true" />
+            <element signature="e#2547#2548#0" expanded="true" />
+            <element signature="e#4656#4657#0" expanded="true" />
+            <element signature="e#4730#4731#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DictTypeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5643#5644#0" expanded="true" />
+            <element signature="e#5704#5705#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/DictTypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3268#3269#0" expanded="true" />
+            <element signature="e#3338#3339#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
