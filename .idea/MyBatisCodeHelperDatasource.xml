@@ -74,6 +74,18 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="onlinehospital:sys_operation_log">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="oper_id" />
+                  <option name="javaModelName" value="OperationLog" />
+                  <option name="moduleName" value="hospital-system" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="onlinehospital:sys_user">
               <value>
                 <TableGenerateConfig>

@@ -1082,7 +1082,7 @@
     <table id="283" parent="22" name="sys_notice">
       <Comment>通知公告表</Comment>
     </table>
-    <table id="284" parent="22" name="sys_oper_log">
+    <table id="284" parent="22" name="sys_operation_log">
       <Comment>操作日志记录</Comment>
     </table>
     <table id="285" parent="22" name="sys_registered_item">
@@ -2926,7 +2926,7 @@
     </key>
     <column id="576" parent="279" name="dict_code">
       <Position>1</Position>
-      <Comment>字典编码</Comment>
+      <Comment>字典数据主键</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
