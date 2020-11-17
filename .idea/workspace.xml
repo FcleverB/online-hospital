@@ -4,14 +4,17 @@
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="系统管理hospital-system生成OperationLog操作日志表代码并修改代码内容">
       <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201116082850570.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201116083204206.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201117090331331.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.assets/image-20201117090357023.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/doc/进一步改善记录/onlinehospital.assets/image-20201114131136076.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/doc/进一步改善记录/onlinehospital.assets/image-20201115212039121.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/doc/进一步改善记录/onlinehospital.assets/image-20201115212044142.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/进一步改善记录/onlinehospital.assets/image-20201117082656095.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/aspectj/OperationLogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/utils/ServletUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/系统管理/系统管理.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/系统管理/系统管理.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/进一步改善记录/onlinehospital.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/进一步改善记录/onlinehospital.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/dto/OperationLogDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/dto/OperationLogDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/LoginController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -93,11 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="224">
+              <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -675,14 +675,7 @@
       <workItem from="1605361951489" duration="709000" />
       <workItem from="1605449707147" duration="1046000" />
       <workItem from="1605484250435" duration="17326000" />
-      <workItem from="1605572575514" duration="2850000" />
-    </task>
-    <task id="LOCAL-00007" summary="系统模块下接口模块system-interface创建并配置">
-      <created>1602739620903</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1602739620903</updated>
+      <workItem from="1605572575514" duration="3132000" />
     </task>
     <task id="LOCAL-00008" summary="系统模块下实体模块system-domain创建并配置">
       <created>1602740096479</created>
@@ -1020,11 +1013,18 @@
       <option name="project" value="LOCAL" />
       <updated>1605489714426</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="online-hospital系统定义切面Log注解和相关枚举类">
+      <created>1605575712298</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1605575712299</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258610000" />
+    <option name="totallyTimeSpent" value="258892000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1036,8 +1036,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="790" height="832" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
       <window_info id="Structure" order="1" sideWeight="0.50153375" side_tool="true" weight="0.30592993" />
@@ -1046,8 +1045,8 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49846625" weight="0.41393444" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.41871166" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49846625" visible="true" weight="0.20308311" />
+      <window_info anchor="bottom" id="Version Control" order="0" visible="true" weight="0.41788855" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.5153374" />
       <window_info anchor="bottom" id="Run Dashboard" order="2" weight="0.39442816" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32991204" />
@@ -1157,7 +1156,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改公共模块目录类别" />
     <MESSAGE value="添加公共模块公用辅助类" />
     <MESSAGE value="系统管理控制层模块system-web添加mybatis-plus插件配置" />
     <MESSAGE value="系统管理hospital-system生成User表相关代码并添加登录操作依赖功能" />
@@ -1182,7 +1180,8 @@
     <MESSAGE value="online-hospital系统《进一步改善记录》文档提交" />
     <MESSAGE value="系统管理hospital-system中字典类型中查询所有字典类型方法返回值修改" />
     <MESSAGE value="系统管理hospital-system生成OperationLog操作日志表代码并修改代码内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="系统管理hospital-system生成OperationLog操作日志表代码并修改代码内容" />
+    <MESSAGE value="online-hospital系统定义切面Log注解和相关枚举类" />
+    <option name="LAST_COMMIT_MESSAGE" value="online-hospital系统定义切面Log注解和相关枚举类" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1616,11 +1615,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="224">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
         </state>
       </provider>
     </entry>
