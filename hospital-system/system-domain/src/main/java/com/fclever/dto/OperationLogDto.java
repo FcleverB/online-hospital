@@ -21,6 +21,7 @@ import java.util.Date;
 
 /**
     * 操作日志记录
+ *          和前端交互使用  封装查询条件
     */
 @ApiModel(value="com-fclever-domain-OperationLog")
 @Data
