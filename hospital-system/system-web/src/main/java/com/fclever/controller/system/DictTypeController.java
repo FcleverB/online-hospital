@@ -1,5 +1,7 @@
 package com.fclever.controller.system;
 
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.dto.DictTypeDto;
 import com.fclever.service.DictTypeService;
 import com.fclever.utils.ShiroSecurityUtils;
@@ -42,6 +44,7 @@ public class DictTypeController {
      * @return 消息+code
      */
     @PostMapping("addDictType")
+    @Log(title = "添加字典类型",businessType = BusinessType.INSERT)
     public AjaxResult addDictType(@Validated DictTypeDto dictTypeDto){
         // 检查数据库中是否已经存在了待添加的字典类型数据
         // 返回true表示可以存在，不能操作
@@ -60,6 +63,7 @@ public class DictTypeController {
      * @return 消息+code
      */
     @PutMapping("updateDictType")
+    @Log(title = "更新字典类型数据",businessType = BusinessType.UPDATE)
     public AjaxResult updateDictType(@Validated DictTypeDto dictTypeDto){
         // 检查数据库中是否已经存在了待修改的字典类型数据
         // 返回true表示可以存在，不能操作
@@ -88,6 +92,7 @@ public class DictTypeController {
      * @return 消息+code
      */
     @DeleteMapping("deleteDictTypeByIds/{dictIds}")
+    @Log(title = "删除字典类型数据（含批量）",businessType = BusinessType.DELETE)
     public AjaxResult deleteDictTypeByIds(@PathVariable @Validated @NotBlank(message = "删除Id不能为空")Long[] dictIds){
         // 大于0，就表示成功
         return AjaxResult.toAjax(this.dictTypeService.deleteDictTypeByIds(dictIds));
@@ -107,6 +112,7 @@ public class DictTypeController {
      * @return
              */
     @GetMapping("dictCacheAsync")
+    @Log(title = "同步字典类型到缓存",businessType = BusinessType.CACHEASYNC)
     public AjaxResult dictCacheAsync(){
         try{
             this.dictTypeService.dictCacheAsync();

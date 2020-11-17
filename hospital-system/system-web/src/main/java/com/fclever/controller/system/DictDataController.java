@@ -1,5 +1,7 @@
 package com.fclever.controller.system;
 
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.domain.DictData;
 import com.fclever.dto.DictDataDto;
 import com.fclever.service.DictDataService;
@@ -44,6 +46,7 @@ public class DictDataController {
      * @return 消息+code
      */
     @PostMapping("addDictData")
+    @Log(title = "添加字典数据",businessType = BusinessType.INSERT)
     public AjaxResult addDictData(@Validated DictDataDto dictDataDto){
         // 设置登录用户信息
         dictDataDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
@@ -57,6 +60,7 @@ public class DictDataController {
      * @return 消息+code
      */
     @PutMapping("updateDictData")
+    @Log(title = "修改字典数据",businessType = BusinessType.UPDATE)
     public AjaxResult updateDictData(@Validated DictDataDto dictDataDto){
         // 设置登录用户信息
         dictDataDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
@@ -80,6 +84,7 @@ public class DictDataController {
      * @return 消息+code
      */
     @DeleteMapping("deleteDictDataByIds/{dictCodeIds}")
+    @Log(title = "删除字典数据（含批量）",businessType = BusinessType.DELETE)
     public AjaxResult deleteDictDataByIds(@PathVariable @Validated @NotBlank(message = "删除Id不能为空")Long[] dictCodeIds){
         // 大于0，就表示成功
         return AjaxResult.toAjax(this.dictDataService.deleteDictDataByIds(dictCodeIds));

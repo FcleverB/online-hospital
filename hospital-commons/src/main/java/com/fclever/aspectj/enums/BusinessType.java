@@ -29,6 +29,11 @@ public enum BusinessType {
     DELETE,
 
     /**
+     * 同步字典数据到缓存
+     */
+    CACHEASYNC,
+
+    /**
      * 授权
      */
     GRANT,

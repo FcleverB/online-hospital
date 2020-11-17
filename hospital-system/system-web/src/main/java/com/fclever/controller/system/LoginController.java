@@ -1,5 +1,7 @@
 package com.fclever.controller.system;
 
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.constants.Constants;
 import com.fclever.constants.HttpStatus;
 import com.fclever.domain.Menu;
@@ -39,11 +41,13 @@ public class LoginController {
 
     /**
      * 登录方法
+     *      @Log  默认还有  后台用户+保存请求参数
      * @param loginBodyDto 保存用户输入的登录数据
      * @param request
      * @return
      */
     @PostMapping("login/doLogin")
+    @Log(title = "用户登录",businessType = BusinessType.OTHER)
     public AjaxResult login(@RequestBody @Validated LoginBodyDto loginBodyDto, HttpServletRequest request){
         // 创建统一返回类型对象
         AjaxResult ajaxResult = AjaxResult.success();
@@ -89,6 +93,7 @@ public class LoginController {
      * @return
      */
     @PostMapping("login/logout")
+    @Log(title = "用户退出",businessType = BusinessType.OTHER)
     public AjaxResult logout(){
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
