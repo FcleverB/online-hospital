@@ -1073,8 +1073,8 @@
     <table id="280" parent="22" name="sys_dict_type">
       <Comment>字典类型表</Comment>
     </table>
-    <table id="281" parent="22" name="sys_login_info">
-      <Comment>系统访问记录</Comment>
+    <table id="281" parent="22" name="sys_login_log">
+      <Comment>登录日志表</Comment>
     </table>
     <table id="282" parent="22" name="sys_menu">
       <Comment>菜单权限表</Comment>
@@ -1083,7 +1083,7 @@
       <Comment>通知公告表</Comment>
     </table>
     <table id="284" parent="22" name="sys_operation_log">
-      <Comment>操作日志记录</Comment>
+      <Comment>操作日志记录表</Comment>
     </table>
     <table id="285" parent="22" name="sys_registered_item">
       <Collation>utf8mb4_general_ci</Collation>

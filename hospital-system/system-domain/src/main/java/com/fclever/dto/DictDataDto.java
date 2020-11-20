@@ -15,7 +15,7 @@ import java.util.Date;
  * @author Fclever
  * @create 2020-11-03 20:35
  */
-@ApiModel(value="com-fclever-domain-DictData")
+@ApiModel(value="com-fclever-dto-DictDataDto")
 @Data
 @EqualsAndHashCode(callSuper=true)
 @AllArgsConstructor
