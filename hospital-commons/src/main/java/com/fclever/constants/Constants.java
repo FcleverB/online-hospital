@@ -36,7 +36,7 @@ public class Constants {
     public static final String DICT_REDIS_PROFIX="dict:";
 
     /**
-     * 登陆状态  0 成功  1失败
+     * 登录状态  0 成功  1失败
      */
     public static final String LOGIN_SUCCESS = "0";
     public static final String LOGIN_ERROR = "1";

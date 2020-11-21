@@ -16,7 +16,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginBodyDto implements Serializable {
-    //  用户名
+    //  用户名  手机号为登录用户名
     @NotNull(message = "用户名不能为空")
     private String username;
     //  密码
