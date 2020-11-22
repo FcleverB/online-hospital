@@ -1,5 +1,7 @@
 package com.fclever.controller.system;
 
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.domain.Dept;
 import com.fclever.dto.DeptDto;
 import com.fclever.service.DeptService;
@@ -31,6 +33,7 @@ public class DeptController {
      * @return 统一返回实体
      */
     @PutMapping("updateDept")
+    @Log(title = "更新科室信息",businessType = BusinessType.UPDATE)
     public AjaxResult updateDept(@Validated DeptDto deptDto){
         // 这里设置的登录用户将作为更新者进行保存
         deptDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
@@ -63,6 +66,7 @@ public class DeptController {
      * @return 统一返回实体
      */
     @DeleteMapping("deleteDeptByIds/{deptIds}")
+    @Log(title = "根据id删除科室信息（含批量)",businessType = BusinessType.DELETE)
     public AjaxResult deleteDeptByIds(@PathVariable @Validated @NotNull(message = "要删除的id不能为空") Long[] deptIds){
         return AjaxResult.toAjax(this.deptService.deleteDeptByIds(deptIds));
     }
@@ -83,6 +87,7 @@ public class DeptController {
      * @return 统一返回实体
      */
     @PostMapping("addDept")
+    @Log(title = "添加科室信息",businessType = BusinessType.INSERT)
     public AjaxResult addDept(@Validated DeptDto deptDto){
         // 获取当前登录用户信息，这里的登录用户作为创建者来保存
         deptDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
