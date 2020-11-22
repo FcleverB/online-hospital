@@ -198,7 +198,7 @@ public class AjaxResult extends HashMap<String,Object> {
     }
 
     /**
-     * 返回错误消息
+     * 根据rows情况返回不同类型消息
      *
      * @param rows 状态码
      * @return 添加修改删除转化信息
