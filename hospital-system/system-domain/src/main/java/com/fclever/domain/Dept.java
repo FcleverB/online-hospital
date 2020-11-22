@@ -44,7 +44,7 @@ public class Dept extends BaseEntity {
      * 挂号编号
      */
     @TableField(value = "reg_number")
-    @ApiModelProperty(value="挂号编号")
+    @ApiModelProperty(value="当前科室的挂号数量")
     private Integer regNumber;
 
     /**

@@ -48,8 +48,8 @@ public class DeptDto extends BaseDto {
     /**
      * 挂号编号
      */
-    @NotNull(message = "挂号编号不能为空")
-    @ApiModelProperty(value="挂号编号")
+    @NotNull(message = "挂号数量不能为空")
+    @ApiModelProperty(value="当前科室的挂号数量")
     private Integer regNumber;
 
     /**
