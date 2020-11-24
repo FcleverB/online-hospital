@@ -1,5 +1,7 @@
 package com.fclever.controller.system;
 
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.constants.Constants;
 import com.fclever.domain.Menu;
 import com.fclever.dto.MenuDto;
@@ -29,6 +31,7 @@ public class MenuController {
      * @return 修改是否成功标志
      */
     @PutMapping("updateMenu")
+    @Log(title = "更新菜单信息",businessType = BusinessType.UPDATE)
     public AjaxResult updateMenu(@Validated MenuDto menuDto){
         // 这里设置的就是修改人了
         menuDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
@@ -64,6 +67,7 @@ public class MenuController {
      * @return 是否删除成功标志
      */
     @DeleteMapping("deleteMenuById/{menuId}")
+    @Log(title = "根据id删除菜单信息",businessType = BusinessType.DELETE)
     public AjaxResult deleteMenuById(@PathVariable Long menuId){
         // 删除前要判断当前删除菜单是否含有子节点，如果有不允许删除
         boolean hasChildren = this.menuService.hasChildByMenuId(menuId);
@@ -90,6 +94,7 @@ public class MenuController {
      * @return 是否添加成功标志
      */
     @PostMapping("addMenu")
+    @Log(title = "添加菜单信息",businessType = BusinessType.INSERT)
     public AjaxResult addMenu(@Validated MenuDto menuDto){
         // 保存创建者信息
         menuDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
