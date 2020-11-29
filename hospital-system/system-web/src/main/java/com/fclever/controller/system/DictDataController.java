@@ -97,7 +97,7 @@ public class DictDataController {
      * @return 查询到的字典数据集合
      */
     @GetMapping("getDataByType/{dictType}")
-    public AjaxResult getDataByType(@PathVariable @Validated @NotNull(message = "字典类型不能为空") String dictType){
+    public AjaxResult getDataByType(@PathVariable @Validated @NotBlank(message = "字典类型不能为空") String dictType){
         List<DictData> dictDataList = this.dictDataService.selectDictDataByDictType(dictType);
         return AjaxResult.success("根据字典类型查询数据成功", dictDataList);
     }

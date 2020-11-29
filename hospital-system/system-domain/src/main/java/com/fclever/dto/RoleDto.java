@@ -12,6 +12,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
@@ -38,14 +39,14 @@ public class RoleDto extends BaseDto {
     /**
      * 角色名称
      */
-    @NotNull(message = "角色名称不能为空")
+    @NotBlank(message = "角色名称不能为空")
     @ApiModelProperty(value="角色名称")
     private String roleName;
 
     /**
      * 角色码值
      */
-    @NotNull(message = "角色码值不能为空")
+    @NotBlank(message = "角色码值不能为空")
     @ApiModelProperty(value="角色码值")
     private String roleCode;
 
@@ -65,7 +66,7 @@ public class RoleDto extends BaseDto {
     /**
      * 角色状态（0正常 1停用）
      */
-    @NotNull(message = "角色状态不能为空")
+    @NotBlank(message = "角色状态不能为空")
     @ApiModelProperty(value="角色状态（0正常 1停用）")
     private String status;
 

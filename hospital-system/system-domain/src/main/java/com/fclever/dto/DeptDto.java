@@ -12,6 +12,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
@@ -41,7 +42,7 @@ public class DeptDto extends BaseDto {
     /**
      * 科室名称
      */
-    @NotNull(message = "科室名称不能为空")
+    @NotBlank(message = "科室名称不能为空")
     @ApiModelProperty(value="科室名称")
     private String deptName;
 
@@ -55,7 +56,7 @@ public class DeptDto extends BaseDto {
     /**
      * 科室编号
      */
-    @NotNull(message = "科室编号不能为空")
+    @NotBlank(message = "科室编号不能为空")
     @ApiModelProperty(value="科室编号")
     private String deptNumber;
 
