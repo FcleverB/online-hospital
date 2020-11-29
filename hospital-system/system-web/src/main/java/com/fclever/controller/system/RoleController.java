@@ -1,5 +1,7 @@
 package com.fclever.controller.system;
 
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.domain.Role;
 import com.fclever.dto.RoleDto;
 import com.fclever.service.RoleService;
@@ -43,6 +45,7 @@ public class RoleController {
      * @return 是否插入成功标志
      */
     @PostMapping("addRole")
+    @Log(title = "添加角色信息",businessType = BusinessType.INSERT)
     public AjaxResult addRole(@Validated RoleDto roleDto){
         roleDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.roleService.addRole(roleDto));
@@ -65,6 +68,7 @@ public class RoleController {
      * @return  是否更新成功的标志
      */
     @PutMapping("updateRole")
+    @Log(title = "更新角色信息",businessType = BusinessType.UPDATE)
     public AjaxResult updateRole(@Validated RoleDto roleDto){
         roleDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.roleService.updateRole(roleDto));
@@ -76,6 +80,7 @@ public class RoleController {
      * @return 是否删除成功标志
      */
     @DeleteMapping("deleteRoleByIds/{roleIds}")
+    @Log(title = "删除角色信息",businessType = BusinessType.DELETE)
     public AjaxResult deleteRoleByIds(@PathVariable Long[] roleIds){
         return AjaxResult.toAjax(this.roleService.deleteRoleByIds(roleIds));
     }
@@ -97,6 +102,7 @@ public class RoleController {
      * @return  是否保存成功信息
      */
     @PostMapping("saveRoleAndMenu/{roleId}/{menuIds}")
+    @Log(title = "保存角色和菜单的关联关系",businessType = BusinessType.INSERT)
     public AjaxResult saveRoleAndMenu(@PathVariable Long roleId, @PathVariable Long[] menuIds){
         /**
          * 使用路径传参，角色id一定不为空，因为是行数据传递过来的，但是menuIds可能为空
