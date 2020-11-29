@@ -58,7 +58,7 @@ public class Menu extends BaseEntity {
      * 菜单类型（M目录 C菜单 F按钮）
      */
     @TableField(value = "menu_type")
-    @ApiModelProperty(value="菜单类型（M目录 C菜单 F按钮）")
+    @ApiModelProperty(value="菜单类型（M目录 C菜单 F权限）")
     private String menuType;
 
     /**

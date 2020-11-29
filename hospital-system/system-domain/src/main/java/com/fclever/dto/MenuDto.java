@@ -58,7 +58,7 @@ public class MenuDto extends BaseDto {
      * 菜单类型（M目录 C菜单 F按钮）
      */
     @NotNull(message = "菜单类型不能为空")
-    @ApiModelProperty(value="菜单类型（M目录 C菜单 F按钮）")
+    @ApiModelProperty(value="菜单类型（M目录 C菜单 F权限）")
     private String menuType;
 
     /**

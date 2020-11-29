@@ -124,7 +124,6 @@ public class LoginController {
      * @return
      */
     @PostMapping("login/logout")
-    @Log(title = "用户退出",businessType = BusinessType.OTHER)
     public AjaxResult logout(){
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
