@@ -38,6 +38,18 @@
         <option name="removeTablePreName" value="sys_" />
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="onlinehospital:sys_dept">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="dept_id" />
+                  <option name="javaModelName" value="Dept" />
+                  <option name="moduleName" value="hospital-system" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="onlinehospital:sys_dict_data">
               <value>
                 <TableGenerateConfig>
@@ -91,6 +103,18 @@
                 <TableGenerateConfig>
                   <option name="generatedKey" value="oper_id" />
                   <option name="javaModelName" value="OperationLog" />
+                  <option name="moduleName" value="hospital-system" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="onlinehospital:sys_role">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="role_id" />
+                  <option name="javaModelName" value="Role" />
                   <option name="moduleName" value="hospital-system" />
                   <option name="sequenceColumn" value="" />
                   <option name="sequenceId" value="" />

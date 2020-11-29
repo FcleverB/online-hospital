@@ -1065,7 +1065,7 @@
       <Comment>检查费用表</Comment>
     </table>
     <table id="278" parent="22" name="sys_dept">
-      <Comment>部门/科室表</Comment>
+      <Comment>科室信息表</Comment>
     </table>
     <table id="279" parent="22" name="sys_dict_data">
       <Comment>字典数据表</Comment>
@@ -2832,7 +2832,7 @@
     </key>
     <column id="562" parent="278" name="dept_id">
       <Position>1</Position>
-      <Comment>部门科室id</Comment>
+      <Comment>科室主键id</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
@@ -2840,14 +2840,14 @@
     </column>
     <column id="563" parent="278" name="dept_name">
       <Position>2</Position>
-      <Comment>部门名称</Comment>
+      <Comment>科室名称</Comment>
       <DataType>varchar(30)|0s</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="564" parent="278" name="reg_number">
       <Position>3</Position>
-      <Comment>挂号编号</Comment>
+      <Comment>当前科室的挂号数量</Comment>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
@@ -2871,7 +2871,7 @@
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="568" parent="278" name="leader_phone">
+    <column id="568" parent="278" name="contact_phone">
       <Position>7</Position>
       <Comment>联系电话</Comment>
       <DataType>varchar(11)|0s</DataType>
@@ -2879,7 +2879,7 @@
     </column>
     <column id="569" parent="278" name="status">
       <Position>8</Position>
-      <Comment>部门状态（0正常 1停用）</Comment>
+      <Comment>科室状态（0正常 1停用）</Comment>
       <DataType>char(1)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
@@ -3193,7 +3193,7 @@
     </column>
     <column id="616" parent="282" name="menu_type">
       <Position>5</Position>
-      <Comment>菜单类型（M目录 C菜单 F按钮）</Comment>
+      <Comment>菜单类型（M目录 C菜单 F权限）</Comment>
       <DataType>char(1)|0s</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
@@ -3529,7 +3529,7 @@
     </column>
     <column id="665" parent="286" name="role_code">
       <Position>3</Position>
-      <Comment>角色权限编码</Comment>
+      <Comment>角色码值</Comment>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
