@@ -142,12 +142,16 @@ public class RoleServiceImpl implements RoleService{
      */
     @Override
     public int saveRoleAndMenu(Long roleId, Long[] menuIds) {
-        // 删除关联表中原来的sys_role_menu数据
-        this.roleMapper.deleteRoleMenuByRoleIds(Arrays.asList(roleId));
-        int row = 0;
+        int row = 1;
         // 重新进行保存
-        for (Long menuId : menuIds) {
-            row += this.roleMapper.saveRoleMenu(roleId,menuId);
+        try{
+            // 删除关联表中原来的sys_role_menu数据
+            this.roleMapper.deleteRoleMenuByRoleIds(Arrays.asList(roleId));
+            for (Long menuId : menuIds) {
+                this.roleMapper.saveRoleMenu(roleId,menuId);
+            }
+        }catch (Exception e){
+            return 0;
         }
         return row;
     }

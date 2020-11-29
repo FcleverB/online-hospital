@@ -109,7 +109,7 @@ public class RoleController {
          * 前端对此进行了判断，如果是空的，传递过来的menuIds是【-1】的内容
          * 因此后端也要进行识别，这种情况表示该角色没有选择任何一个菜单
          */
-        if (menuIds.length == 1 && menuIds[0].equals(1L)){
+        if (menuIds.length == 1 && menuIds[0].equals(-1L)){
             menuIds = new Long[]{};
         }
         return AjaxResult.toAjax(this.roleService.saveRoleAndMenu(roleId,menuIds));
