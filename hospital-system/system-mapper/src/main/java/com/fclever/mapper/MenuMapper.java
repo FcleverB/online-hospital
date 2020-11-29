@@ -19,4 +19,11 @@ public interface MenuMapper extends BaseMapper<Menu> {
      * @return 查询到的子菜单个数
      */
     Long queryChildCountByMenuId(@Param("menuId") Long menuId);
+
+    /**
+     * 根据角色id查询该角色已经分配的所有菜单id（仅仅查询子菜单id）
+     * @param roleId    角色id
+     * @return  查询结果
+     */
+    List<Long> queryMenuIdsByRoleId(@Param("roleId") Long roleId);
 }

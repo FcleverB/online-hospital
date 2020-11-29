@@ -100,4 +100,15 @@ public class MenuController {
         menuDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.menuService.addMenu(menuDto));
     }
+
+    /**
+     * 根据角色id查询该角色已经分配的所有菜单id（仅仅查询子菜单id）
+     * @param roleId    角色id
+     * @return  查询结果
+     */
+    @GetMapping("getMenuIdsByRoleId/{roleId}")
+    public AjaxResult getMenuIdsByRoleId(@PathVariable Long roleId){
+        List<Long> menuIds = this.menuService.getMenuIdsByRoleId(roleId);
+        return AjaxResult.success("查询对应角色的菜单权限成功",menuIds);
+    }
 }

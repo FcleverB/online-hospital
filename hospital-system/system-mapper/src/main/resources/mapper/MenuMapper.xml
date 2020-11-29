@@ -28,4 +28,39 @@
   <select id="queryChildCountByMenuId" resultType="java.lang.Long">
     select count(1) from sys_menu where parent_id = #{menuId}
   </select>
+
+  <!--根据角色id查询该角色已经分配的所有菜单id(仅仅查询子菜单id  not in就是用来排除是父菜单id的条件）-->
+  <!--
+    select rmone.menu_id from sys_role_menu rmone
+    where rmone.role_id = #{roleId}
+          可以查询到角色-菜单关联表中，要查询的角色id已经分配的菜单id
+          但是这样的查询结果中含有父菜单id，如果按这种形式返回到前台，那么会导致某个父菜单下明明仅仅选择了非全部子菜单，
+          但是显示为全部勾选
+    and rm.menu_id not in
+    (
+        select m.parent_id from sys_menu m
+        inner join sys_role_menu rmtwo
+        on m.menu_id = rmtwo.menu_id and rmtwo.role_id = #{roleId}
+    )
+          这里进行进一步过滤，联合菜单表和角色-菜单关联表，查找出两表中menu_id相同的记录
+          并且筛选出这些记录中在关联表中的角色id为查询的角色id，这样的话，就可以查询出所有和外层select同样的结果
+          但是最终是通过菜单表，找到以上数据的父菜单id，只要外层查询结果的菜单id不再这些父菜单id之内，就表示为子菜单id
+    以下两个SQL查询结果是一样的
+          select rmone.menu_id from sys_role_menu rmone
+          where rmone.role_id = #{roleId}
+
+          select m.menu_id from sys_menu m
+          inner join sys_role_menu rmtwo
+          on m.menu_id = rmtwo.menu_id and rmtwo.role_id = #{roleId}
+    括号内的作用+and rm.menu_id not in  就是为了把父菜单排除掉，因为只要返回子菜单，前端就可以自动判断父菜单是全选还是半选
+  -->
+  <select id="queryMenuIdsByRoleId" resultType="java.lang.Long">
+    select rmone.menu_id from sys_role_menu rmone
+    where rmone.role_id = #{roleId} and rmone.menu_id not in
+    (
+        select distinct(m.parent_id) from sys_menu m
+        inner join sys_role_menu rmtwo
+        on m.menu_id = rmtwo.menu_id and rmtwo.role_id = #{roleId}
+    )
+  </select>
 </mapper>

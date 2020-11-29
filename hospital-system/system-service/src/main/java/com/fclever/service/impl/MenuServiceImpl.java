@@ -130,4 +130,14 @@ public class MenuServiceImpl implements MenuService{
         Long count = this.menuMapper.queryChildCountByMenuId(menuId);
         return count > 0L ? true : false;
     }
+
+    /**
+     * 根据角色id查询该角色已经分配的所有菜单id（仅仅查询子菜单id）
+     * @param roleId    角色id
+     * @return  查询结果
+     */
+    @Override
+    public List<Long> getMenuIdsByRoleId(Long roleId) {
+        return this.menuMapper.queryMenuIdsByRoleId(roleId);
+    }
 }

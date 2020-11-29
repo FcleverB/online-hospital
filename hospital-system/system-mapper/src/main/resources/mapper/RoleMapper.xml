@@ -41,4 +41,9 @@
       </foreach>
     </where>
   </delete>
+
+  <!--保存角色和菜单的关联关系-->
+  <insert id="saveRoleMenu">
+    insert into sys_role_menu (role_id, menu_id) values (#{roleId},#{menuId})
+  </insert>
 </mapper>

@@ -133,4 +133,22 @@ public class RoleServiceImpl implements RoleService{
         // 返回
         return this.roleMapper.selectList(qw);
     }
+
+    /**
+     * 保存角色和菜单的关联关系
+     * @param roleId    角色id
+     * @param menuIds   菜单id集合
+     * @return  是否保存成功信息
+     */
+    @Override
+    public int saveRoleAndMenu(Long roleId, Long[] menuIds) {
+        // 删除关联表中原来的sys_role_menu数据
+        this.roleMapper.deleteRoleMenuByRoleIds(Arrays.asList(roleId));
+        int row = 0;
+        // 重新进行保存
+        for (Long menuId : menuIds) {
+            row += this.roleMapper.saveRoleMenu(roleId,menuId);
+        }
+        return row;
+    }
 }

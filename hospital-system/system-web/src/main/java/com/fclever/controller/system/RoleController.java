@@ -89,4 +89,23 @@ public class RoleController {
         List<Role> roles = this.roleService.selectAllRoles();
         return AjaxResult.success(roles);
     }
+
+    /**
+     * 保存角色和菜单的关联关系
+     * @param roleId    角色id
+     * @param menuIds   菜单id集合
+     * @return  是否保存成功信息
+     */
+    @PostMapping("saveRoleAndMenu/{roleId}/{menuIds}")
+    public AjaxResult saveRoleAndMenu(@PathVariable Long roleId, @PathVariable Long[] menuIds){
+        /**
+         * 使用路径传参，角色id一定不为空，因为是行数据传递过来的，但是menuIds可能为空
+         * 前端对此进行了判断，如果是空的，传递过来的menuIds是【-1】的内容
+         * 因此后端也要进行识别，这种情况表示该角色没有选择任何一个菜单
+         */
+        if (menuIds.length == 1 && menuIds[0].equals(1L)){
+            menuIds = new Long[]{};
+        }
+        return AjaxResult.toAjax(this.roleService.saveRoleAndMenu(roleId,menuIds));
+    }
 }

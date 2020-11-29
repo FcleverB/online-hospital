@@ -53,4 +53,12 @@ public interface RoleService{
      * @return  查询结果
      */
     List<Role> selectAllRoles();
+
+    /**
+     * 保存角色和菜单的关联关系
+     * @param roleId    角色id
+     * @param menuIds   菜单id集合
+     * @return  是否保存成功信息
+     */
+    int saveRoleAndMenu(Long roleId, Long[] menuIds);
 }
