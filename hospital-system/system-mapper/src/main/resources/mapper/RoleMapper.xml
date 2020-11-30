@@ -46,4 +46,24 @@
   <insert id="saveRoleMenu">
     insert into sys_role_menu (role_id, menu_id) values (#{roleId},#{menuId})
   </insert>
+
+  <!--根据用户id删除用户-角色关联表数据-->
+  <delete id="deleteRoleUserByUserIds">
+    delete from sys_role_user
+    <where>
+      <foreach collection="userIdsList" open="user_id in (" separator="," close=")" item="userId">
+        #{userId}
+      </foreach>
+    </where>
+  </delete>
+
+  <!--根据菜单id删除角色-菜单关联表数据-->
+  <delete id="deleteRoleMenuByMenuIds">
+    delete from sys_role_menu
+    <where>
+      <foreach collection="menuIdsList" open="menu_id in (" separator="," close=")" item="menuId">
+        #{menuId}
+      </foreach>
+    </where>
+  </delete>
 </mapper>

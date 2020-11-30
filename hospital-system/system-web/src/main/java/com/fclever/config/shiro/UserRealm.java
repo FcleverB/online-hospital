@@ -43,7 +43,7 @@ public class UserRealm extends AuthorizingRealm {
         // 获取用户登录名   getPrincipal输入的用户名    getCredentials输入的密码
         String phone = token.getPrincipal().toString();
         // 根据电话查询用户是否存在
-        User user = userService.queryUserByPhone(phone);
+        User user = this.userService.queryUserByPhone(phone);
         if (null != user){ // 用户名验证正确，继续验证密码
             // 组装存放到redis中的对象ActiverUser
             /**

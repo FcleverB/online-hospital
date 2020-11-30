@@ -8,9 +8,11 @@ import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.fclever.constants.Constants;
 import com.fclever.domain.SimpleUser;
 import com.fclever.dto.MenuDto;
+import com.fclever.mapper.RoleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
+import java.util.Arrays;
 import java.util.List;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fclever.domain.Menu;
@@ -25,6 +27,9 @@ public class MenuServiceImpl implements MenuService{
 
     @Autowired
     private MenuMapper menuMapper;
+
+    @Autowired
+    private RoleMapper roleMapper;
 
     /**
      * 查询菜单信息
@@ -89,7 +94,10 @@ public class MenuServiceImpl implements MenuService{
      */
     @Override
     public int deleteMenuById(Long menuId) {
-        // 删除菜单权限中间表sys_role_menu的数据【后续添加】
+        // 删除菜单权限中间表sys_role_menu的数据
+        // 菜单管理这里的删除没有批量
+        List<Long> menuIdsList = Arrays.asList(menuId);
+        this.roleMapper.deleteRoleMenuByMenuIds(menuIdsList);
         return this.menuMapper.deleteById(menuId);
     }
 
