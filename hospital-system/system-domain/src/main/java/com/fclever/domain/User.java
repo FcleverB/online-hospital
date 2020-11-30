@@ -36,14 +36,14 @@ public class User extends BaseEntity{
      * 部门ID
      */
     @TableField(value = "dept_id")
-    @ApiModelProperty(value="部门ID")
+    @ApiModelProperty(value="科室ID")
     private Long deptId;
 
     /**
      * 用户账号
      */
     @TableField(value = "user_name")
-    @ApiModelProperty(value="用户账号")
+    @ApiModelProperty(value="用户名称")
     private String userName;
 
     /**
@@ -78,7 +78,7 @@ public class User extends BaseEntity{
      * 学历 sys_dict_type:sys_user_background
      */
     @TableField(value = "background")
-    @ApiModelProperty(value="学历 sys_dict_type:sys_user_background")
+    @ApiModelProperty(value="学历 字典：sys_user_background")
     private String background;
 
     /**
@@ -98,9 +98,9 @@ public class User extends BaseEntity{
     /**
      * 擅长
      */
-    @TableField(value = "strong")
-    @ApiModelProperty(value="擅长")
-    private String strong;
+    @TableField(value = "hobby")
+    @ApiModelProperty(value="爱好")
+    private String hobby;
 
     /**
      * 荣誉
@@ -121,7 +121,7 @@ public class User extends BaseEntity{
 医生级别sys_dict_type:sys_user_level
      */
     @TableField(value = "user_rank")
-    @ApiModelProperty(value=",医生级别sys_dict_type:sys_user_level")
+    @ApiModelProperty(value=",医生级别   字典：sys_user_level")
     private String userRank;
 
     /**
@@ -232,7 +232,7 @@ public class User extends BaseEntity{
 
     public static final String COL_EMAIL = "email";
 
-    public static final String COL_STRONG = "strong";
+    public static final String COL_HOBBY = "hobby";
 
     public static final String COL_HONOR = "honor";
 
