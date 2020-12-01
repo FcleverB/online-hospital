@@ -1,5 +1,7 @@
 package com.fclever.controller.system;
 
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.domain.User;
 import com.fclever.dto.UserDto;
 import com.fclever.service.UserService;
@@ -10,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -41,6 +45,7 @@ public class UserController {
      * @return 结果
      */
     @PostMapping("addUser")
+    @Log(title = "添加用户信息",businessType = BusinessType.INSERT)
     public AjaxResult addUser(@Validated UserDto userDto){
         // 设置登录用户作为创建者
         userDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
@@ -54,7 +59,7 @@ public class UserController {
      * @return 结果
      */
     @GetMapping("getUserById/{userId}")
-    public AjaxResult getUserById(@PathVariable Long userId){
+    public AjaxResult getUserById(@PathVariable  @Validated @NotEmpty(message = "用户id不能为空") Long userId){
         return AjaxResult.success(this.userService.getUserById(userId));
     }
 
@@ -64,6 +69,7 @@ public class UserController {
      * @return 结果
      */
     @PutMapping("updateUser")
+    @Log(title = "修改用户信息",businessType = BusinessType.UPDATE)
     public AjaxResult updateUser(@Validated UserDto userDto){
         // 设置登录用户作为更新这
         userDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
@@ -76,7 +82,8 @@ public class UserController {
      * @return 结果
      */
     @DeleteMapping("deleteUserByIds/{userIds}")
-    public AjaxResult deleteUserByIds(@PathVariable Long[] userIds){
+    @Log(title = "删除用户信息（含批量）",businessType = BusinessType.DELETE)
+    public AjaxResult deleteUserByIds(@PathVariable  @Validated @NotNull(message = "用户id不能为空") Long[] userIds){
         return AjaxResult.toAjax(this.userService.deleteUserByIds(userIds));
     }
 
@@ -86,7 +93,8 @@ public class UserController {
      * @return 结果
      */
     @PutMapping("resetPassword/{userIds}")
-    public AjaxResult resetPassword(@PathVariable Long[] userIds){
+    @Log(title = "重置用户密码",businessType = BusinessType.UPDATE)
+    public AjaxResult resetPassword(@PathVariable @Validated @NotEmpty(message = "用户id不能为空") Long[] userIds){
         if (userIds.length > 0){
             return AjaxResult.toAjax(this.userService.resetPassword(userIds));
         }
