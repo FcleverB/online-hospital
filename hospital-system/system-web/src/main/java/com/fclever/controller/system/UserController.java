@@ -2,7 +2,6 @@ package com.fclever.controller.system;
 
 import com.fclever.aspectj.annotation.Log;
 import com.fclever.aspectj.enums.BusinessType;
-import com.fclever.domain.User;
 import com.fclever.dto.UserDto;
 import com.fclever.service.UserService;
 import com.fclever.utils.ShiroSecurityUtils;

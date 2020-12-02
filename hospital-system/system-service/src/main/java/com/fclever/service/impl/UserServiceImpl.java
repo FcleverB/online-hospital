@@ -163,6 +163,8 @@ public class UserServiceImpl implements UserService{
             if (user.getUserType().equals(Constants.USER_ADMIN)){
                 defaultPassword = "123456";
             }else {
+                // 电话号码为11位，substring截取的是从索引为5（包括）的位置开始截取到最后
+                // "Harbison".substring(3) returns "bison"
                 defaultPassword = user.getPhone().substring(5);
             }
             user.setSalt(Md5Utils.createSalt());

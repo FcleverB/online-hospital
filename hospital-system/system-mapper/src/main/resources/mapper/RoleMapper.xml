@@ -66,4 +66,9 @@
       </foreach>
     </where>
   </delete>
+
+  <!--根据用户id查询该用户已经分配的所有角色id-->
+  <select id="queryRoleIdsByUserId" resultType="java.lang.Long">
+    select role_id from sys_role_user where user_id = #{userId}
+  </select>
 </mapper>

@@ -61,4 +61,11 @@ public interface RoleService{
      * @return  是否保存成功信息
      */
     int saveRoleAndMenu(Long roleId, Long[] menuIds);
+
+    /**
+     * 根据用户id查询该用户已经分配的所有角色id
+     * @param userId    用户id
+     * @return  查询结果
+     */
+    List<Long> getRoleIdsByUserId(Long userId);
 }

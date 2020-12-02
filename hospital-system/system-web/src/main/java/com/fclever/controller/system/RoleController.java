@@ -114,4 +114,14 @@ public class RoleController {
         }
         return AjaxResult.toAjax(this.roleService.saveRoleAndMenu(roleId,menuIds));
     }
+
+    /**
+     * 根据用户id查询该用户已经分配的所有角色id
+     * @param userId    用户id
+     * @return  查询结果
+     */
+    @GetMapping("getRoleIdsByUserId/{userId}")
+    public AjaxResult getRoleIdsByUserId(@PathVariable Long userId){
+        return AjaxResult.success("查询该用户所拥有的角色成功", this.roleService.getRoleIdsByUserId(userId));
+    }
 }

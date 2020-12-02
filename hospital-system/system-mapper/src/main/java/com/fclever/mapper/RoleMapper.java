@@ -43,4 +43,11 @@ public interface RoleMapper extends BaseMapper<Role> {
      * @param menuIdsList   待删除菜单id
      */
     void deleteRoleMenuByMenuIds(@Param("menuIdsList") List<Long> menuIdsList);
+
+    /**
+     * 根据用户id查询该用户已经分配的所有角色id
+     * @param userId    用户id
+     * @return  查询结果
+     */
+    List<Long> queryRoleIdsByUserId(@Param("userId") Long userId);
 }

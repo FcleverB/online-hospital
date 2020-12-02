@@ -155,4 +155,14 @@ public class RoleServiceImpl implements RoleService{
         }
         return row;
     }
+
+    /**
+     * 根据用户id查询该用户已经分配的所有角色id
+     * @param userId    用户id
+     * @return  查询结果
+     */
+    @Override
+    public List<Long> getRoleIdsByUserId(Long userId) {
+        return this.roleMapper.queryRoleIdsByUserId(userId);
+    }
 }
