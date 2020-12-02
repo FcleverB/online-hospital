@@ -70,4 +70,12 @@ public interface UserService{
      * @return 查询结果
      */
     List<User> selectAllUser();
+
+    /**
+     * 保存用户和角色信息
+     * @param userId 用户id
+     * @param roleIds 角色id数组
+     * @return 是否保存成功标志
+     */
+    int saveUserAndRole(Long userId, Long[] roleIds);
 }

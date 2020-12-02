@@ -191,4 +191,26 @@ public class UserServiceImpl implements UserService{
         return this.userMapper.selectList(qw);
     }
 
+    /**
+     * 保存用户和角色信息
+     * @param userId 用户id
+     * @param roleIds 角色id数组
+     * @return 是否保存成功标志
+     */
+    @Override
+    public int saveUserAndRole(Long userId, Long[] roleIds) {
+        int row = 1;
+        // 重新进行保存
+        try{
+            // 删除关联表中原来的sys_role_user数据
+            this.roleMapper.deleteRoleUserByUserIds(Arrays.asList(userId))  ;
+            for (Long roleId : roleIds) {
+                this.userMapper.saveUserRole(userId, roleId);
+            }
+        }catch (Exception e){
+            return 0;
+        }
+        return row;
+    }
+
 }

@@ -39,4 +39,9 @@
     `status`, union_id, open_id, create_time, update_time, create_by, update_by, salt, 
     del_flag, scheduling_flag
   </sql>
+
+  <!--保存用户和角色信息-->
+  <insert id="saveUserRole">
+    insert into sys_role_user (user_id, role_id) values (#{userId},#{roleId})
+  </insert>
 </mapper>

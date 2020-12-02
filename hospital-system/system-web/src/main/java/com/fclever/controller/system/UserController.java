@@ -108,4 +108,17 @@ public class UserController {
     public AjaxResult selectAllUser(){
         return AjaxResult.success(this.userService.selectAllUser());
     }
+
+    @PostMapping("saveUserAndRole/{userId}/{roleIds}")
+    public AjaxResult saveUserAndRole(@PathVariable Long userId, @PathVariable Long[] roleIds){
+        /**
+         * 使用路径传参，角色id一定不为空，因为是行数据传递过来的，但是menuIds可能为空
+         * 前端对此进行了判断，如果是空的，传递过来的menuIds是【-1】的内容
+         * 因此后端也要进行识别，这种情况表示该角色没有选择任何一个菜单
+         */
+        if (roleIds.length == 1 && roleIds[0].equals(-1L)){
+            roleIds = new Long[]{};
+        }
+        return AjaxResult.toAjax(this.userService.saveUserAndRole(userId, roleIds));
+    }
 }
