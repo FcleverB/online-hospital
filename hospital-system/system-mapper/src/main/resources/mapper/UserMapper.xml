@@ -14,7 +14,7 @@
     <result column="background" jdbcType="CHAR" property="background" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="email" jdbcType="VARCHAR" property="email" />
-    <result column="strong" jdbcType="VARCHAR" property="strong" />
+    <result column="hobby" jdbcType="VARCHAR" property="hobby" />
     <result column="honor" jdbcType="VARCHAR" property="honor" />
     <result column="introduction" jdbcType="LONGVARCHAR" property="introduction" />
     <result column="user_rank" jdbcType="CHAR" property="userRank" />

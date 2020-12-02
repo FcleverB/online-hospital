@@ -109,6 +109,12 @@ public class UserController {
         return AjaxResult.success(this.userService.selectAllUser());
     }
 
+    /**
+     * 保存用户和角色信息
+     * @param userId 用户id
+     * @param roleIds 角色id数组
+     * @return 操作结果
+     */
     @PostMapping("saveUserAndRole/{userId}/{roleIds}")
     public AjaxResult saveUserAndRole(@PathVariable Long userId, @PathVariable Long[] roleIds){
         /**
