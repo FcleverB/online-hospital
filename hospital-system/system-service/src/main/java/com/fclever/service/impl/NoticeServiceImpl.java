@@ -39,6 +39,8 @@ public class NoticeServiceImpl implements NoticeService{
         BeanUtil.copyProperties(noticeDto, notice);
         // 设置更新人
         notice.setUpdateBy(noticeDto.getSimpleUser().getUserName());
+        // 设置更新时间
+        notice.setUpdateTime(DateUtil.date());
         //执行更新操作
         return this.noticeMapper.updateById(notice);
     }
