@@ -1,5 +1,7 @@
 package com.fclever.controller.system;
 
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.dto.CheckItemDto;
 import com.fclever.service.CheckItemService;
 import com.fclever.utils.ShiroSecurityUtils;
@@ -27,6 +29,7 @@ public class CheckItemController {
      * @return 是否修改成功标志
      */
     @PutMapping("updateCheckItem")
+    @Log(title = "修改检查项目",businessType = BusinessType.UPDATE)
     public AjaxResult updateCheckItem(@Validated CheckItemDto checkItemDto){
         // 获取登录用户作为更新人
         checkItemDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
@@ -50,6 +53,7 @@ public class CheckItemController {
      * @return 是否删除成功标志
      */
     @DeleteMapping("deleteCheckItemByIds/{checkItemIds}")
+    @Log(title = "根据id删除检查项目（含批量）",businessType = BusinessType.DELETE)
     public AjaxResult deleteCheckItemByIds(@PathVariable Long[] checkItemIds){
         return AjaxResult.toAjax(this.checkItemService.deleteCheckItemByIds(checkItemIds));
     }
@@ -79,6 +83,7 @@ public class CheckItemController {
      * @return 是否添加成功标志
      */
     @PostMapping("addCheckItem")
+    @Log(title = "添加检查项目",businessType = BusinessType.INSERT)
     public AjaxResult addCheckItem(@Validated CheckItemDto checkItemDto){
         // 获取登录用户作为更新人
         checkItemDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
