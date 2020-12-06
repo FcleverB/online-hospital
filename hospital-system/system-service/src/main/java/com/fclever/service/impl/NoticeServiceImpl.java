@@ -61,6 +61,8 @@ public class NoticeServiceImpl implements NoticeService{
         qw.like(StringUtils.isNotBlank(noticeDto.getCreateBy()), Notice.COL_CREATE_BY, noticeDto.getCreateBy());
         // 精确匹配公告类型
         qw.eq(StringUtils.isNotBlank(noticeDto.getNoticeType()), Notice.COL_NOTICE_TYPE, noticeDto.getNoticeType());
+        // 精确匹配公告状态
+        qw.eq(StringUtils.isNotBlank(noticeDto.getStatus()), Notice.COL_STATUS, noticeDto.getStatus());
         // 排序  创建时间升序
         qw.orderByAsc(Notice.COL_CREATE_TIME);
         // 执行查询
@@ -76,12 +78,11 @@ public class NoticeServiceImpl implements NoticeService{
      */
     @Override
     public int deleteNoticeByIds(Long[] noticeIds) {
-        int row = 0;
         List<Long> noticeIdsList = Arrays.asList(noticeIds);
         if (noticeIdsList != null && noticeIdsList.size() > 0 ){
-            row += this.noticeMapper.deleteBatchIds(noticeIdsList);
+            return this.noticeMapper.deleteBatchIds(noticeIdsList);
         }
-        return row;
+        return 0;
     }
 
     /**

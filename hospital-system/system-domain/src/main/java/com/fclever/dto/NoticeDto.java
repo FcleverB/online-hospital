@@ -67,6 +67,11 @@ public class NoticeDto extends BaseDto {
      * 创建者
      */
     @ApiModelProperty(value="创建者")
-    @NotBlank(message = "创建者不能为空")
     private String createBy;
+
+    /**
+     * 备注
+     */
+    @ApiModelProperty(value="备注")
+    private String remark;
 }
