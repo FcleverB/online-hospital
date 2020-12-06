@@ -8,9 +8,9 @@ import com.fclever.vo.DataGridView;
 import java.util.List;
 
 /**
-@author Fclever
-@create 2020-12-05 16:18
-*/
+ @author Fclever
+ @create 2020-12-05 16:18
+ */
 public interface RegisteredItemService{
 
     /**

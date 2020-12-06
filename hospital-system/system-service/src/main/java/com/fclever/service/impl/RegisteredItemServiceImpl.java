@@ -18,9 +18,9 @@ import com.fclever.mapper.RegisteredItemMapper;
 import com.fclever.domain.RegisteredItem;
 import com.fclever.service.RegisteredItemService;
 /**
-@author Fclever
-@create 2020-12-05 16:18
-*/
+ @author Fclever
+ @create 2020-12-05 16:18
+ */
 @Service
 public class RegisteredItemServiceImpl implements RegisteredItemService{
 

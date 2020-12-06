@@ -17,13 +17,13 @@ import java.util.Date;
 
 /**
  * 挂号费用
-@author Fclever
-@create 2020-12-05 16:18
-*/
+ @author Fclever
+ @create 2020-12-05 16:18
+ */
 
 /**
-    * 挂号项目信息表
-    */
+ * 挂号项目信息表
+ */
 @ApiModel(value="com-fclever-dto-RegisteredItemDto")
 @Data
 @EqualsAndHashCode(callSuper=true)
