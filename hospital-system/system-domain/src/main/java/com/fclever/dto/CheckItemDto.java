@@ -62,7 +62,7 @@ public class CheckItemDto extends BaseDto {
      * 项目成本
      */
     @ApiModelProperty(value="项目成本")
-    @NotBlank(message = "项目成本不能为空")
+    @NotNull(message = "项目成本不能为空")
     private BigDecimal cost;
 
     /**
