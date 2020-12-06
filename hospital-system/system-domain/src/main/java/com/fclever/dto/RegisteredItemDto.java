@@ -12,6 +12,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -40,25 +42,20 @@ public class RegisteredItemDto extends BaseDto {
      * 挂号项目名称
      */
     @ApiModelProperty(value="挂号项目名称")
+    @NotBlank(message = "挂号项目名称不能为空")
     private String regItemName;
 
     /**
      * 挂号费用
      */
     @ApiModelProperty(value="挂号费用")
+    @NotNull(message = "挂号费用不能为空")
     private BigDecimal regItemFee;
 
     /**
      * 状态（0正常 1停用）
      */
-    @TableField(value = "status")
     @ApiModelProperty(value="状态（0正常 1停用）")
+    @NotBlank(message = "状态不能为空")
     private String status;
-
-    /**
-     * 删除标志（0正常 1删除）
-     */
-    @TableField(value = "del_flag")
-    @ApiModelProperty(value="删除标志（0正常 1删除）")
-    private String delFlag;
 }
