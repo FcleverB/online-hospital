@@ -84,3 +84,42 @@
     - 第二种：删除后，分页回到第一页，每页页数与删除前一致
     - ![image-20201129154954917](onlinehospital.assets/image-20201129154954917.png)
 - 再次强调，vue页面中Import和全局方法直接调用，不能写this.，因为this调用的是当前页面的方法
+- 用户---角色---菜单   关联删除方法----YApi，暂时都写在角色管理API里面了，后续进行分类划分
+- 常见的合法性校验需要在前端配置
+  - 电话
+  - 邮箱
+  - 中文
+  - 长度
+- 以用户管理为例，为啥登录成功后，进行用户添加，删除等操作不输入token也能进行操作，token用来干嘛？？
+- 统一调整Controller中和实体类中的校验
+  - @NotNull
+    - 不能为null，但可以为empty，没有size的约束
+  - @NotEmpty
+    - String，Collection，Map，数组不能为null或者长度不能为0
+  - @NotBlank
+    - 只能用于String，不能为null，并且trim后size大于0
+- 再次强调，做好规范统一工作
+- 方法的命名规范，比如addxxx、updatexxx，selectxxx，也方便了后期开发新功能的替换
+- 检查查询条件部分的placeholder的提示信息
+- 页面的提示信息统一修改，以保存表单为例，添加和保存走同一个方法，那么可以把公共部分抽取到外部
+  - ![image-20201202084359828](onlinehospital.assets/image-20201202084359828.png)
+  - ![image-20201202084414074](onlinehospital.assets/image-20201202084414074.png)
+- 检查各页面保存和修改表单的校验，是否前后端一致
+  - ![image-20201202084936602](onlinehospital.assets/image-20201202084936602.png)
+- 数据列表列头排序功能
+- 对Controller的返回值进行统一规划，成功与失败等等
+- 封装前端API请求前缀
+  - ![image-20201203134521003](onlinehospital.assets/image-20201203134521003.png)
+- MarkDown组件无法设置禁用状态，是否考虑替换为textarea
+  - ![image-20201204131059594](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201204131059594.png)
+- 核对校验
+  - 数据库的主键--NotNull
+  - 页面的校验信息
+  - 后端的校验
+- 对于每个实体类的属性中，如果是码表数据，后期统一在代码上添加码表的类型名称注释，方便查看
+  - ![image-20201205113332897](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201205113332897.png)
+- 列表el-table-column特殊点
+  - ![image-20201205151143779](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201205151143779.png)
+  - 在没有formatter的情况下，会根据prop属性进行匹配显示
+  - 如果有formatter，即便prop写错了，只要formatter能进行装换也可以在页面显示出来
+
