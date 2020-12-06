@@ -1,5 +1,7 @@
 package com.fclever.controller.system;
 
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.dto.RegisteredItemDto;
 import com.fclever.service.RegisteredItemService;
 import com.fclever.utils.ShiroSecurityUtils;
@@ -27,6 +29,7 @@ public class RegisteredItemController {
      * @return 是否修改成功标志
      */
     @PutMapping("updateRegisteredItem")
+    @Log(title = "修改挂号信息",businessType = BusinessType.UPDATE)
     public AjaxResult updateRegisteredItem(@Validated RegisteredItemDto registeredItemDto){
         // 获取登录人为更新人
         registeredItemDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
@@ -59,6 +62,7 @@ public class RegisteredItemController {
      * @return 是否删除成功的标志
      */
     @DeleteMapping("deleteRegisteredItemByIds/{regItemId}")
+    @Log(title = "根绝id删除对应挂号信息（含批量）",businessType = BusinessType.DELETE)
     public AjaxResult deleteRegisteredItemByIds(@PathVariable Long[] regItemId){
         return AjaxResult.toAjax(this.registeredItemService.deleteRegiteredItemByIds(regItemId));
     }
@@ -79,6 +83,7 @@ public class RegisteredItemController {
      * @return 是否添加成功的标志
      */
     @PostMapping("addRegisteredItem")
+    @Log(title = "添加挂号费用信息",businessType = BusinessType.INSERT)
     public AjaxResult addRegisteredItem(@Validated RegisteredItemDto registeredItemDto){
         registeredItemDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.registeredItemService.addRegisteredItem(registeredItemDto));
