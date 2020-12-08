@@ -15,5 +15,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ErpApplication {
     public static void main(String[] args) {
         SpringApplication.run(ErpApplication.class, args);
+        System.out.println("系统模块hospital-erp启动成功");
     }
 }
