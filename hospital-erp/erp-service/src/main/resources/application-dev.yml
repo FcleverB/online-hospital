@@ -38,6 +38,6 @@ dubbo:
   application:
     name: hospital-erp-service # 该项目部署在Zookeeper上的服务名称
   registry:
-    address: zookeeper://192.168.125.20:2181
+    address: zookeeper://192.168.125.20:2181?timeout=10000
   consumer:
     check: false # 是否检查消费者
