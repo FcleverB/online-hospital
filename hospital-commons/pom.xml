@@ -60,5 +60,10 @@
             <artifactId>shiro-core</artifactId>
             <version>1.4.2</version>
         </dependency>
+        <!--引入MyBatisPlus启动器-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
     </dependencies>
 </project>

@@ -21,5 +21,7 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-validation:2.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.shiro:shiro-core:1.4.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.2.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.baomidou:mybatis-plus-extension:3.3.1.tmp" level="project" />
   </component>
 </module>
