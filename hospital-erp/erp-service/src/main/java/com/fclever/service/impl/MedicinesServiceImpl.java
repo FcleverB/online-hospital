@@ -30,8 +30,8 @@ public class MedicinesServiceImpl implements MedicinesService {
     private MedicinesMapper medicinesMapper;
 
     /**
-     * 修改药品信息信息
-     * @param medicinesDto 修改的药品信息信息
+     * 修改药品信息
+     * @param medicinesDto 修改的药品信息
      * @return 是否修改成功标志
      */
     @Override
@@ -47,8 +47,8 @@ public class MedicinesServiceImpl implements MedicinesService {
     }
 
     /**
-     * 分页查询药品信息信息
-     * @param medicinesDto 待修改的药品信息信息
+     * 分页查询药品信息
+     * @param medicinesDto 待修改的药品信息
      * @return 分页数据
      */
     @Override
@@ -93,7 +93,7 @@ public class MedicinesServiceImpl implements MedicinesService {
     }
 
     /**
-     * 根据id查询对应的药品信息信息
+     * 根据id查询对应的药品信息
      * @param medicinesId 待查询的药品信息id
      * @return 查询结果
      */
@@ -103,7 +103,7 @@ public class MedicinesServiceImpl implements MedicinesService {
     }
 
     /**
-     * 查询所有可用的药品信息信息
+     * 查询所有可用的药品信息
      * @return 查询结果
      */
     @Override
@@ -117,7 +117,7 @@ public class MedicinesServiceImpl implements MedicinesService {
     }
 
     /**
-     * 添加药品信息信息
+     * 添加药品信息
      * @param medicinesDto 带添加的数据
      * @return 是否添加成功标志
      */
@@ -136,17 +136,19 @@ public class MedicinesServiceImpl implements MedicinesService {
 
     /**
      * 修改指定药品的库存量
+     * @param userName 修改人
      * @param medicinesId 指定的药品主键id
      * @param medicinesStockNum 要调整的库存量
      * @return 是否修改成功标志
      */
     @Override
-    public int updateMedicinesStock(Long medicinesId, Long medicinesStockNum) {
+    public int updateMedicinesStock(String userName, Long medicinesId, Long medicinesStockNum) {
         // 创建实体对象
         Medicines medicines = new Medicines();
         // 设置值
         medicines.setMedicinesId(medicinesId);
         medicines.setMedicinesStockNum(medicinesStockNum);
+        medicines.setUpdateBy(userName);
         // 设置修改人----未实现
         // 执行更新操作
         return this.medicinesMapper.updateById(medicines);
