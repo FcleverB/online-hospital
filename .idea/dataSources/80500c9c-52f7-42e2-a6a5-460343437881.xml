@@ -1062,7 +1062,7 @@
     <table id="275" parent="22" name="stock_purchase"/>
     <table id="276" parent="22" name="stock_purchase_item"/>
     <table id="277" parent="22" name="sys_check_item">
-      <Comment>检查费用表</Comment>
+      <Comment>检查项目表</Comment>
     </table>
     <table id="278" parent="22" name="sys_dept">
       <Comment>科室信息表</Comment>
@@ -1086,6 +1086,7 @@
       <Comment>操作日志记录表</Comment>
     </table>
     <table id="285" parent="22" name="sys_registered_item">
+      <Comment>挂号项目信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="286" parent="22" name="sys_role">
@@ -2234,6 +2235,7 @@
     </key>
     <column id="470" parent="272" name="medicines_id">
       <Position>1</Position>
+      <Comment>药品主键</Comment>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
@@ -2744,7 +2746,7 @@
     </key>
     <column id="549" parent="277" name="check_item_id">
       <Position>1</Position>
-      <Comment>项目费用ID</Comment>
+      <Comment>检查项目ID</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
@@ -2781,7 +2783,7 @@
     </column>
     <column id="554" parent="277" name="unit">
       <Position>6</Position>
-      <Comment>单位</Comment>
+      <Comment>计量单位</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -3261,7 +3263,7 @@
     </key>
     <column id="626" parent="283" name="notice_id">
       <Position>1</Position>
-      <Comment>公告ID</Comment>
+      <Comment>通知ID</Comment>
       <DataType>int(4)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
@@ -3269,27 +3271,27 @@
     </column>
     <column id="627" parent="283" name="notice_title">
       <Position>2</Position>
-      <Comment>公告标题</Comment>
+      <Comment>通知标题</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="628" parent="283" name="notice_type">
       <Position>3</Position>
-      <Comment>公告类型（1通知 2公告）</Comment>
+      <Comment>通知类型（1通知 2公告）</Comment>
       <DataType>char(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="629" parent="283" name="notice_content">
       <Position>4</Position>
-      <Comment>公告内容</Comment>
+      <Comment>通知内容</Comment>
       <DataType>varchar(2000)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="630" parent="283" name="status">
       <Position>5</Position>
-      <Comment>公告状态（0正常 1关闭）</Comment>
+      <Comment>通知状态（0正常 1关闭）</Comment>
       <DataType>char(1)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
@@ -3318,7 +3320,9 @@
       <Position>9</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
     <column id="635" parent="283" name="remark">
       <Position>10</Position>
@@ -3443,7 +3447,7 @@
     </key>
     <column id="653" parent="285" name="reg_item_id">
       <Position>1</Position>
-      <Comment>挂号项ID</Comment>
+      <Comment>挂号项目ID</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
@@ -3457,7 +3461,7 @@
     </column>
     <column id="655" parent="285" name="reg_item_fee">
       <Position>3</Position>
-      <Comment>金额</Comment>
+      <Comment>挂号费用</Comment>
       <DataType>decimal(10,2 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -3691,13 +3695,13 @@ role_id</ColNames>
     </column>
     <column id="690" parent="290" name="dept_id">
       <Position>2</Position>
-      <Comment>部门ID</Comment>
+      <Comment>科室ID</Comment>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="691" parent="290" name="user_name">
       <Position>3</Position>
-      <Comment>用户账号</Comment>
+      <Comment>用户名称</Comment>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
@@ -3730,7 +3734,7 @@ role_id</ColNames>
     </column>
     <column id="696" parent="290" name="background">
       <Position>8</Position>
-      <Comment>学历 sys_dict_type:sys_user_background</Comment>
+      <Comment>学历  字典：sys_user_background</Comment>
       <DataType>char(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -3748,9 +3752,9 @@ role_id</ColNames>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="699" parent="290" name="strong">
+    <column id="699" parent="290" name="hobby">
       <Position>11</Position>
-      <Comment>擅长</Comment>
+      <Comment>爱好</Comment>
       <DataType>varchar(255)|0s</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
@@ -3771,7 +3775,7 @@ role_id</ColNames>
     <column id="702" parent="290" name="user_rank">
       <Position>14</Position>
       <Comment>&#xd;
-医生级别sys_dict_type:sys_user_level</Comment>
+医生级别  字典：sys_user_level</Comment>
       <DataType>char(2)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>

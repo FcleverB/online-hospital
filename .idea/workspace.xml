@@ -4,12 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/RoleService.java" description="int updateRole(RoleDto roleDto);" line="41" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
+    <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="进销存管理hospital-erp中生成">
+      <change beforePath="$PROJECT_DIR$/.idea/MyBatisCodeHelperDatasource.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyBatisCodeHelperDatasource.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/80500c9c-52f7-42e2-a6a5-460343437881.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/80500c9c-52f7-42e2-a6a5-460343437881.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-service/system-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-service/system-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/SystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/SystemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/erp/ProducterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/erp/ProducterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital-erp/erp-interface/src/main/java/com/fclever/service/MedicinesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-erp/erp-interface/src/main/java/com/fclever/service/MedicinesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital-erp/erp-service/src/main/java/com/fclever/service/impl/MedicinesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-erp/erp-service/src/main/java/com/fclever/service/impl/MedicinesServiceImpl.java" afterDir="false" />
     </list>
     <list id="0a8bab89-bf34-481f-9475-97873582964d" name="系统管理hospital-system中挂号费用管理后端增删改查功能实现" comment="" />
     <list id="cf4d9d9c-abbd-4c72-be5e-5aa5cef5e5f1" name="系统管理hospital-system中挂号费用管理后端增删改查功能是吸纳" comment="" />
@@ -79,46 +79,79 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/pom.xml">
+        <entry file="file://$PROJECT_DIR$/hospital-erp/erp-domain/src/main/java/com/fclever/domain/Medicines.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="95" column="8" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="100" selection-end-column="21" />
+            <state relative-caret-position="127">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/SystemApplication.java">
+        <entry file="file://$PROJECT_DIR$/hospital-erp/erp-domain/src/main/java/com/fclever/dto/MedicinesDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="24" selection-end-line="24" />
+            <state relative-caret-position="488">
+              <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="117" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/BaseController.java">
+        <entry file="file://$PROJECT_DIR$/hospital-erp/erp-interface/src/main/java/com/fclever/service/MedicinesService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state relative-caret-position="440">
+              <caret line="55" column="4" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="60" selection-end-column="7" />
               <folding>
-                <element signature="e#645#646#0" expanded="true" />
-                <element signature="e#689#690#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/erp/ProducterController.java">
+        <entry file="file://$PROJECT_DIR$/hospital-erp/erp-service/src/main/java/com/fclever/service/impl/MedicinesServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+            <state relative-caret-position="472">
+              <caret line="149" column="23" selection-start-line="149" selection-start-column="23" selection-end-line="149" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3764#3765#0" expanded="true" />
+                <element signature="e#3831#3832#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="207" column="39" selection-start-line="207" selection-start-column="39" selection-end-line="207" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-mapper/src/main/java/com/fclever/mapper/UserMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-erp/erp-mapper/src/main/java/com/fclever/mapper/MedicinesMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-erp/erp-mapper/src/main/resources/mapper/MedicinesMapper.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -134,10 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Spr</find>
-      <find>Violation</find>
-      <find>ViolationFi</find>
-      <find>SpringValidatorAd</find>
       <find>500</find>
       <find>200</find>
       <find>Record</find>
@@ -164,6 +193,10 @@
       <find>@Validated</find>
       <find>@NotNull</find>
       <find>deleteRoleMenuByRoleIds</find>
+      <find>zookeeper://192.168.125.20:2181?timeout</find>
+      <find>生产厂家</find>
+      <find>producter</find>
+      <find>用户和角色</find>
     </findStrings>
     <replaceStrings>
       <replace>public static final String</replace>
@@ -174,6 +207,8 @@
       <replace>OperationLog</replace>
       <replace>operationLogService</replace>
       <replace>LoginLogDto</replace>
+      <replace>药品信息</replace>
+      <replace>medicines</replace>
     </replaceStrings>
     <dirStrings>
       <dir>G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-statistics\statistics-service</dir>
@@ -191,17 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/aspectj/OperationLogAspect.java" />
-        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java" />
-        <option value="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/utils/AddressUtils.java" />
-        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/OperationLogController.java" />
-        <option value="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/aspectj/enums/BusinessType.java" />
-        <option value="$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/dto/OperationLogDto.java" />
-        <option value="$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/dto/LoginLogDto.java" />
-        <option value="$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/LoginLogService.java" />
-        <option value="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/LoginLogServiceImpl.java" />
-        <option value="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/constants/Constants.java" />
-        <option value="$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/DeptService.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/DeptServiceImpl.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/LoginLogController.java" />
         <option value="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/vo/AjaxResult.java" />
@@ -242,6 +266,17 @@
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/SystemApplication.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/BaseController.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/erp/ProducterController.java" />
+        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-prod.yml" />
+        <option value="$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/hospital-statistics/statistics-service/src/main/resources/application-prod.yml" />
+        <option value="$PROJECT_DIR$/hospital-erp/erp-service/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/hospital-erp/erp-service/src/main/resources/application-prod.yml" />
+        <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/resources/application-prod.yml" />
+        <option value="$PROJECT_DIR$/hospital-erp/erp-domain/src/main/java/com/fclever/dto/MedicinesDto.java" />
+        <option value="$PROJECT_DIR$/hospital-erp/erp-interface/src/main/java/com/fclever/service/MedicinesService.java" />
+        <option value="$PROJECT_DIR$/hospital-erp/erp-service/src/main/java/com/fclever/service/impl/MedicinesServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -669,7 +704,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/hospital-erp/erp-service/src/main/java/com/fclever/service" />
-    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/com/fclever/hospital-commons/1.0/hospital-commons-1.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hospital-erp/erp-interface/src/main/java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -679,19 +714,19 @@
     <property name="settings.editor.selected.configurable" value="com.ccnode.codegenerator.C.b" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-commons\src\main\java\com\fclever\constants" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-statistics\statistics-service\src\main\resources" />
+      <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-diagnose\diagnose-service\src\main\resources" />
+      <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-erp\erp-service\src\main\resources" />
+      <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-system\system-web\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.fclever.dto" />
       <recent name="com.fclever.controller.system" />
       <recent name="com.fclever.domain" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-statistics\statistics-service\src\main\resources" />
-      <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-diagnose\diagnose-service\src\main\resources" />
-      <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-erp\erp-service\src\main\resources" />
-      <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-system\system-web\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-commons\src\main\java\com\fclever\constants" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -910,27 +945,6 @@
       <workItem from="1606438288427" duration="1523000" />
       <workItem from="1606549353621" duration="747000" />
       <workItem from="1606611070895" duration="18196000" />
-    </task>
-    <task id="LOCAL-00036" summary="系统管理hospital-system生成Menu表相关代码">
-      <created>1603257953459</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1603257953459</updated>
-    </task>
-    <task id="LOCAL-00037" summary="系统管理hospital-system完成Shiro的配置">
-      <created>1603673392808</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1603673392809</updated>
-    </task>
-    <task id="LOCAL-00038" summary="系统管理hospital-system完成登录相关的几个映射接口">
-      <created>1603760069864</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1603760069864</updated>
     </task>
     <task id="LOCAL-00039" summary="系统管理hospital-system登录时添加用户名和密码非空校验">
       <created>1603784756470</created>
@@ -1254,7 +1268,28 @@
       <option name="project" value="LOCAL" />
       <updated>1607777954005</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="系统管理hospital-system中解决服务提供者宕机或者异常问题（Hystrix熔断+保护）">
+      <created>1607778571570</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1607778571570</updated>
+    </task>
+    <task id="LOCAL-00086" summary="online-hospital系统中增加Zookeeper连接超时时间，避免网络波动造成连接失败">
+      <created>1607778845976</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1607778845976</updated>
+    </task>
+    <task id="LOCAL-00087" summary="进销存管理hospital-erp中药品信息管理后端代码生成">
+      <created>1607782338608</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1607782338608</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1269,7 +1304,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="385201000" />
+    <option name="totallyTimeSpent" value="389754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1291,9 +1326,9 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49846625" weight="0.8865248" />
-      <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49932975" visible="true" weight="0.3328446" />
-      <window_info anchor="bottom" id="Run Dashboard" order="1" sideWeight="0.8357909" weight="0.36349693" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49846625" visible="true" weight="0.24128686" />
+      <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49932975" weight="0.38269794" />
+      <window_info anchor="bottom" id="Run Dashboard" order="1" sideWeight="0.8357909" weight="0.43841642" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.5153374" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -1318,7 +1353,7 @@
       <window_info anchor="right" id="Maven" order="6" weight="0.29423591" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Database" order="9" weight="0.19235925" />
+      <window_info anchor="right" id="Database" order="9" weight="0.30898124" />
       <window_info anchor="right" id="Bean Validation" order="10" weight="0.32841823" />
     </layout>
     <layout-to-restore>
@@ -1419,9 +1454,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="系统管理hospital-system生成LoginLog登录日志表代码并编写代码逻辑" />
-    <MESSAGE value="系统管理hospital-system中登录日志添加登录失败保存用户名称逻辑" />
-    <MESSAGE value="系统管理hospital-system生成Dept科室信息表代码并修改代码内容" />
     <MESSAGE value="系统管理hospital-system中DeptController的增删改操作添加@Log注解" />
     <MESSAGE value="系统管理hospital-system中科室信息实体类属性修改注释" />
     <MESSAGE value="系统管理hospital-system菜单管理后端代码修改（基于之前生成的代码+新增Dto类）" />
@@ -1444,7 +1476,10 @@
     <MESSAGE value="online-hospital系统中文档移出，项目完成后加入" />
     <MESSAGE value="进销存管理hospital-erp中ProducterController创建" />
     <MESSAGE value="进销存管理hospital-erp中生产厂家服务中解决非幂等操作的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="进销存管理hospital-erp中生产厂家服务中解决非幂等操作的问题" />
+    <MESSAGE value="系统管理hospital-system中解决服务提供者宕机或者异常问题（Hystrix熔断+保护）" />
+    <MESSAGE value="online-hospital系统中增加Zookeeper连接超时时间，避免网络波动造成连接失败" />
+    <MESSAGE value="进销存管理hospital-erp中药品信息管理后端代码生成" />
+    <option name="LAST_COMMIT_MESSAGE" value="进销存管理hospital-erp中药品信息管理后端代码生成" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1467,80 +1502,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.3.1.tmp/mybatis-plus-core-3.3.1.tmp-sources.jar!/com/baomidou/mybatisplus/core/conditions/AbstractWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="354" column="23" selection-start-line="354" selection-start-column="23" selection-end-line="354" selection-end-column="23" />
-          <folding>
-            <element signature="e#4404#4405#0" expanded="true" />
-            <element signature="e#4467#4468#0" expanded="true" />
-            <element signature="e#4836#4837#0" expanded="true" />
-            <element signature="e#4899#4900#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/OperationLogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1373#1374#0" expanded="true" />
-            <element signature="e#1462#1463#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DeptController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateDept#0;class#DeptController#0" />
-            <element signature="method#deleteDeptByIds#0;class#DeptController#0" />
-            <element signature="method#getDeptById#0;class#DeptController#0" />
-            <element signature="method#addDept#0;class#DeptController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/dto/DictTypeDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="51" column="18" lean-forward="true" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/domain/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="26" column="2" lean-forward="true" selection-end-line="126" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/dto/RoleDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="39" column="8" lean-forward="true" selection-end-line="77" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/MenuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-mapper/src/main/java/com/fclever/mapper/MenuMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-mapper/src/main/resources/mapper/MenuMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -1827,16 +1788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-service/src/main/java/com/fclever/service/impl/ProducterServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-web/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -1851,30 +1802,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/erp/ProducterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="20" column="3" lean-forward="true" selection-end-line="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        <state relative-caret-position="144">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#645#646#0" expanded="true" />
             <element signature="e#689#690#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-interface/src/main/java/com/fclever/service/ProducterService.java">
+    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-domain/src/main/java/com/fclever/domain/Medicines.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="127">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/erp/ProducterController.java">
+    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-mapper/src/main/java/com/fclever/mapper/MedicinesMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-mapper/src/main/resources/mapper/MedicinesMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-domain/src/main/java/com/fclever/dto/MedicinesDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="117" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-interface/src/main/java/com/fclever/service/ProducterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="54" column="48" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="54" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-service/src/main/java/com/fclever/service/impl/ProducterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="132" column="1" lean-forward="true" selection-start-line="22" selection-end-line="132" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-interface/src/main/java/com/fclever/service/MedicinesService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="55" column="4" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="60" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-service/src/main/java/com/fclever/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="207" column="39" selection-start-line="207" selection-start-column="39" selection-end-line="207" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-mapper/src/main/java/com/fclever/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-erp/erp-service/src/main/java/com/fclever/service/impl/MedicinesServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="149" column="23" selection-start-line="149" selection-start-column="23" selection-end-line="149" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3764#3765#0" expanded="true" />
+            <element signature="e#3831#3832#0" expanded="true" />
           </folding>
         </state>
       </provider>
