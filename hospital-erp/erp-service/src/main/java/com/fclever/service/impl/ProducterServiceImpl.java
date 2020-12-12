@@ -1,4 +1,4 @@
-package com.fclever.service;
+package com.fclever.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateUtil;
@@ -7,7 +7,9 @@ import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fclever.constants.Constants;
 import com.fclever.dto.ProducterDto;
+import com.fclever.service.ProducterService;
 import com.fclever.vo.DataGridView;
+import org.apache.dubbo.config.annotation.Method;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.Arrays;
@@ -18,7 +20,8 @@ import com.fclever.mapper.ProducterMapper;
 @author Fclever
 @create 2020-12-07 13:28
 */
-@Service
+// 指定该类中的addProducter方法的请求重试次数为0
+@Service(methods = {@Method(name = "addProducter", retries = 0)})
 public class ProducterServiceImpl implements ProducterService {
 
     @Autowired
