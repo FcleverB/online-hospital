@@ -12,14 +12,14 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.5.RELEASE" level="project" />
     <orderEntry type="module" module-name="system-mapper" />
-    <orderEntry type="module" module-name="system-domain" />
     <orderEntry type="module" module-name="system-interface" />
     <orderEntry type="library" name="Maven: com.baomidou:mybatis-plus-extension:3.3.1.tmp" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.baomidou:mybatis-plus-core:3.3.1.tmp" level="project" />
-    <orderEntry type="module" module-name="hospital-commons" />
     <orderEntry type="library" name="Maven: cn.hutool:hutool-all:5.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.62" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-redis:2.2.6.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.fclever:hospital-commons:1.0" level="project" />
+    <orderEntry type="module" module-name="system-domain" />
   </component>
 </module>
