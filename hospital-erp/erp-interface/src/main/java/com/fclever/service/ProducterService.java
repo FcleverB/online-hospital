@@ -1,4 +1,4 @@
-package com.fclever.service.impl;
+package com.fclever.service;
 
 import com.fclever.domain.Producter;
 import com.baomidou.mybatisplus.extension.service.IService;

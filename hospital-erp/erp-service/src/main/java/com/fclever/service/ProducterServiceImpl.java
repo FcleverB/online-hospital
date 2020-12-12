@@ -1,4 +1,4 @@
-package com.fclever.service.impl;
+package com.fclever.service;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateUtil;
@@ -19,7 +19,7 @@ import com.fclever.mapper.ProducterMapper;
 @create 2020-12-07 13:28
 */
 @Service
-public class ProducterServiceImpl implements ProducterService{
+public class ProducterServiceImpl implements ProducterService {
 
     @Autowired
     private ProducterMapper producterMapper;
