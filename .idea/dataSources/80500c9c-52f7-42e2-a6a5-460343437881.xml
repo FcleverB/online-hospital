@@ -1047,10 +1047,11 @@
       <Comment>排班信息表</Comment>
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="271" parent="22" name="stock_inventory_log"/>
+    <table id="271" parent="22" name="stock_inventory_log">
+      <Comment>入库信息记录表</Comment>
+    </table>
     <table id="272" parent="22" name="stock_medicines">
       <Comment>药品信息表</Comment>
-      <Engine>MyISAM</Engine>
       <Collation>utf8_general_ci</Collation>
     </table>
     <table id="273" parent="22" name="stock_producter">
@@ -1059,8 +1060,12 @@
     <table id="274" parent="22" name="stock_provider">
       <Comment>供应商信息表</Comment>
     </table>
-    <table id="275" parent="22" name="stock_purchase"/>
-    <table id="276" parent="22" name="stock_purchase_item"/>
+    <table id="275" parent="22" name="stock_purchase">
+      <Comment>入库单据表</Comment>
+    </table>
+    <table id="276" parent="22" name="stock_purchase_item">
+      <Comment>入库单据详细信息表</Comment>
+    </table>
     <table id="277" parent="22" name="sys_check_item">
       <Comment>检查项目表</Comment>
     </table>
@@ -2545,7 +2550,7 @@
     </key>
     <column id="518" parent="275" name="purchase_id">
       <Position>1</Position>
-      <Comment>制单号ID 全局ID雪花算法</Comment>
+      <Comment>单据主键ID 全局ID雪花算法</Comment>
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>

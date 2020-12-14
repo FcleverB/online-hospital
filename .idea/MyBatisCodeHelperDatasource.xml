@@ -78,6 +78,18 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="onlinehospital:stock_purchase">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="Purchase" />
+                  <option name="moduleName" value="hospital-erp" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="onlinehospital:sys_dept">
               <value>
                 <TableGenerateConfig>
