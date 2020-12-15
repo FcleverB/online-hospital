@@ -1,12 +1,11 @@
 package com.fclever.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import javax.annotation.Resource;
+
 import java.util.Collections;
 import java.util.List;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fclever.domain.PurchaseItem;
 import com.fclever.mapper.PurchaseItemMapper;
 import com.fclever.service.PurchaseItemService;
