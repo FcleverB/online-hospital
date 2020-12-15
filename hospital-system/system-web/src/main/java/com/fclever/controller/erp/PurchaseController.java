@@ -1,5 +1,7 @@
 package com.fclever.controller.erp;
 
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.constants.Constants;
 import com.fclever.controller.BaseController;
 import com.fclever.domain.Purchase;
@@ -48,6 +50,7 @@ public class PurchaseController extends BaseController {
      * @return  返回结果
      */
     @PutMapping("doAudit/{purchaseId}")
+    @Log(title = "提交审核【根据入库单据id】",businessType = BusinessType.UPDATE)
     @HystrixCommand
     public AjaxResult doAudit(@PathVariable String purchaseId){
         // 根据审核单据id查询对应的入库单据实体，根据状态来判断是否可以执行该操作
@@ -67,6 +70,7 @@ public class PurchaseController extends BaseController {
      * @return
      */
     @PutMapping("doInvalid/{purchaseId}")
+    @Log(title = "作废【根据入库单据id】",businessType = BusinessType.UPDATE)
     @HystrixCommand
     public AjaxResult doInvalid(@PathVariable String purchaseId){
         // 根据审核单据id查询对应的入库单据实体，根据状态来判断是否可以执行该操作
@@ -98,6 +102,7 @@ public class PurchaseController extends BaseController {
      * @return  返回结果
      */
     @PutMapping("auditPass/{purchaseId}")
+    @Log(title = "审核通过【根据入库单据id】",businessType = BusinessType.UPDATE)
     @HystrixCommand
     public AjaxResult auditPass(@PathVariable String purchaseId){
         // 根据审核单据id查询对应的入库单据实体，根据状态来判断是否可以执行该操作
@@ -116,6 +121,7 @@ public class PurchaseController extends BaseController {
      * @return  返回结果
      */
     @PutMapping("auditRefuse/{purchaseId}/{auditMsg}")
+    @Log(title = "审核不通过【根据入库单据id】",businessType = BusinessType.UPDATE)
     @HystrixCommand
     public AjaxResult auditRefuse(@PathVariable String purchaseId, @PathVariable String auditMsg){
         // 根据审核单据id查询对应的入库单据实体，根据状态来判断是否可以执行该操作
