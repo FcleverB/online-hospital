@@ -85,5 +85,5 @@ public class PurchaseDto extends BaseDto {
      * 审核信息
      */
     @ApiModelProperty(value="审核信息")
-    private String examine;
+    private String auditMsg;
 }

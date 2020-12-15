@@ -114,9 +114,9 @@ public class Purchase extends BaseEntity {
     /**
      * 审核信息
      */
-    @TableField(value = "examine")
+    @TableField(value = "audit_msg")
     @ApiModelProperty(value="审核信息")
-    private String examine;
+    private String auditMsg;
 
     public static final String COL_PURCHASE_ID = "purchase_id";
 
@@ -142,5 +142,5 @@ public class Purchase extends BaseEntity {
 
     public static final String COL_UPDATE_BY = "update_by";
 
-    public static final String COL_EXAMINE = "examine";
+    public static final String COL_AUDITMSG = "audit_msg";
 }
