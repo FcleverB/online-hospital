@@ -1048,7 +1048,7 @@
       <Collation>utf8_general_ci</Collation>
     </table>
     <table id="271" parent="22" name="stock_inventory_log">
-      <Comment>入库信息记录表</Comment>
+      <Comment>入库操作信息记录表</Comment>
     </table>
     <table id="272" parent="22" name="stock_medicines">
       <Comment>药品信息表</Comment>
@@ -2625,7 +2625,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="530" parent="275" name="examine">
+    <column id="530" parent="275" name="audit_msg">
       <Position>13</Position>
       <Comment>审核信息</Comment>
       <DataType>varchar(255)|0s</DataType>
