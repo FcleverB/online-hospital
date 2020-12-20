@@ -160,7 +160,7 @@ public class PurchaseServiceImpl implements PurchaseService{
         // 首先判断是否已经存在，如果存在，先删除，然后进行插入操作
         // 入库单据id
         String purchaseId = purchaseFormDto.getPurchaseDto().getPurchaseId();
-        Purchase purchase = this.purchaseMapper.selectById(purchaseId);
+        PurchaseDto purchase = purchaseFormDto.getPurchaseDto();
         // 保存主表数据
         Purchase newPurchase = new Purchase();
         BeanUtil.copyProperties(purchase, newPurchase);
