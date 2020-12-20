@@ -12,6 +12,7 @@ public interface Constants {
      * 令牌
      */
     String TOKEN = "token";
+
     /**
      * 系统用户类型
      */
@@ -41,11 +42,13 @@ public interface Constants {
      */
     String LOGIN_SUCCESS = "0";
     String LOGIN_ERROR = "1";
+
     /**
      * 登陆类型0系统用户1患者用户
      */
     String LOGIN_TYPE_SYSTEM = "0" ;
     String LOGIN_TYPE_PATIENT = "1" ;
+
     /**
      * 入库单状态：1未提交   2待审核    3审核通过   4审核不通过  5作废 6入库成功
      */
@@ -55,4 +58,9 @@ public interface Constants {
     String STOCK_PURCHASE_STATUS_4 = "4";
     String STOCK_PURCHASE_STATUS_5 = "5";
     String STOCK_PURCHASE_STATUS_6 = "6";
+
+    /**
+     * 生产入库单据id的前缀
+     */
+    String ID_PROFIX_CG = "CG";
 }

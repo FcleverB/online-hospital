@@ -34,6 +34,7 @@ public class PurchaseDto extends BaseDto {
     /**
      * 单据主键ID 全局ID雪花算法
      */
+    @NotBlank(message = "入库单据id不能为空")
     @ApiModelProperty(value="单据主键ID 全局ID雪花算法")
     private String purchaseId;
 

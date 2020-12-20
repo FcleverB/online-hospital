@@ -9,6 +9,7 @@ import com.fclever.domain.SimpleUser;
 import com.fclever.dto.PurchaseDto;
 import com.fclever.service.PurchaseItemService;
 import com.fclever.service.PurchaseService;
+import com.fclever.utils.IdGeneratorSnowflake;
 import com.fclever.utils.ShiroSecurityUtils;
 import com.fclever.vo.AjaxResult;
 import com.fclever.vo.DataGridView;
@@ -141,5 +142,14 @@ public class PurchaseController extends BaseController {
     @HystrixCommand
     public AjaxResult getPurchaseItemById(@PathVariable String purchaseId){
         return AjaxResult.success(this.purchaseItemService.getPurchaseItemById(purchaseId));
+    }
+
+    /**
+     * 生成入库单据id
+     * @return 雪花算法生成的入库单据id
+     */
+    @GetMapping("generatePurchaseId")
+    public AjaxResult generatePurchaseId() {
+        return AjaxResult.success(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PROFIX_CG));
     }
 }
