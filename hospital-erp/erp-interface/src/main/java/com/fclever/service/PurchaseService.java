@@ -3,6 +3,7 @@ package com.fclever.service;
 import com.fclever.domain.Purchase;
 import com.fclever.domain.SimpleUser;
 import com.fclever.dto.PurchaseDto;
+import com.fclever.dto.PurchaseFormDto;
 import com.fclever.vo.DataGridView;
 
 /**
@@ -58,4 +59,25 @@ public interface PurchaseService {
      * @return  返回结果
      */
     Purchase getPurchaseById(String purchaseId);
+
+    /**
+     * 暂存入库单据和详情信息
+     * @param purchaseFormDto 保存入库单据和详情的类
+     * @return 返回结果
+     */
+    int addPurchaseAndItem(PurchaseFormDto purchaseFormDto);
+
+    /**
+     * 添加入库单据和详情信息并提交审核
+     * @param purchaseFormDto 保存入库单据和详情的类
+     * @return 返回结果
+     */
+    int addPurchaseAndItemToAudit(PurchaseFormDto purchaseFormDto);
+
+    /**
+     * 入库【根据入库单据id】
+     * @param purchaseId 待入库的单据id
+     * @return  返回结果
+     */
+    int doInventory(String purchaseId, SimpleUser user);
 }

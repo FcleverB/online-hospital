@@ -3,8 +3,6 @@
   <component name="MyBatisCodeHelperDatasource">
     <option name="projectProfile">
       <ProjectProfile>
-        <option name="generateService" value="true" />
-        <option name="generateServiceInterface" value="true" />
         <option name="javaMapperPackage" value="com.fclever.mapper" />
         <option name="javaMapperPath" value="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-erp\erp-mapper\src\main\java" />
         <option name="javaModelPackage" value="com.fclever.domain" />
@@ -23,10 +21,6 @@
                   <option name="javaMapperPath" value="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-erp\erp-mapper\src\main\java" />
                   <option name="javaModelPacakge" value="com.fclever.domain" />
                   <option name="javaModelPath" value="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-erp\erp-domain\src\main\java" />
-                  <option name="javaServiceInterfacePackage" value="com.fclever.service" />
-                  <option name="javaServiceInterfacePath" value="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-erp\erp-interface\src\main\java" />
-                  <option name="javaServicePackage" value="com.fclever.service.impl" />
-                  <option name="javaServicePath" value="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-erp\erp-service\src\main\java" />
                   <option name="xmlPackage" value="mapper" />
                   <option name="xmlPath" value="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-erp\erp-mapper\src\main\resources" />
                 </UserPackageAndPathInfoByModule>
@@ -54,6 +48,18 @@
         <option name="removeTablePreName" value="stock_" />
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="onlinehospital:stock_inventory_log">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="InventoryLog" />
+                  <option name="moduleName" value="hospital-erp" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="onlinehospital:stock_medicines">
               <value>
                 <TableGenerateConfig>
