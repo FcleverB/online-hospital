@@ -9,9 +9,7 @@
     <result column="medicines_id" jdbcType="VARCHAR" property="medicinesId" />
     <result column="inventory_log_num" jdbcType="INTEGER" property="inventoryLogNum" />
     <result column="trade_price" jdbcType="DECIMAL" property="tradePrice" />
-    <result column="prescription_price" jdbcType="DECIMAL" property="prescriptionPrice" />
     <result column="trade_total_amount" jdbcType="DECIMAL" property="tradeTotalAmount" />
-    <result column="prescription_total_amount" jdbcType="DECIMAL" property="prescriptionTotalAmount" />
     <result column="batch_number" jdbcType="VARCHAR" property="batchNumber" />
     <result column="medicines_name" jdbcType="VARCHAR" property="medicinesName" />
     <result column="medicines_type" jdbcType="CHAR" property="medicinesType" />
@@ -19,14 +17,13 @@
     <result column="producter_id" jdbcType="VARCHAR" property="producterId" />
     <result column="conversion" jdbcType="INTEGER" property="conversion" />
     <result column="unit" jdbcType="VARCHAR" property="unit" />
-    <result column="provider_id" jdbcType="VARCHAR" property="providerId" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="create_by" jdbcType="VARCHAR" property="createBy" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    inventory_log_id, purchase_id, medicines_id, inventory_log_num, trade_price, prescription_price, 
-    trade_total_amount, prescription_total_amount, batch_number, medicines_name, medicines_type, 
-    prescription_type, producter_id, `conversion`, unit, provider_id, create_time, create_by
+    inventory_log_id, purchase_id, medicines_id, inventory_log_num, trade_price, trade_total_amount, 
+    batch_number, medicines_name, medicines_type, prescription_type, producter_id, `conversion`, 
+    unit, create_time, create_by
   </sql>
 </mapper>
