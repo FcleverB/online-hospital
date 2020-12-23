@@ -186,7 +186,7 @@ public class PurchaseController extends BaseController {
 
     /**
      * 添加入库单据和详情信息并提交审核--新增页面和查看详情页面都会调用该方法
-     * @param purchaseFormDto 保存入库单据和详情的类
+     * @param purchaseFormDto 保存listPurchasePendingForPage入库单据和详情的类
      * @return 返回结果
      */
     @PostMapping("addPurchaseToAudit")
