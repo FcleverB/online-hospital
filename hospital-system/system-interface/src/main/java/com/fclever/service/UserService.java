@@ -78,4 +78,12 @@ public interface UserService{
      * @return 是否保存成功标志
      */
     int saveUserAndRole(Long userId, Long[] roleIds);
+
+    /**
+     * 查询可以进行排班的医生列表(下拉框)
+     *      如果deptId为空,那么就表示查询全部需要排班的医生列表
+     *      如果deptId不为空,那么就查询对应部门下的需要排班的医生列表
+     * @return 返回结果
+     */
+    List<User> queryUsersNeedScheduling(Long userId, Long deptId);
 }

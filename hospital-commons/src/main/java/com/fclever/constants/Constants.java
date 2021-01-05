@@ -63,4 +63,10 @@ public interface Constants {
      * 生产入库单据id的前缀
      */
     String ID_PROFIX_CG = "CG";
+
+    /**
+     * 是否需要排班标志
+     */
+    String SCHEDULING_FLAG_FALSE = "0";
+    String SCHEDULING_FLAG_TRUE = "1";
 }

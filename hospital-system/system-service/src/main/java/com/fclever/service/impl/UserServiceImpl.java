@@ -213,4 +213,25 @@ public class UserServiceImpl implements UserService{
         return row;
     }
 
+    /**
+     * 查询可以进行排班的医生列表(下拉框)
+     *      如果deptId为空,那么就表示查询全部需要排班的医生列表
+     *      如果deptId不为空,那么就查询对应部门下的需要排班的医生列表
+     * @return 返回结果
+     */
+    @Override
+    public List<User> queryUsersNeedScheduling(Long userId, Long deptId) {
+        // 设置查询条件
+        QueryWrapper<User> qw = new QueryWrapper<>();
+        // 科室id不为空,则查询对应科室信息
+        qw.eq(deptId != null, User.COL_DEPT_ID, deptId);
+        // userId不为空，表示查询当前用户的排班信息
+        qw.eq(userId != null, User.COL_USER_ID, userId);
+        // 查询是否排班标志位为1的时候进行查询
+        qw.eq(User.COL_SCHEDULING_FLAG, Constants.SCHEDULING_FLAG_TRUE);
+        // 可用状态
+        qw.eq(User.COL_STATUS, Constants.STATUS_TRUE);
+        return this.userMapper.selectList(qw);
+    }
+
 }
