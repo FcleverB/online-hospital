@@ -7,21 +7,18 @@ import com.fclever.controller.BaseController;
 import com.fclever.domain.Scheduling;
 import com.fclever.domain.User;
 import com.fclever.dto.SchedulingDto;
+import com.fclever.dto.SchedulingFormDto;
 import com.fclever.dto.SchedulingQueryDto;
 import com.fclever.service.SchedulingService;
 import com.fclever.service.UserService;
+import com.fclever.utils.ShiroSecurityUtils;
 import com.fclever.vo.AjaxResult;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 排班控制层
@@ -62,6 +59,18 @@ public class SchedulingController extends BaseController {
         // 需要查询排班信息表，然后将对应查询日期的排班信息查询出来
         List<User> users = this.userService.queryUsersNeedScheduling(schedulingQueryDto.getUserId(),schedulingQueryDto.getDeptId());
         return getSchedulingAjaxResult(schedulingQueryDto, users);
+    }
+
+    /**
+     * 保存排班信息
+     * @param schedulingFormDto  待保存的排班数据  传递的是Json对象
+     * @return 返回结果
+     */
+    @PostMapping("saveScheduling")
+//    @HystrixCommand 涉及到远程调用
+    public AjaxResult saveScheduling(@RequestBody SchedulingFormDto schedulingFormDto){
+        schedulingFormDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
+        return AjaxResult.toAjax(this.schedulingService.saveScheduling(schedulingFormDto));
     }
 
 
@@ -123,7 +132,9 @@ public class SchedulingController extends BaseController {
                     // 判断排版时段
                     switch (subsectionType){
                         case "1":
+                            // 处理上午的排班类型
                             Map<String, String> recordMorning = schedulingMorning.getRecord();
+                            // schedulingDay为日期，如果map集合里面已经有该key，则直接覆盖原有值
                             recordMorning.put(schedulingDay,scheduling.getSchedulingType());
                             break;
                         case "2":
@@ -201,7 +212,8 @@ public class SchedulingController extends BaseController {
      * @return 对应周的日期集合
      */
     private Map<String, String> initMap(DateTime beginTime) {
-        HashMap<String, String> map = new HashMap<>();
+        // 改为LinkedHashMap，因为保存的日期是从对应周第一天到最后一天的，需要保持插入顺序一致
+        Map<String, String> map = new LinkedHashMap<>();
         // 传递的beginTime为目前周的第一天，通过循环可以遍历这周的7天，将日期保存到map集合中
         for (int i = 0; i < 7; i++){
             DateTime dateTime = DateUtil.offsetDay(beginTime, i);

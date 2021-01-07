@@ -2,6 +2,7 @@ package com.fclever.service;
 
 import com.fclever.domain.Scheduling;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.fclever.dto.SchedulingFormDto;
 import com.fclever.dto.SchedulingQueryDto;
 
 import java.util.List;
@@ -18,4 +19,11 @@ public interface SchedulingService{
      * @return 查询到的排班数据列表
      */
     List<Scheduling> queryScheduling(SchedulingQueryDto schedulingQueryDto);
+
+    /**
+     * 保存排班信息
+     * @param schedulingFormDto  待保存的排班数据  传递的是Json对象
+     * @return 返回结果
+     */
+    int saveScheduling(SchedulingFormDto schedulingFormDto);
 }
