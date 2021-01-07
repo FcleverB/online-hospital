@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-domain/src/main/java/com/fclever/dto/SchedulingFormDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/SchedulingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/SchedulingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/SchedulingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/SchedulingServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/SchedulingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/SchedulingController.java" afterDir="false" />
     </list>
     <list id="0a8bab89-bf34-481f-9475-97873582964d" name="系统管理hospital-system中挂号费用管理后端增删改查功能实现" comment="" />
@@ -101,11 +97,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/SchedulingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="214" column="59" selection-start-line="214" selection-start-column="59" selection-end-line="214" selection-end-column="59" />
+            <state relative-caret-position="295">
+              <caret line="72" column="60" selection-start-line="72" selection-start-column="60" selection-end-line="72" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/erp/MedicinesController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="34" column="61" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -790,7 +795,7 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.19535519" />
+    <option name="contentProportion" value="0.079918034" />
   </component>
   <component name="RunManager" selected="Spring Boot.SystemApplication">
     <configuration name="IdGeneratorSnowflake" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -1008,14 +1013,7 @@
       <workItem from="1609895236489" duration="8272000" />
       <workItem from="1609981317195" duration="8707000" />
       <workItem from="1609997656550" duration="3021000" />
-      <workItem from="1610015529089" duration="4121000" />
-    </task>
-    <task id="LOCAL-00067" summary="系统管理hospital-system中MenuController的增删改操作添加@Log注解">
-      <created>1606191118533</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1606191118533</updated>
+      <workItem from="1610015529089" duration="5484000" />
     </task>
     <task id="LOCAL-00068" summary="系统管理hospital-system删除LoginController中退出登录的日志注解">
       <created>1606611420513</created>
@@ -1353,7 +1351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609987012149</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="看病就诊管理hospital-doctor中医生排班实现保存排班信息并解决回显数据错乱问题">
+      <created>1610021458721</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1610021458722</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1368,7 +1373,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="512963000" />
+    <option name="totallyTimeSpent" value="514326000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1381,6 +1386,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
       <window_info id="Structure" order="1" sideWeight="0.6967509" side_tool="true" weight="0.1769437" />
@@ -1391,7 +1397,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.3032491" visible="true" weight="0.19436997" />
       <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49932975" weight="0.73753667" />
-      <window_info anchor="bottom" id="Run Dashboard" order="1" sideWeight="0.8357909" visible="true" weight="0.32991204" />
+      <window_info anchor="bottom" id="Run Dashboard" order="1" sideWeight="0.8357909" weight="0.37683284" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.51466274" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -1518,7 +1524,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="进销存管理hospital-erp中供应商管理后端代码生成" />
     <MESSAGE value="进销存管理hospital-erp中供应商管理后端代码api编写" />
     <MESSAGE value="系统管理hospital-system中供应商管理中ProviderController创建" />
     <MESSAGE value="进销存管理hospital-erp中供应商管理中ProviderController创建" />
@@ -1543,7 +1548,8 @@
     <MESSAGE value="看病就诊管理hospital-doctor中排班医生列表查询功能实现（下拉框）" />
     <MESSAGE value="看病就诊管理hospital-doctor中医生排班数据排班列表数据功能实现" />
     <MESSAGE value="看病就诊管理hospital-doctor中医生排班解决Id类型不匹配问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="看病就诊管理hospital-doctor中医生排班解决Id类型不匹配问题" />
+    <MESSAGE value="看病就诊管理hospital-doctor中医生排班实现保存排班信息并解决回显数据错乱问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="看病就诊管理hospital-doctor中医生排班实现保存排班信息并解决回显数据错乱问题" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1575,13 +1581,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1040">
-          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://G:/JDK8_1/src.zip!/java/lang/NumberFormatException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -1946,10 +1945,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/erp/MedicinesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="34" column="61" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/SchedulingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="214" column="59" selection-start-line="214" selection-start-column="59" selection-end-line="214" selection-end-column="59" />
+        <state relative-caret-position="295">
+          <caret line="72" column="60" selection-start-line="72" selection-start-column="60" selection-end-line="72" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

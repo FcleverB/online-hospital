@@ -3,6 +3,8 @@ package com.fclever.controller.diagnose;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.controller.BaseController;
 import com.fclever.domain.Scheduling;
 import com.fclever.domain.User;
@@ -52,7 +54,7 @@ public class SchedulingController extends BaseController {
      * 条件查询可以排班的医生的排班信息（数据列表）
      */
     @GetMapping("queryScheduling")
-//    @HystrixCommand // 涉及到远程调用schedulingService
+    @HystrixCommand // 涉及到远程调用schedulingService
     public AjaxResult queryScheduling(SchedulingQueryDto schedulingQueryDto){
         // 根据科室id和用户id查询用户信息，如果用户id和科室id都为空，那么就查询所有排班的用户信息
         // 返回结果为查询到的用户（医生）信息，在根据日期范围进行查询进行数据回显即可
@@ -67,7 +69,8 @@ public class SchedulingController extends BaseController {
      * @return 返回结果
      */
     @PostMapping("saveScheduling")
-//    @HystrixCommand 涉及到远程调用
+    @HystrixCommand  //涉及到远程调用
+    @Log(title = "保存排班信息",businessType = BusinessType.INSERT)
     public AjaxResult saveScheduling(@RequestBody SchedulingFormDto schedulingFormDto){
         schedulingFormDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.schedulingService.saveScheduling(schedulingFormDto));
