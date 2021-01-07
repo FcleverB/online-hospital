@@ -15,5 +15,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DiagnoseApplication {
     public static void main(String[] args) {
         SpringApplication.run(DiagnoseApplication.class, args);
+        System.out.println("看病就诊模块hospital-diagnose启动成功");
     }
 }

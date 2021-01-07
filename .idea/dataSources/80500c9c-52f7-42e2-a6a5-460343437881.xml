@@ -2080,7 +2080,7 @@
     </column>
     <column id="446" parent="270" name="scheduling_day">
       <Position>3</Position>
-      <Comment>值班日期</Comment>
+      <Comment>排班日期</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>

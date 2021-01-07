@@ -25,6 +25,12 @@
             <artifactId>erp-interface</artifactId>
             <version>1.0</version>
         </dependency>
+        <!--依赖Diagnose Service业务层-->
+        <dependency>
+            <groupId>com.fclever</groupId>
+            <artifactId>diagnose-interface</artifactId>
+            <version>1.0</version>
+        </dependency>
         <!--Swagger  接口对外暴露，利用Swagger方便生成一些接口文档-->
         <dependency>
             <groupId>io.springfox</groupId>
