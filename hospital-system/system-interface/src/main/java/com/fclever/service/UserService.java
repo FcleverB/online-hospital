@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.fclever.dto.UserDto;
 import com.fclever.vo.DataGridView;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**

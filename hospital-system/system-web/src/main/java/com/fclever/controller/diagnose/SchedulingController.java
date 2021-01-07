@@ -76,6 +76,20 @@ public class SchedulingController extends BaseController {
         return AjaxResult.toAjax(this.schedulingService.saveScheduling(schedulingFormDto));
     }
 
+    /**
+     * 查询我的排班信息
+     * @param schedulingQueryDto 查询条件
+     * @return  返回结果
+     */
+    @GetMapping("queryMyScheduling")
+    @HystrixCommand // 涉及到远程调用schedulingService
+    public AjaxResult queryMyScheduling(SchedulingQueryDto schedulingQueryDto){
+        // 根据科室id和用户id查询用户信息，如果用户id和科室id都为空，那么就查询所有排班的用户信息
+        // 返回结果为查询到的用户（医生）信息，在根据日期范围进行查询进行数据回显即可
+        // 需要查询排班信息表，然后将对应查询日期的排班信息查询出来
+        List<User> users = this.userService.queryUsersNeedScheduling(Long.valueOf(ShiroSecurityUtils.getCurrentSimpleUser().getUserId().toString()),schedulingQueryDto.getDeptId());
+        return getSchedulingAjaxResult(schedulingQueryDto, users);
+    }
 
     /**
      *  根据条件构造页面显示数据
