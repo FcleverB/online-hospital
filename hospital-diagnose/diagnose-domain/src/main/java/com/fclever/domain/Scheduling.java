@@ -32,14 +32,14 @@ public class Scheduling extends BaseEntity {
      */
     @TableField(value = "user_id")
     @ApiModelProperty(value="医生ID")
-    private Integer userId;
+    private Long userId;
 
     /**
      * 科室ID
      */
     @TableField(value = "dept_id")
     @ApiModelProperty(value="科室ID")
-    private Integer deptId;
+    private Long deptId;
 
     /**
      * 排班日期

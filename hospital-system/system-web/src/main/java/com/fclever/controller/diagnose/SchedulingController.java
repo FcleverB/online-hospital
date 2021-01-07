@@ -115,11 +115,11 @@ public class SchedulingController extends BaseController {
             schedulingDtos.add(schedulingEvening);
             for (Scheduling scheduling : schedulingList) {
                 // 从数据库中获取数据
-                Integer userId = scheduling.getUserId();    // 数据库中查到的userId
+                Long userId = scheduling.getUserId();    // 数据库中查到的userId
                 String subsectionType = scheduling.getSubsectionType(); // 数据库查到的上午下午晚上的类型
                 String schedulingDay = scheduling.getSchedulingDay(); // 数据库查到的值班类型  门诊和急症
                 // 判断userid一致性
-                if (user.getUserId().equals(userId.longValue())){
+                if (user.getUserId().equals(userId)){
                     // 判断排版时段
                     switch (subsectionType){
                         case "1":
@@ -148,7 +148,7 @@ public class SchedulingController extends BaseController {
         Map<String, Object> schedulingData = new HashMap<>();
         schedulingData.put("startTimeWeek", schedulingQueryDto.getBeginDate());
         schedulingData.put("endTimeWeek", schedulingQueryDto.getEndDate());
-        resMap.put("schedulingData", schedulingData);
+        resMap.put("schedulingDate", schedulingData);
         resMap.put("labelNames", initLabel(beginTime));
         return AjaxResult.success(resMap);
     }
