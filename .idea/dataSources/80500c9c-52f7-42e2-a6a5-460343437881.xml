@@ -1038,6 +1038,7 @@
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="268" parent="22" name="his_patient_file">
+      <Comment>患者档案表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="269" parent="22" name="his_registration">
@@ -2067,14 +2068,14 @@
     <column id="444" parent="270" name="user_id">
       <Position>1</Position>
       <Comment>医生ID</Comment>
-      <DataType>int(10)|0s</DataType>
+      <DataType>bigint(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="445" parent="270" name="dept_id">
       <Position>2</Position>
       <Comment>科室ID</Comment>
-      <DataType>int(10)|0s</DataType>
+      <DataType>bigint(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
