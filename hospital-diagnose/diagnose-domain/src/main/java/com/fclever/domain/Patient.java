@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -94,6 +95,7 @@ public class Patient extends BaseEntity {
      */
     @TableField(value = "password")
     @ApiModelProperty(value="登录密码")
+    @JsonIgnore
     private String password;
 
     /**
@@ -101,6 +103,7 @@ public class Patient extends BaseEntity {
      */
     @TableField(value = "openid")
     @ApiModelProperty(value="微信openid")
+    @JsonIgnore
     private String openid;
 
     /**

@@ -15,5 +15,6 @@
     <orderEntry type="library" name="Maven: com.baomidou:mybatis-plus-annotation:3.3.1.tmp" level="project" />
     <orderEntry type="library" name="Maven: com.fclever:hospital-commons:1.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.3" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" level="project" />
   </component>
 </module>
