@@ -47,6 +47,8 @@ public class PatientServiceImpl implements PatientService{
         qw.like(StringUtils.isNotBlank(patientDto.getPhone()), Patient.COL_PHONE, patientDto.getPhone());
         // 模糊匹配身份证号
         qw.like(StringUtils.isNotBlank(patientDto.getIdCard()), Patient.COL_ID_CARD, patientDto.getIdCard());
+        // 排序
+        qw.orderByAsc(Patient.COL_CREATE_TIME);
         // 执行查询
         this.patientMapper.selectPage(page, qw);
         // 构建返回结果
