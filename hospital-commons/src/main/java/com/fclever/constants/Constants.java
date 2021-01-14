@@ -69,4 +69,13 @@ public interface Constants {
      */
     String SCHEDULING_FLAG_FALSE = "0";
     String SCHEDULING_FLAG_TRUE = "1";
+    /**
+     * 挂号单状态
+     */
+    String REG_STATUS_0 = "0"; // 待支付
+    String REG_STATUS_1 = "1"; // 待就诊
+    String REG_STATUS_2 = "2"; // 就诊中
+    String REG_STATUS_3 = "3"; // 就诊完成
+    String REG_STATUS_4 = "4"; // 已退号
+    String REG_STATUS_5 = "5"; // 已作废
 }
