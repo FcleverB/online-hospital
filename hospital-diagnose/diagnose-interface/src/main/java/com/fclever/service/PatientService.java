@@ -31,4 +31,11 @@ public interface PatientService{
      * @return  查询结果
      */
     PatientFile getPatientFileById(String patientId);
+
+    /**
+     * 根据身份证号查询患者信息
+     * @param idCard 身份证号
+     * @return 患者信息
+     */
+    Patient getPatientByIdCard(String idCard);
 }

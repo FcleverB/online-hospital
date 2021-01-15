@@ -74,4 +74,17 @@ public class PatientServiceImpl implements PatientService{
     public PatientFile getPatientFileById(String patientId) {
         return this.patientFileMapper.selectById(patientId);
     }
+
+    /**
+     * 根据身份证号查询患者信息
+     * @param idCard 身份证号
+     * @return 患者信息
+     */
+    @Override
+    public Patient getPatientByIdCard(String idCard) {
+        QueryWrapper<Patient> qw = new QueryWrapper<>();
+        // 查询条件身份证号
+        qw.eq(Patient.COL_ID_CARD, idCard);
+        return this.patientMapper.selectOne(qw);
+    }
 }
