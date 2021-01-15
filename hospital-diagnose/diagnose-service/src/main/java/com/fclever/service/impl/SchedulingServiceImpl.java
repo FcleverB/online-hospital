@@ -1,6 +1,5 @@
 package com.fclever.service.impl;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,8 +7,8 @@ import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fclever.domain.Scheduling;
+import com.fclever.dto.RegistrationQueryDto;
 import com.fclever.dto.SchedulingFormDto;
 import com.fclever.dto.SchedulingQueryDto;
 import com.fclever.mapper.SchedulingMapper;
@@ -97,6 +96,19 @@ public class SchedulingServiceImpl implements SchedulingService{
             }
         }
         return 0;
+    }
+
+    /**
+     * 分页查询部门列表信息
+     *      1. 根据查询条件从his_scheduling表中查询出去重后的科室id集合
+     *      2. 然后根据这些科室id集合再去sys_dept表中查询出科室id，科室名称，挂号数量这些信息，并返回给前台页面
+     * @param registrationQueryDto  分页查询的查询条件
+     * @return  返回结果
+     */
+    @Override
+    public List<Long> selectDeptIdsByQuery(RegistrationQueryDto registrationQueryDto) {
+        // 根据查询条件查询排班信息表中的科室id集合
+        return this.schedulingMapper.selectDeptIdsByQuery(registrationQueryDto);
     }
 
     /**

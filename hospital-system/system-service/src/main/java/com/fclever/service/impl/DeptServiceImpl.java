@@ -122,4 +122,17 @@ public class DeptServiceImpl implements DeptService{
         dept.setCreateTime(DateUtil.date());
         return this.deptMapper.insert(dept);
     }
+
+    /**
+     * 根据科室id集合，查询对应的科室信息
+     * @param deptIds 需要查询的科室id集合
+     * @return  查询结果
+     */
+    @Override
+    public List<Dept> listDeptByDeptIds(List<Long> deptIds) {
+        // 创建查询条件对象
+        QueryWrapper<Dept> qw = new QueryWrapper<>();
+        qw.in(Dept.COL_DEPT_ID, deptIds);
+        return this.deptMapper.selectList(qw);
+    }
 }

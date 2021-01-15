@@ -53,4 +53,11 @@ public interface DeptService{
      * @return 是否插入成功标志
      */
     int addDept(DeptDto deptDto);
+
+    /**
+     * 根据科室id集合，查询对应的科室信息
+     * @param deptIds 需要查询的科室id集合
+     * @return  查询结果
+     */
+    List<Dept> listDeptByDeptIds(List<Long> deptIds);
 }

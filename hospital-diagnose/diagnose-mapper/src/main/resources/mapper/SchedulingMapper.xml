@@ -17,4 +17,23 @@
     user_id, dept_id, scheduling_day, subsection_type, scheduling_type, create_time, 
     create_by
   </sql>
+  <!--分页条件查询科室列表  科室id 排班日期 排班时段 排班类型-->
+  <select id="selectDeptIdsByQuery" resultType="java.lang.Long">
+    select distinct dept_id from his_scheduling
+    <where>
+      1 = 1
+      <if test="deptId != null">
+        and dept_id = #{deptId}
+      </if>
+      <if test="schedulingDay != null">
+        and scheduling_day = #{schedulingDay}
+      </if>
+      <if test="subsectionType != null">
+        and subsection_type = #{subsectionType}
+      </if>
+      <if test="schedulingType != null">
+        and scheduling_type = #{schedulingType}
+      </if>
+    </where>
+  </select>
 </mapper>
