@@ -41,3 +41,7 @@ dubbo:
     address: zookeeper://192.168.125.20:2181?timeout=20000
   consumer:
     check: false # 是否检查消费者
+  protocol:
+    name: dubbo # name 指定的是传输协议的名称：dubbo rmi hessian webservice
+    port: 20883
+
