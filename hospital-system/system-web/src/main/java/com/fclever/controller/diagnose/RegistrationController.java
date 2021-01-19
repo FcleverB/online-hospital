@@ -7,6 +7,7 @@ import com.fclever.constants.Constants;
 import com.fclever.controller.BaseController;
 import com.fclever.domain.Dept;
 import com.fclever.domain.Patient;
+import com.fclever.domain.Registration;
 import com.fclever.dto.PatientDto;
 import com.fclever.dto.RegistrationDto;
 import com.fclever.dto.RegistrationFormDto;
@@ -130,5 +131,28 @@ public class RegistrationController extends BaseController {
         return AjaxResult.success("挂号成功",registrationDto.getRegistrationId());
     }
 
+
+    /**
+     * 挂号收费
+     * @param registrationId    挂号流水id
+     * @return  返回结果
+     */
+    @PostMapping("charge/{registrationId}")
+    @HystrixCommand
+    @Log(title = "更新挂号信息",businessType = BusinessType.UPDATE)
+    public AjaxResult charge(@PathVariable String registrationId) {
+        // 查询挂号流水id对应的挂号单据信息
+        Registration registration = this.registrationService.queryRegistrationById(registrationId);
+        if (null == registration) {
+            return AjaxResult.fail("当前挂号流水Id【"+registrationId+"】对应的挂号单数据不存在！");
+        }
+        // 如果挂号单对应的状态不是未收费
+        if (!registration.getRegistrationStatus().equals(Constants.REG_STATUS_0)) {
+            return AjaxResult.fail("当前挂号流水Id【"+registrationId+"】不是未收费状态，不可以进行收费！");
+        }
+        // 执行收费，更新挂号单状态
+        registration.setRegistrationStatus(Constants.REG_STATUS_1);
+        return AjaxResult.toAjax(this.registrationService.updateRegistrationById(registration));
+    }
 }
 

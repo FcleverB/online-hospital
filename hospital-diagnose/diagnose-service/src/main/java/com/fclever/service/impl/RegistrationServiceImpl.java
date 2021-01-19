@@ -35,4 +35,24 @@ public class RegistrationServiceImpl implements RegistrationService{
         // 执行插入操作
         this.registrationMapper.insert(registration);
     }
+
+    /**
+     * 根据挂号流水Id查询对应的挂号信息
+     * @param registrationId    挂号流水Id
+     * @return  返回结果
+     */
+    @Override
+    public Registration queryRegistrationById(String registrationId) {
+        return this.registrationMapper.selectById(registrationId);
+    }
+
+    /**
+     * 更新收费状态
+     * @param registration 待更新的数据
+     * @return  返回结果
+     */
+    @Override
+    public int updateRegistrationById(Registration registration) {
+        return this.registrationMapper.updateById(registration);
+    }
 }
