@@ -19,8 +19,10 @@ import com.fclever.service.SchedulingService;
 import com.fclever.utils.IdGeneratorSnowflake;
 import com.fclever.utils.ShiroSecurityUtils;
 import com.fclever.vo.AjaxResult;
+import com.fclever.vo.DataGridView;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.apache.dubbo.config.annotation.Reference;
+import org.aspectj.weaver.loadtime.Aj;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -137,9 +139,9 @@ public class RegistrationController extends BaseController {
      * @param registrationId    挂号流水id
      * @return  返回结果
      */
-    @PostMapping("charge/{registrationId}")
+    @PutMapping("charge/{registrationId}")
     @HystrixCommand
-    @Log(title = "更新挂号信息",businessType = BusinessType.UPDATE)
+    @Log(title = "挂号收费",businessType = BusinessType.UPDATE)
     public AjaxResult charge(@PathVariable String registrationId) {
         // 查询挂号流水id对应的挂号单据信息
         Registration registration = this.registrationService.queryRegistrationById(registrationId);
@@ -153,6 +155,65 @@ public class RegistrationController extends BaseController {
         // 执行收费，更新挂号单状态
         registration.setRegistrationStatus(Constants.REG_STATUS_1);
         return AjaxResult.toAjax(this.registrationService.updateRegistrationById(registration));
+    }
+
+    /**
+     * 分页查询挂号信息
+     * @param registrationDto   前端传递的查询条件
+     * @return  返回结果
+     */
+    @GetMapping("queryRegistrationForPage")
+    @HystrixCommand
+    public AjaxResult queryRegistrationForPage(RegistrationDto registrationDto) {
+        // 执行分页查询的方法，并返回分页对象
+        DataGridView dataGridView = this.registrationService.queryRegistrationForPage(registrationDto);
+        return AjaxResult.success("分页数据查询成功",dataGridView.getData(), dataGridView.getTotal());
+    }
+
+    /**
+     * 作废【根据挂号流水Id】
+     * @param registrationId    挂号流水Id
+     * @return  返回结果
+     */
+    @PutMapping("doInvalid/{registrationId}")
+    @HystrixCommand
+    @Log(title = "作废【根据挂号流水Id】",businessType = BusinessType.UPDATE)
+    public AjaxResult doInvalid(@PathVariable String registrationId) {
+        // 查询挂号流水id对应的挂号单据信息
+        Registration registration = this.registrationService.queryRegistrationById(registrationId);
+        if (null == registration) {
+            return AjaxResult.fail("当前挂号流水Id【"+registrationId+"】对应的挂号单数据不存在！");
+        }
+        // 如果挂号单对应的状态不是未收费
+        if (!registration.getRegistrationStatus().equals(Constants.REG_STATUS_0)) {
+            return AjaxResult.fail("当前挂号流水Id【"+registrationId+"】不是未收费状态，不可以进行作废！");
+        }
+        // 设置状态为作废
+        registration.setRegistrationStatus(Constants.REG_STATUS_5);
+        return AjaxResult.toAjax(this.registrationService.doInvalid(registration));
+    }
+
+    /**
+     * 退号【根据挂号流水号】
+     * @param registrationId    挂号流水Id
+     * @return  返回结果
+     */
+    @PutMapping("doReturn/{registrationId}")
+    @HystrixCommand
+    @Log(title = "退号【根据挂号流水号】",businessType = BusinessType.UPDATE)
+    public AjaxResult doReturn(@PathVariable String registrationId) {
+        // 查询挂号流水id对应的挂号单据信息
+        Registration registration = this.registrationService.queryRegistrationById(registrationId);
+        if (null == registration) {
+            return AjaxResult.fail("当前挂号流水Id【"+registrationId+"】对应的挂号单数据不存在！");
+        }
+        // 如果挂号单对应的状态不是未收费
+        if (!registration.getRegistrationStatus().equals(Constants.REG_STATUS_1)) {
+            return AjaxResult.fail("当前挂号流水Id【"+registrationId+"】不是待就诊状态，不可以进行退号！");
+        }
+        // 设置状态为退号
+        registration.setRegistrationStatus(Constants.REG_STATUS_4);
+        return AjaxResult.toAjax(this.registrationService.doInvalid(registration));
     }
 }
 

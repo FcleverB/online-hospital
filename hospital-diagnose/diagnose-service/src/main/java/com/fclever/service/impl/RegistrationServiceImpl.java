@@ -2,10 +2,15 @@ package com.fclever.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.fclever.constants.Constants;
 import com.fclever.domain.Registration;
 import com.fclever.dto.RegistrationDto;
 import com.fclever.mapper.RegistrationMapper;
 import com.fclever.service.RegistrationService;
+import com.fclever.vo.DataGridView;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -54,5 +59,58 @@ public class RegistrationServiceImpl implements RegistrationService{
     @Override
     public int updateRegistrationById(Registration registration) {
         return this.registrationMapper.updateById(registration);
+    }
+
+    /**
+     * 作废【根据挂号流水Id】
+     * @param registration    待更新的数据
+     * @return  返回结果
+     */
+    @Override
+    public int doInvalid(Registration registration) {
+        // 执行更新操作
+        return this.registrationMapper.updateById(registration);
+    }
+
+    /**
+     * 退号【根据挂号流水号】
+     * @param registration    待更新的数据
+     * @return  返回结果
+     */
+    @Override
+    public int doReturn(Registration registration) {
+        // 执行更新操作
+        return this.registrationMapper.updateById(registration);
+    }
+
+    /**
+     * 分页查询挂号信息
+     * @param registrationDto   前端传递的查询条件
+     * @return  返回结果
+     */
+    @Override
+    public DataGridView queryRegistrationForPage(RegistrationDto registrationDto) {
+        // 构建分页对象
+        Page<Registration> page = new Page<>(registrationDto.getPageNum(), registrationDto.getPageSize());
+        // 封装查询条件
+        QueryWrapper<Registration> qw = new QueryWrapper<>();
+        // 精确匹配科室
+        qw.eq(registrationDto.getDeptId() != null, Registration.COL_DEPT_ID, registrationDto.getDeptId());
+        // 模糊匹配患者名称
+        qw.like(StringUtils.isNotBlank(registrationDto.getPatientName()), Registration.COL_PATIENT_NAME, registrationDto.getPatientName());
+        // 精确匹配挂号类型
+        qw.eq(StringUtils.isNotBlank(registrationDto.getSchedulingType()), Registration.COL_SCHEDULING_TYPE, registrationDto.getSchedulingType());
+        // 精确匹配挂号时段
+        qw.eq(StringUtils.isNotBlank(registrationDto.getSubsectionType()), Registration.COL_SUBSECTION_TYPE, registrationDto.getSubsectionType());
+        // 精确匹配挂号状态
+        qw.eq(StringUtils.isNotBlank(registrationDto.getRegistrationStatus()), Registration.COL_REGISTRATION_STATUS, registrationDto.getRegistrationStatus());
+        // 精确匹配时间
+        qw.eq(StringUtils.isNotBlank(registrationDto.getVisitDate()), Registration.COL_VISIT_DATE, registrationDto.getVisitDate());
+        // 设置数据显示顺序
+        qw.orderByAsc(Registration.COL_VISIT_DATE);
+        // 执行查询
+        this.registrationMapper.selectPage(page, qw);
+        // 封装DataGridView对象并返回
+        return new DataGridView(page.getTotal(), page.getRecords());
     }
 }
