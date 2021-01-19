@@ -71,7 +71,7 @@ public class Registration extends BaseEntity {
      * 挂号费用ID
      */
     @TableField(value = "registration_item_id")
-    @ApiModelProperty(value="挂号费用ID")
+    @ApiModelProperty(value="挂号项目ID")
     private Long registrationItemId;
 
     /**

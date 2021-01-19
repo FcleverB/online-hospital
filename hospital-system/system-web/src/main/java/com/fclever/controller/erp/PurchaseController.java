@@ -156,7 +156,7 @@ public class PurchaseController extends BaseController {
      */
     @GetMapping("generatePurchaseId")
     public AjaxResult generatePurchaseId() {
-        return AjaxResult.success(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PROFIX_CG));
+        return AjaxResult.success(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PREFIX_CG));
     }
 
     /**

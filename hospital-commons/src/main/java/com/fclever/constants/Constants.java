@@ -62,7 +62,17 @@ public interface Constants {
     /**
      * 生产入库单据id的前缀
      */
-    String ID_PROFIX_CG = "CG";
+    String ID_PREFIX_CG = "CG";
+
+    /**
+     * 患者信息id的前缀
+     */
+    String ID_PREFIX_HZ = "HZ";
+
+    /**
+     * 挂号主键id的前缀
+     */
+    String ID_PREFIX_GH = "GH";
 
     /**
      * 是否需要排班标志
@@ -78,4 +88,10 @@ public interface Constants {
     String REG_STATUS_3 = "3"; // 就诊完成
     String REG_STATUS_4 = "4"; // 已退号
     String REG_STATUS_5 = "5"; // 已作废
+
+    /**
+     * 患者信息是否完善
+     */
+    String IS_FINAL_FALSE = "0";
+    String IS_FINAL_TRUE = "1";
 }

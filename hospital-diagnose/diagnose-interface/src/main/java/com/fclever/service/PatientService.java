@@ -38,4 +38,13 @@ public interface PatientService{
      * @return 患者信息
      */
     Patient getPatientByIdCard(String idCard);
+
+    /**
+     * 添加患者信息
+     *      在门诊挂号时，如果根据身份证号查询不到对应的患者信息，那么在手动输入患者信息之后
+     *      进行挂号操作的时候，就可以自动保存患者信息
+     * @param patientDto 待保存的患者信息
+     * @return  返回结果
+     */
+    Patient addPatient(PatientDto patientDto);
 }

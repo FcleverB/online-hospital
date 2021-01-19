@@ -189,7 +189,7 @@ public class PurchaseServiceImpl implements PurchaseService{
             BeanUtil.copyProperties(item, purchaseItem);
             // 详情信息表中不保存创建和更新相关内容，由主表持有这些信息，因为每次都是重新insert
             purchaseItem.setPurchaseId(newPurchase.getPurchaseId());
-            purchaseItem.setItemId(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PROFIX_CG));
+            purchaseItem.setItemId(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PREFIX_CG));
             this.purchaseItemMapper.insert(purchaseItem);
         }
         return puchaseRes;
@@ -241,7 +241,7 @@ public class PurchaseServiceImpl implements PurchaseService{
             BeanUtil.copyProperties(item, purchaseItem);
             // 详情信息表中不保存创建和更新相关内容，由主表持有这些信息，因为每次都是重新insert
             purchaseItem.setPurchaseId(newPurchase.getPurchaseId());
-            purchaseItem.setItemId(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PROFIX_CG));
+            purchaseItem.setItemId(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PREFIX_CG));
             this.purchaseItemMapper.insert(purchaseItem);
         }
         return puchaseRes;

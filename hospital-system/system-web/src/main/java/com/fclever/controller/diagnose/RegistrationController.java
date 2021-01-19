@@ -1,22 +1,28 @@
 package com.fclever.controller.diagnose;
 
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.fclever.aspectj.annotation.Log;
+import com.fclever.aspectj.enums.BusinessType;
+import com.fclever.constants.Constants;
 import com.fclever.controller.BaseController;
 import com.fclever.domain.Dept;
 import com.fclever.domain.Patient;
+import com.fclever.dto.PatientDto;
+import com.fclever.dto.RegistrationDto;
+import com.fclever.dto.RegistrationFormDto;
 import com.fclever.dto.RegistrationQueryDto;
 import com.fclever.service.DeptService;
 import com.fclever.service.PatientService;
 import com.fclever.service.RegistrationService;
 import com.fclever.service.SchedulingService;
+import com.fclever.utils.IdGeneratorSnowflake;
+import com.fclever.utils.ShiroSecurityUtils;
 import com.fclever.vo.AjaxResult;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 import java.util.List;
@@ -78,4 +84,51 @@ public class RegistrationController extends BaseController {
         }
         return AjaxResult.success(patient);
     }
+
+    /**
+     * 挂号工嗯呢该
+     * @param registrationFormDto   需要保存的JSON信息
+     * @return  返回结果
+     */
+    @PostMapping("addRegistration")
+    @HystrixCommand
+    @Log(title = "保存挂号信息",businessType = BusinessType.INSERT)
+    public AjaxResult addRegistration(@RequestBody @Validated RegistrationFormDto registrationFormDto) {
+        PatientDto patientDto = registrationFormDto.getPatientDto();
+        RegistrationDto registrationDto = registrationFormDto.getRegistrationDto();
+        // 之前的患者信息是根据身份证号查出来的，如果此时patientDto中没有患者id，那说明根据身份证号没有查出来患者信息，表示是录入的新的患者信息
+        // 需要先添加患者信息
+        Patient patient = null;
+        if (StringUtils.isBlank(patientDto.getPatientId())){
+            // 随机生成患者主键id
+            patientDto.setPatientId(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PREFIX_HZ));
+            // 设置创建人信息
+            patientDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
+            // 调用patientService执行添加方法
+            patient = patientService.addPatient(patientDto);
+        } else {
+            // 如果有患者编号，则根据编号查询患者信息
+            patient = this.patientService.getPatientById(patientDto.getPatientId());
+
+        }
+        if (patient == null) {
+            return AjaxResult.fail("当前患者id不存在，请确认后再进行挂号");
+        }
+        // 查询对应挂号的部门信息，获取挂号数，执行挂号操作时，在原有号数的基础上增加一
+        Dept dept = this.deptService.getDeptById(registrationDto.getDeptId());
+        // 保存挂号信息
+        registrationDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
+        registrationDto.setRegistrationId(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PREFIX_HZ));
+        registrationDto.setPatientId(patient.getPatientId());
+        registrationDto.setPatientName(patient.getName());
+        registrationDto.setRegistrationStatus(Constants.REG_STATUS_0); // 待就诊
+        registrationDto.setRegistrationNumber(dept.getRegNumber()+1);
+        this.registrationService.addRegistration(registrationDto);
+        // 更新对应科室的挂号数
+        this.deptService.updateRegNumberByDeptId(dept.getDeptId(), dept.getRegNumber() + 1);
+        // 返回挂号编号给前端
+        return AjaxResult.success("挂号成功",registrationDto.getRegistrationId());
+    }
+
 }
+

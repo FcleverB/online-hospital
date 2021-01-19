@@ -3,16 +3,20 @@ package com.fclever.service.impl;
 import javax.annotation.Resource;
 import java.util.List;
 
+import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.fclever.constants.Constants;
 import com.fclever.domain.Patient;
 import com.fclever.domain.PatientFile;
 import com.fclever.dto.PatientDto;
 import com.fclever.mapper.PatientFileMapper;
 import com.fclever.mapper.PatientMapper;
 import com.fclever.service.PatientService;
+import com.fclever.utils.Md5Utils;
 import com.fclever.vo.DataGridView;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,5 +90,29 @@ public class PatientServiceImpl implements PatientService{
         // 查询条件身份证号
         qw.eq(Patient.COL_ID_CARD, idCard);
         return this.patientMapper.selectOne(qw);
+    }
+
+    /**
+     * 添加患者信息
+     *      在门诊挂号时，如果根据身份证号查询不到对应的患者信息，那么在手动输入患者信息之后
+     *      进行挂号操作的时候，就可以自动保存患者信息
+     * @param patientDto 待保存的患者信息
+     * @return  返回结果
+     */
+    @Override
+    public Patient addPatient(PatientDto patientDto) {
+        // 这些患者后期是可以进行登录的，所以在添加的时候需要处理一下用户名和密码的问题
+        // 创建实体对象
+        Patient patient = new Patient();
+        // 值拷贝
+        BeanUtil.copyProperties(patientDto, patient);
+        // 设置值
+        patient.setCreateTime(DateUtil.date());
+        patient.setIsFinal(Constants.IS_FINAL_FALSE); // 第一次添加为未完善信息
+        String defaultPwd = patient.getPhone().substring(5);
+        // MD5 加盐散列两次
+        patient.setPassword(Md5Utils.md5(defaultPwd, patient.getPhone(), 2));
+        this.patientMapper.insert(patient);
+        return patient;
     }
 }

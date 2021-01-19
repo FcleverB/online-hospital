@@ -135,4 +135,17 @@ public class DeptServiceImpl implements DeptService{
         qw.in(Dept.COL_DEPT_ID, deptIds);
         return this.deptMapper.selectList(qw);
     }
+
+    /**
+     * 根据科室id更新挂号数量
+     * @param deptId    科室id
+     * @param regNumber 要更新的挂号数量
+     */
+    @Override
+    public void updateRegNumberByDeptId(Long deptId, int regNumber) {
+        Dept dept = new Dept();
+        dept.setDeptId(deptId);
+        dept.setRegNumber(regNumber);
+        this.deptMapper.updateById(dept);
+    }
 }
