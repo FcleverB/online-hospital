@@ -79,4 +79,12 @@ dubbo:
   protocol:
     name: dubbo # name 指定的是传输协议的名称：dubbo rmi hessian webservice
     port: 20884
+# Hystrix超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds=20000 # 远程服务调用超时时间，避免因为服务响应慢而报错
 

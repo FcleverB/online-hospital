@@ -1,7 +1,7 @@
 package com.fclever.controller;
 
-        import com.fclever.vo.AjaxResult;
-        import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
+import com.fclever.vo.AjaxResult;
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 
 /**
  * 基础控制层，由服务提供者进行继承，统一规范熔断时的处理
