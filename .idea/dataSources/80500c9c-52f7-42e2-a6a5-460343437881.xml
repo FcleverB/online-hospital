@@ -1003,15 +1003,15 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="259" parent="22" name="his_care_history">
-      <Comment>病例表</Comment>
+      <Comment>病历信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="260" parent="22" name="his_care_order">
-      <Comment>药用处方表</Comment>
+      <Comment>处方信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="261" parent="22" name="his_care_order_item">
-      <Comment>开诊细表</Comment>
+      <Comment>处方项目详细信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="262" parent="22" name="his_check_result">
@@ -1034,81 +1034,82 @@
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="267" parent="22" name="his_patient">
-      <Comment>患者信息表</Comment>
+      <Comment>1患者信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="268" parent="22" name="his_patient_file">
-      <Comment>患者档案表</Comment>
+      <Comment>1患者档案表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="269" parent="22" name="his_registration">
+      <Comment>1挂号信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="270" parent="22" name="his_scheduling">
-      <Comment>排班信息表</Comment>
+      <Comment>1排班信息表</Comment>
       <Collation>utf8_general_ci</Collation>
     </table>
     <table id="271" parent="22" name="stock_inventory_log">
-      <Comment>入库操作信息记录表</Comment>
+      <Comment>1入库操作信息记录表</Comment>
     </table>
     <table id="272" parent="22" name="stock_medicines">
-      <Comment>药品信息表</Comment>
+      <Comment>1药品信息表</Comment>
       <Collation>utf8_general_ci</Collation>
     </table>
     <table id="273" parent="22" name="stock_producter">
-      <Comment>生产厂家表</Comment>
+      <Comment>1生产厂家表</Comment>
     </table>
     <table id="274" parent="22" name="stock_provider">
-      <Comment>供应商信息表</Comment>
+      <Comment>1供应商信息表</Comment>
     </table>
     <table id="275" parent="22" name="stock_purchase">
-      <Comment>入库单据表</Comment>
+      <Comment>1入库单据表</Comment>
     </table>
     <table id="276" parent="22" name="stock_purchase_item">
-      <Comment>入库单据详细信息表</Comment>
+      <Comment>1入库单据详细信息表</Comment>
     </table>
     <table id="277" parent="22" name="sys_check_item">
-      <Comment>检查项目表</Comment>
+      <Comment>1检查项目表</Comment>
     </table>
     <table id="278" parent="22" name="sys_dept">
-      <Comment>科室信息表</Comment>
+      <Comment>1科室信息表</Comment>
     </table>
     <table id="279" parent="22" name="sys_dict_data">
-      <Comment>字典数据表</Comment>
+      <Comment>1字典数据表</Comment>
     </table>
     <table id="280" parent="22" name="sys_dict_type">
-      <Comment>字典类型表</Comment>
+      <Comment>1字典类型表</Comment>
     </table>
     <table id="281" parent="22" name="sys_login_log">
-      <Comment>登录日志表</Comment>
+      <Comment>1登录日志表</Comment>
     </table>
     <table id="282" parent="22" name="sys_menu">
-      <Comment>菜单权限表</Comment>
+      <Comment>1菜单权限表</Comment>
     </table>
     <table id="283" parent="22" name="sys_notice">
-      <Comment>通知公告表</Comment>
+      <Comment>1通知公告表</Comment>
     </table>
     <table id="284" parent="22" name="sys_operation_log">
-      <Comment>操作日志记录表</Comment>
+      <Comment>1操作日志记录表</Comment>
     </table>
     <table id="285" parent="22" name="sys_registered_item">
-      <Comment>挂号项目信息表</Comment>
+      <Comment>1挂号项目信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="286" parent="22" name="sys_role">
-      <Comment>角色信息表</Comment>
+      <Comment>1角色信息表</Comment>
     </table>
     <table id="287" parent="22" name="sys_role_menu">
-      <Comment>角色和菜单关联表</Comment>
+      <Comment>1角色和菜单关联表</Comment>
     </table>
     <table id="288" parent="22" name="sys_role_user">
-      <Comment>用户和角色关联表</Comment>
+      <Comment>1用户和角色关联表</Comment>
     </table>
     <table id="289" parent="22" name="sys_sms_log">
       <Comment>短息发送记录表</Comment>
     </table>
     <table id="290" parent="22" name="sys_user">
-      <Comment>用户信息表</Comment>
+      <Comment>1用户信息表</Comment>
     </table>
     <column id="291" parent="259" name="ch_id">
       <Position>1</Position>
@@ -1997,7 +1998,7 @@
     </column>
     <column id="433" parent="269" name="registration_item_id">
       <Position>7</Position>
-      <Comment>挂号费用ID</Comment>
+      <Comment>挂号项目ID</Comment>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -2027,14 +2028,14 @@
     </column>
     <column id="438" parent="269" name="scheduling_type">
       <Position>12</Position>
-      <Comment>排班类型1 门诊 2 急诊 字典表数据翻译</Comment>
+      <Comment>挂号类型1 门诊 2 急诊 字典表数据翻译</Comment>
       <DataType>char(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_general_ci</Collation>
     </column>
     <column id="439" parent="269" name="subsection_type">
       <Position>13</Position>
-      <Comment>排班时段1上午  2下午 3晚上 字典表数据翻译</Comment>
+      <Comment>挂号时段1上午  2下午 3晚上 字典表数据翻译</Comment>
       <DataType>char(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>

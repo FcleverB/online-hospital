@@ -4,12 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/RoleService.java" description="int updateRole(RoleDto roleDto);" line="41" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-prod.yml" afterDir="false" />
-    </list>
+    <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="" />
     <list id="0a8bab89-bf34-481f-9475-97873582964d" name="系统管理hospital-system中挂号费用管理后端增删改查功能实现" comment="" />
     <list id="cf4d9d9c-abbd-4c72-be5e-5aa5cef5e5f1" name="系统管理hospital-system中挂号费用管理后端增删改查功能是吸纳" comment="" />
     <list id="daae4acf-b2bc-4122-8344-f58627adbff4" name="进销存管理hospital-erp中供应商管理中ProviderController创建" comment="进销存管理hospital-erp中供应商管理中ProviderController创建" />
@@ -84,76 +79,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/RegistrationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/BaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="88" column="65" lean-forward="true" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-prod.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="88" column="65" selection-start-line="88" selection-start-column="65" selection-end-line="88" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/RegistrationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/RegistrationServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1264">
-              <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -888,14 +814,7 @@
       <workItem from="1611017738719" duration="9431000" />
       <workItem from="1611051077574" duration="3833000" />
       <workItem from="1611061309659" duration="2484000" />
-      <workItem from="1611107660411" duration="4738000" />
-    </task>
-    <task id="LOCAL-00082" summary="online-hospital系统中文档移出，项目完成后加入">
-      <created>1607776737506</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1607776737507</updated>
+      <workItem from="1611107660411" duration="8443000" />
     </task>
     <task id="LOCAL-00083" summary="进销存管理hospital-erp中ProducterController创建">
       <created>1607777001084</created>
@@ -1233,7 +1152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611062548758</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="系统管理hospital-system中调整Hystrix的服务调用超时时间">
+      <created>1611130360103</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1611130360105</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1248,7 +1174,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="593348000" />
+    <option name="totallyTimeSpent" value="597053000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1261,7 +1187,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
       <window_info id="Structure" order="1" sideWeight="0.6967509" side_tool="true" weight="0.1769437" />
@@ -1270,9 +1195,9 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.3032491" visible="true" weight="0.19296375" />
-      <window_info anchor="bottom" id="Run Dashboard" order="0" sideWeight="0.8357909" visible="true" weight="0.36191538" />
-      <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.49932975" weight="0.44209355" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.3032491" visible="true" weight="0.19296375" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="0" sideWeight="0.8357909" visible="true" weight="0.36191538" />
+      <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.49932975" weight="0.25389755" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
@@ -1364,7 +1289,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="进销存管理hospital-erp中采购入库中生产InventoryLog入库操作信息表代码" />
     <MESSAGE value="进销存管理hospital-erp中采购入库中重新生成InventoryLog入库操作信息表代码" />
     <MESSAGE value="进销存管理hospital-erp中采购入库中新增|查看详情|入库功能实现" />
     <MESSAGE value="进销存管理hospital-erp中采购入库中暂存和提交审核bug解决" />
@@ -1389,7 +1313,8 @@
     <MESSAGE value="看病就诊管理hospital-doctor中后端挂号功能实现" />
     <MESSAGE value="看病就诊管理hospital-doctor中挂号功能中收费接口实现" />
     <MESSAGE value="看病就诊管理hospital-doctor中挂号列表功能中分页查询|退号|作废实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="看病就诊管理hospital-doctor中挂号列表功能中分页查询|退号|作废实现" />
+    <MESSAGE value="系统管理hospital-system中调整Hystrix的服务调用超时时间" />
+    <option name="LAST_COMMIT_MESSAGE" value="系统管理hospital-system中调整Hystrix的服务调用超时时间" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1798,8 +1723,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-prod.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="88" column="65" selection-start-line="88" selection-start-column="65" selection-end-line="88" selection-end-column="65" />
+        <state relative-caret-position="-5">
+          <caret line="63" column="38" lean-forward="true" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
         </state>
       </provider>
     </entry>
