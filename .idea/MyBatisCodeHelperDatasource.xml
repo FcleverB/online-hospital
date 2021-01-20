@@ -92,6 +92,18 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="onlinehospital:his_care_order_item">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="CareOrderItem" />
+                  <option name="moduleName" value="hospital-diagnose" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="onlinehospital:his_patient">
               <value>
                 <TableGenerateConfig>
