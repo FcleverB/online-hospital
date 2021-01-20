@@ -68,6 +68,30 @@
         <option name="removeTablePreName" value="his_" />
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="onlinehospital:his_care_history">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="CareHistory" />
+                  <option name="moduleName" value="hospital-diagnose" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="onlinehospital:his_care_order">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="CareOrder" />
+                  <option name="moduleName" value="hospital-diagnose" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="onlinehospital:his_patient">
               <value>
                 <TableGenerateConfig>
