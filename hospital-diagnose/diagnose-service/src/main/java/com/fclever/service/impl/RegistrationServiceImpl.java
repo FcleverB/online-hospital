@@ -5,14 +5,16 @@ import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.fclever.constants.Constants;
 import com.fclever.domain.Registration;
+import com.fclever.domain.SimpleUser;
 import com.fclever.dto.RegistrationDto;
 import com.fclever.mapper.RegistrationMapper;
 import com.fclever.service.RegistrationService;
 import com.fclever.vo.DataGridView;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 /**
 @author Fclever
@@ -112,5 +114,40 @@ public class RegistrationServiceImpl implements RegistrationService{
         this.registrationMapper.selectPage(page, qw);
         // 封装DataGridView对象并返回
         return new DataGridView(page.getTotal(), page.getRecords());
+    }
+
+    /**
+     * 医生接诊
+     * @param registration  挂号信息
+     * @return  返回结果
+     */
+    @Override
+    public int receivePatient(Registration registration) {
+        return this.registrationMapper.updateById(registration);
+    }
+
+    /**
+     * 查询待就诊的挂号信息
+     * @param schedulingType        挂号类型    门诊|急诊
+     * @param deptId                科室id
+     * @param registrationStatus    挂号状态
+     * @param subsectionType        挂号时段
+     * @param userId                医生id
+     * @return  返回结果
+     */
+    @Override
+    public List<Registration> queryRegistration(String schedulingType, Long deptId, String registrationStatus, String subsectionType, Long userId) {
+        // 构建查询条件对象
+        QueryWrapper<Registration> qw = new QueryWrapper<>();
+        // 封装查询条件
+        qw.eq(Registration.COL_SCHEDULING_TYPE, schedulingType);
+        qw.eq(Registration.COL_DEPT_ID, deptId);
+        qw.eq(Registration.COL_REGISTRATION_STATUS, registrationStatus);
+        qw.eq(Registration.COL_SUBSECTION_TYPE, subsectionType);
+        qw.eq(userId != null, Registration.COL_USER_ID, userId);
+        // 排序
+        qw.orderByAsc(Registration.COL_REGISTRATION_NUMBER);
+        // 执行查询
+        return this.registrationMapper.selectList(qw);
     }
 }

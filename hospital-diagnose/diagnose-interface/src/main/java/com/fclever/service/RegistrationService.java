@@ -1,9 +1,11 @@
 package com.fclever.service;
 
 import com.fclever.domain.Registration;
-import com.baomidou.mybatisplus.extension.service.IService;
+import com.fclever.domain.SimpleUser;
 import com.fclever.dto.RegistrationDto;
 import com.fclever.vo.DataGridView;
+
+import java.util.List;
 
 /**
 @author Fclever
@@ -26,6 +28,7 @@ public interface RegistrationService{
 
     /**
      * 更新收费状态
+     * 医生接诊---更新数据状态
      * @param registration 待更新的数据
      * @return  返回结果
      */
@@ -51,4 +54,22 @@ public interface RegistrationService{
      * @return  返回结果
      */
     DataGridView queryRegistrationForPage(RegistrationDto registrationDto);
+
+    /**
+     * 医生接诊
+     * @param registration  挂号信息
+     * @return  返回结果
+     */
+    int receivePatient(Registration registration);
+
+    /**
+     * 查询待就诊的挂号信息
+     * @param schedulingType        挂号类型    门诊|急诊
+     * @param deptId                科室id
+     * @param registrationStatus    挂号状态
+     * @param subsectionType        挂号时段
+     * @param userId                医生id
+     * @return  返回结果
+     */
+    List<Registration> queryRegistration(String schedulingType, Long deptId, String registrationStatus, String subsectionType, Long userId);
 }
