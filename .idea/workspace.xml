@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/hospital-system/system-interface/src/main/java/com/fclever/service/RoleService.java" description="int updateRole(RoleDto roleDto);" line="41" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="公共">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/CareHistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/CareHistoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/RegistrationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/CareHistoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/CareHistoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/RegistrationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/RegistrationServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="" />
     <list id="0a8bab89-bf34-481f-9475-97873582964d" name="系统管理hospital-system中挂号费用管理后端增删改查功能实现" comment="" />
     <list id="cf4d9d9c-abbd-4c72-be5e-5aa5cef5e5f1" name="系统管理hospital-system中挂号费用管理后端增删改查功能是吸纳" comment="" />
     <list id="daae4acf-b2bc-4122-8344-f58627adbff4" name="进销存管理hospital-erp中供应商管理中ProviderController创建" comment="进销存管理hospital-erp中供应商管理中ProviderController创建" />
@@ -803,14 +797,7 @@
       <workItem from="1611051077574" duration="3833000" />
       <workItem from="1611061309659" duration="2484000" />
       <workItem from="1611107660411" duration="12358000" />
-      <workItem from="1611191966788" duration="7708000" />
-    </task>
-    <task id="LOCAL-00087" summary="进销存管理hospital-erp中药品信息管理后端代码生成">
-      <created>1607782338608</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1607782338608</updated>
+      <workItem from="1611191966788" duration="8096000" />
     </task>
     <task id="LOCAL-00088" summary="进销存管理hospital-erp中药品信息管理后端代码api编写">
       <created>1607783769937</created>
@@ -1148,7 +1135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611194165069</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="看病就诊管理hospital-diagnose中查询不同就诊状态数据|接诊|查询患者全部信息实现">
+      <created>1611206310827</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1611206310827</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1163,7 +1157,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="608676000" />
+    <option name="totallyTimeSpent" value="609064000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1175,8 +1169,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
       <window_info id="Structure" order="1" sideWeight="0.6967509" side_tool="true" weight="0.1769437" />
@@ -1279,7 +1272,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="进销存管理hospital-erp中采购入库中提交审核bug解决" />
     <MESSAGE value="进销存管理hospital-erp中库存查询功能实现" />
     <MESSAGE value="看病就诊管理hospital-doctor中排班医生列表查询功能实现（下拉框）" />
     <MESSAGE value="看病就诊管理hospital-doctor中医生排班数据排班列表数据功能实现" />
@@ -1304,7 +1296,8 @@
     <MESSAGE value="看病就诊管理hospital-diagnose中生成处方信息表后端代码" />
     <MESSAGE value="看病就诊管理hospital-diagnose中生成处方项目详细信息表后端代码" />
     <MESSAGE value="公共模块hospital-commons中添加根据当前时间计算所处时间段工具类" />
-    <option name="LAST_COMMIT_MESSAGE" value="公共模块hospital-commons中添加根据当前时间计算所处时间段工具类" />
+    <MESSAGE value="看病就诊管理hospital-diagnose中查询不同就诊状态数据|接诊|查询患者全部信息实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="看病就诊管理hospital-diagnose中查询不同就诊状态数据|接诊|查询患者全部信息实现" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

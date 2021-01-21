@@ -53,6 +53,8 @@ public class CareController extends BaseController {
         // 设置要查询的状态，只能查询挂号信息的待就诊状态信息
         String registrationStatus = Constants.REG_STATUS_1;
         // 设置默认可以选择挂号的时间段，根据当前时间进行计算，如果是上午进入，那么只能挂上午的号，下午-》下午，以此类推
+        // 就诊中和就诊完成两个查询时，不需要根据当前时间计算时间段，因为已经接诊了，就任何时间都可以查看即可
+        // 但是处于未接诊状态的时候，就可以指定根据当前时间来计算时间段，然后显示当前时间段的数据进行回显即可了
         String subsectionType = DateUtils.getCurrentTimeType();
         // 当前登录用户的id，待就诊的话，可以查看到当前科室的所有患者信息
         // 就诊中和就诊完成，只能看到当前用户（医生）的接诊的患者，其他同科室医生的接诊信息无法查询到
@@ -73,12 +75,10 @@ public class CareController extends BaseController {
         Long deptId = ShiroSecurityUtils.getCurrentUser().getDeptId();
         // 设置要查询的状态，只能查询挂号信息的就诊中状态信息
         String registrationStatus = Constants.REG_STATUS_2;
-        // 设置默认可以选择挂号的时间段，根据当前时间进行计算，如果是上午进入，那么只能挂上午的号，下午-》下午，以此类推
-        String subsectionType = DateUtils.getCurrentTimeType();
         // 当前登录用户的id，待就诊的话，可以查看到当前科室的所有患者信息
         // 就诊中和就诊完成，只能看到当前用户（医生）的接诊的患者，其他同科室医生的接诊信息无法查询到
         Long userId = ShiroSecurityUtils.getCurrentUser().getUserId();
-        List<Registration> registrationList = this.registrationService.queryRegistration(schedulingType, deptId, registrationStatus, subsectionType, userId);
+        List<Registration> registrationList = this.registrationService.queryRegistration(schedulingType, deptId, registrationStatus, null, userId);
         return AjaxResult.success(registrationList);
     }
 
@@ -94,12 +94,10 @@ public class CareController extends BaseController {
         Long deptId = ShiroSecurityUtils.getCurrentUser().getDeptId();
         // 设置要查询的状态，只能查询挂号信息的就诊完成状态信息
         String registrationStatus = Constants.REG_STATUS_3;
-        // 设置默认可以选择挂号的时间段，根据当前时间进行计算，如果是上午进入，那么只能挂上午的号，下午-》下午，以此类推
-        String subsectionType = DateUtils.getCurrentTimeType();
         // 当前登录用户的id，待就诊的话，可以查看到当前科室的所有患者信息
         // 就诊中和就诊完成，只能看到当前用户（医生）的接诊的患者，其他同科室医生的接诊信息无法查询到
         Long userId = ShiroSecurityUtils.getCurrentUser().getUserId();
-        List<Registration> registrationList = this.registrationService.queryRegistration(schedulingType, deptId, registrationStatus, subsectionType, userId);
+        List<Registration> registrationList = this.registrationService.queryRegistration(schedulingType, deptId, registrationStatus, null, userId);
         return AjaxResult.success(registrationList);
     }
 

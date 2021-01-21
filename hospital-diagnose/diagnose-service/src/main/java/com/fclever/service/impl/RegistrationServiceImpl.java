@@ -143,7 +143,7 @@ public class RegistrationServiceImpl implements RegistrationService{
         qw.eq(Registration.COL_SCHEDULING_TYPE, schedulingType);
         qw.eq(Registration.COL_DEPT_ID, deptId);
         qw.eq(Registration.COL_REGISTRATION_STATUS, registrationStatus);
-        qw.eq(Registration.COL_SUBSECTION_TYPE, subsectionType);
+        qw.eq(subsectionType != null,Registration.COL_SUBSECTION_TYPE, subsectionType);
         qw.eq(userId != null, Registration.COL_USER_ID, userId);
         // 排序
         qw.orderByAsc(Registration.COL_REGISTRATION_NUMBER);
