@@ -121,7 +121,7 @@ public class RegistrationController extends BaseController {
         Dept dept = this.deptService.getDeptById(registrationDto.getDeptId());
         // 保存挂号信息
         registrationDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
-        registrationDto.setRegistrationId(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PREFIX_HZ));
+        registrationDto.setRegistrationId(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PREFIX_GH));
         registrationDto.setPatientId(patient.getPatientId());
         registrationDto.setPatientName(patient.getName());
         registrationDto.setRegistrationStatus(Constants.REG_STATUS_0); // 待就诊
