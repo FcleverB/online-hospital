@@ -145,6 +145,9 @@ public class RegistrationServiceImpl implements RegistrationService{
         qw.eq(Registration.COL_REGISTRATION_STATUS, registrationStatus);
         qw.eq(subsectionType != null,Registration.COL_SUBSECTION_TYPE, subsectionType);
         qw.eq(userId != null, Registration.COL_USER_ID, userId);
+        // 增加日期查询条件，只能查询当天的数据
+        // 个人感觉，实际中挂号（除了提前预约的专家号），都是当天挂当天的号，所以把新开就诊中能拿到的患者数据都限制在当天，然后挂号列表中可以查询各种日期的数据
+        qw.eq(Registration.COL_VISIT_DATE, DateUtil.format(DateUtil.date(), "yyyy-MM-dd"));
         // 排序
         qw.orderByAsc(Registration.COL_REGISTRATION_NUMBER);
         // 执行查询
