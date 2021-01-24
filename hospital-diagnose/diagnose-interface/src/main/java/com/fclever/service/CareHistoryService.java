@@ -2,6 +2,7 @@ package com.fclever.service;
 
 import com.fclever.domain.CareHistory;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.fclever.dto.CareHistoryDto;
 
 import java.util.List;
 
@@ -17,4 +18,12 @@ public interface CareHistoryService{
      * @return  返回结果
      */
     List<CareHistory> queryCareHistoryByPatientId(String patientId);
+
+    /**
+     * 保存或更新病历信息
+     *      如果病历id已经存在则进行更新
+     * @param careHistoryDto    待保存数据
+     * @return  返回结果
+     */
+    CareHistory saveOrUpdateCareHistory(CareHistoryDto careHistoryDto);
 }

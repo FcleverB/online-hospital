@@ -75,6 +75,11 @@ public interface Constants {
     String ID_PREFIX_GH = "GH";
 
     /**
+     * 病历主键id的前缀
+     */
+    String ID_PREFIX_CH = "CH";
+
+    /**
      * 是否需要排班标志
      */
     String SCHEDULING_FLAG_FALSE = "0";

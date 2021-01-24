@@ -6,6 +6,7 @@ import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.constants.Constants;
 import com.fclever.controller.BaseController;
 import com.fclever.domain.*;
+import com.fclever.dto.CareHistoryDto;
 import com.fclever.service.CareHistoryService;
 import com.fclever.service.DeptService;
 import com.fclever.service.PatientService;
@@ -39,6 +40,9 @@ public class CareController extends BaseController {
 
     @Reference
     private CareHistoryService careHistoryService;
+
+    @Autowired
+    private DeptService deptService;
 
     /**
      * 查询待就诊的挂号信息
@@ -151,5 +155,27 @@ public class CareController extends BaseController {
         res.put("patientFile",patientFile);
         res.put("careHistoryList",careHistories);
         return AjaxResult.success(res);
+    }
+
+    /**
+     * 保存或更新病历信息
+     *      如果病历id已经存在则进行更新
+     * @param careHistoryDto    待保存数据
+     * @return  返回结果
+     */
+    @PostMapping("saveCareHistory")
+    @HystrixCommand
+    @Log(title = "保存病历信息",businessType = BusinessType.INSERT)
+    public AjaxResult saveCareHistory(@RequestBody CareHistoryDto careHistoryDto) {
+        // 封装数据
+        careHistoryDto.setUserId(ShiroSecurityUtils.getCurrentUser().getUserId());
+        careHistoryDto.setUserName(ShiroSecurityUtils.getCurrentUser().getUserName());
+        careHistoryDto.setDeptId(ShiroSecurityUtils.getCurrentUser().getDeptId());
+        Dept dept = this.deptService.getDeptById(ShiroSecurityUtils.getCurrentUser().getDeptId());
+        careHistoryDto.setDeptName(dept.getDeptName());
+        // 设置就诊时间
+        careHistoryDto.setCareTime(DateUtil.date());
+        CareHistory careHistory = this.careHistoryService.saveOrUpdateCareHistory(careHistoryDto);
+        return AjaxResult.success(careHistory);
     }
 }
