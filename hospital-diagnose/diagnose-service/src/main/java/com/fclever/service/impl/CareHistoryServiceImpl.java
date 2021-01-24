@@ -58,4 +58,18 @@ public class CareHistoryServiceImpl implements CareHistoryService{
         }
         return careHistory;
     }
+
+    /**
+     * 根据挂号单id查询对应的病历信息
+     * @param registrationId    挂号单id
+     * @return  返回结果
+     */
+    @Override
+    public CareHistory queryCareHistoryByRegistrationId(String registrationId) {
+        // 构建查询对象
+        QueryWrapper<CareHistory> qw = new QueryWrapper<>();
+        // 封装查询条件
+        qw.eq(registrationId != null, CareHistory.COL_REGISTRATION_ID, registrationId);
+        return this.careHistoryMapper.selectOne(qw);
+    }
 }

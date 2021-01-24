@@ -31,7 +31,7 @@ public class CareOrderItem extends BaseEntity {
      * 开诊明细ID
      */
     @TableId(value = "item_id", type = IdType.INPUT)
-    @ApiModelProperty(value="开诊明细ID")
+    @ApiModelProperty(value="处方项目ID")
     private String itemId;
 
     /**

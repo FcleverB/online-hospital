@@ -160,7 +160,7 @@ public class CareHistory extends BaseEntity {
 
     public static final String COL_CASE_DATE = "case_date";
 
-    public static final String COL_REG_ID = "reg_id";
+    public static final String COL_REGISTRATION_ID = "registration_id";
 
     public static final String COL_CASE_TITLE = "case_title";
 

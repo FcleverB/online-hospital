@@ -26,4 +26,11 @@ public interface CareHistoryService{
      * @return  返回结果
      */
     CareHistory saveOrUpdateCareHistory(CareHistoryDto careHistoryDto);
+
+    /**
+     * 根据挂号单id查询对应的病历信息
+     * @param registrationId    挂号单id
+     * @return  返回结果
+     */
+    CareHistory queryCareHistoryByRegistrationId(String registrationId);
 }

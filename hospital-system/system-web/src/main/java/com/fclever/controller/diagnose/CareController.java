@@ -7,10 +7,7 @@ import com.fclever.constants.Constants;
 import com.fclever.controller.BaseController;
 import com.fclever.domain.*;
 import com.fclever.dto.CareHistoryDto;
-import com.fclever.service.CareHistoryService;
-import com.fclever.service.DeptService;
-import com.fclever.service.PatientService;
-import com.fclever.service.RegistrationService;
+import com.fclever.service.*;
 import com.fclever.utils.DateUtils;
 import com.fclever.utils.ShiroSecurityUtils;
 import com.fclever.vo.AjaxResult;
@@ -19,6 +16,7 @@ import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,6 +38,12 @@ public class CareController extends BaseController {
 
     @Reference
     private CareHistoryService careHistoryService;
+
+    @Reference
+    private CareOrderService careOrderService;
+
+    @Reference
+    private CareOrderItemService careOrderItemService;
 
     @Autowired
     private DeptService deptService;
@@ -177,5 +181,37 @@ public class CareController extends BaseController {
         careHistoryDto.setCareTime(DateUtil.date());
         CareHistory careHistory = this.careHistoryService.saveOrUpdateCareHistory(careHistoryDto);
         return AjaxResult.success(careHistory);
+    }
+
+    /**
+     * 根据挂号单id查询对应的病历信息    一对一关系
+     * @param registrationId    挂号单id
+     * @return  返回结果
+     */
+    @GetMapping("getCareHistoryByRegistrationId/{registrationId}")
+    @HystrixCommand
+    public AjaxResult getCareHistoryByRegistrationId(@PathVariable String registrationId) {
+        CareHistory careHistory = this.careHistoryService.queryCareHistoryByRegistrationId(registrationId);
+        return  AjaxResult.success(careHistory);
+    }
+
+    /**
+     * 根据病历id查询处方信息和处方详情信息
+     * @param chId  病历id
+     * @return  返回结果
+     */
+    @GetMapping("queryOrdersByChId/{chId}")
+    @HystrixCommand
+    public AjaxResult queryOrdersByChId(@PathVariable String chId) {
+        List<CareOrder> careOrders = this.careOrderService.queryCareOrdersByChId(chId);
+        ArrayList<Map<String, Object>> res = new ArrayList<>();
+        for (CareOrder careOrder : careOrders) {
+            Map<String, Object> map = new HashMap<>();
+            map.put("careOrder", careOrder);
+            List<CareOrderItem> careOrderItems = this.careOrderItemService.queryCareOrderItemsByCoId(careOrder.getCoId());
+            map.put("careOrderItems", careOrderItems);
+            res.add(map);
+        }
+        return AjaxResult.success(res);
     }
 }
