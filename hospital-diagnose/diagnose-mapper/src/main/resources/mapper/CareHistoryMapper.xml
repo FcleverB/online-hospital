@@ -15,7 +15,7 @@
     <result column="is_contagious" jdbcType="CHAR" property="isContagious" />
     <result column="care_time" jdbcType="TIMESTAMP" property="careTime" />
     <result column="case_date" jdbcType="VARCHAR" property="caseDate" />
-    <result column="reg_id" jdbcType="VARCHAR" property="regId" />
+    <result column="registration_id" jdbcType="VARCHAR" property="registrationId" />
     <result column="case_title" jdbcType="VARCHAR" property="caseTitle" />
     <result column="case_result" jdbcType="VARCHAR" property="caseResult" />
     <result column="doctor_tips" jdbcType="VARCHAR" property="doctorTips" />

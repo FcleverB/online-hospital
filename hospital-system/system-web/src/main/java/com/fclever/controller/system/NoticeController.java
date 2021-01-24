@@ -77,7 +77,7 @@ public class NoticeController {
      */
     @PostMapping("addNotice")
     @Log(title = "添加通知公告信息",businessType = BusinessType.INSERT)
-    public AjaxResult addNotice(@Validated NoticeDto noticeDto){
+    public AjaxResult addNotice(@RequestBody @Validated NoticeDto noticeDto){
         // 设置当前登录人，用作创建人
         noticeDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.noticeService.addNotice(noticeDto));

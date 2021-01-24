@@ -93,7 +93,7 @@ public class MedicinesController extends BaseController {
     @PostMapping("addMedicines")
     @Log(title = "添加药品信息",businessType = BusinessType.INSERT)
     @HystrixCommand
-    public AjaxResult addMedicines(@Validated MedicinesDto medicinesDto){
+    public AjaxResult addMedicines(@RequestBody @Validated MedicinesDto medicinesDto){
         // 保存当前登录人为创建人
         medicinesDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.medicinesService.addMedicines(medicinesDto));

@@ -45,7 +45,7 @@ public class UserController {
      */
     @PostMapping("addUser")
     @Log(title = "添加用户信息",businessType = BusinessType.INSERT)
-    public AjaxResult addUser(@Validated UserDto userDto){
+    public AjaxResult addUser(@RequestBody @Validated UserDto userDto){
         // 设置登录用户作为创建者
         userDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.userService.addUser(userDto));

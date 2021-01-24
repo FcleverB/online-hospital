@@ -45,7 +45,7 @@ public class DictTypeController {
      */
     @PostMapping("addDictType")
     @Log(title = "添加字典类型",businessType = BusinessType.INSERT)
-    public AjaxResult addDictType(@Validated DictTypeDto dictTypeDto){
+    public AjaxResult addDictType(@RequestBody @Validated DictTypeDto dictTypeDto){
         // 检查数据库中是否已经存在了待添加的字典类型数据
         // 返回true表示可以存在，不能操作
         if (dictTypeService.checkDictTypeUnique(dictTypeDto.getDictId(), dictTypeDto.getDictType())){

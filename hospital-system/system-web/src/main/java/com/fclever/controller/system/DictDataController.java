@@ -47,7 +47,7 @@ public class DictDataController {
      */
     @PostMapping("addDictData")
     @Log(title = "添加字典数据",businessType = BusinessType.INSERT)
-    public AjaxResult addDictData(@Validated DictDataDto dictDataDto){
+    public AjaxResult addDictData(@RequestBody @Validated DictDataDto dictDataDto){
         // 设置登录用户信息
         dictDataDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         // 执行插入操作

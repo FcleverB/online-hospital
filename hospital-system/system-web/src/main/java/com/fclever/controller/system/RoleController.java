@@ -46,7 +46,7 @@ public class RoleController {
      */
     @PostMapping("addRole")
     @Log(title = "添加角色信息",businessType = BusinessType.INSERT)
-    public AjaxResult addRole(@Validated RoleDto roleDto){
+    public AjaxResult addRole(@RequestBody @Validated RoleDto roleDto){
         roleDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.roleService.addRole(roleDto));
     }

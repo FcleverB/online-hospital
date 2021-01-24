@@ -88,7 +88,7 @@ public class DeptController {
      */
     @PostMapping("addDept")
     @Log(title = "添加科室信息",businessType = BusinessType.INSERT)
-    public AjaxResult addDept(@Validated DeptDto deptDto){
+    public AjaxResult addDept(@RequestBody @Validated DeptDto deptDto){
         // 获取当前登录用户信息，这里的登录用户作为创建者来保存
         deptDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.deptService.addDept(deptDto));

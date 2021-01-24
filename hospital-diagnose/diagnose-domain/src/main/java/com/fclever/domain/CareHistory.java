@@ -106,9 +106,9 @@ public class CareHistory extends BaseEntity {
     /**
      * 挂号单号
      */
-    @TableField(value = "reg_id")
+    @TableField(value = "registration_id")
     @ApiModelProperty(value="挂号单号")
-    private String regId;
+    private String registrationId;
 
     /**
      * 主诉

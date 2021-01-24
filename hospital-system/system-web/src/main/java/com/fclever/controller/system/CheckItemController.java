@@ -84,7 +84,7 @@ public class CheckItemController {
      */
     @PostMapping("addCheckItem")
     @Log(title = "添加检查项目",businessType = BusinessType.INSERT)
-    public AjaxResult addCheckItem(@Validated CheckItemDto checkItemDto){
+    public AjaxResult addCheckItem(@RequestBody @Validated CheckItemDto checkItemDto){
         // 获取登录用户作为更新人
         checkItemDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.checkItemService.addCheckItem(checkItemDto));

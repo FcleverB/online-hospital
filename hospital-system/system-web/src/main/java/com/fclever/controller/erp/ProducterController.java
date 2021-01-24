@@ -94,7 +94,7 @@ public class ProducterController extends BaseController {
     @PostMapping("addProducter")
     @Log(title = "添加生产厂家信息",businessType = BusinessType.INSERT)
     @HystrixCommand
-    public AjaxResult addProducter(@Validated ProducterDto producterDto){
+    public AjaxResult addProducter(@RequestBody @Validated ProducterDto producterDto){
         // 保存当前登录人为创建人
         producterDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.producterService.addProducter(producterDto));

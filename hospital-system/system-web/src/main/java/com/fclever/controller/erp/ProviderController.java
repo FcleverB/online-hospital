@@ -92,7 +92,7 @@ public class ProviderController extends BaseController {
     @PostMapping("addProvider")
     @Log(title = "添加供应商信息",businessType = BusinessType.INSERT)
     @HystrixCommand
-    public AjaxResult addProvider(@Validated ProviderDto providerDto){
+    public AjaxResult addProvider(@RequestBody @Validated ProviderDto providerDto){
         // 保存当前登录人为创建人
         providerDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.providerService.addProvider(providerDto));

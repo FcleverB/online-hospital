@@ -95,7 +95,7 @@ public class MenuController {
      */
     @PostMapping("addMenu")
     @Log(title = "添加菜单信息",businessType = BusinessType.INSERT)
-    public AjaxResult addMenu(@Validated MenuDto menuDto){
+    public AjaxResult addMenu(@RequestBody @Validated MenuDto menuDto){
         // 保存创建者信息
         menuDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.menuService.addMenu(menuDto));

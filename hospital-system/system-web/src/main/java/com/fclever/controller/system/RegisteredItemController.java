@@ -84,7 +84,7 @@ public class RegisteredItemController {
      */
     @PostMapping("addRegisteredItem")
     @Log(title = "添加挂号费用信息",businessType = BusinessType.INSERT)
-    public AjaxResult addRegisteredItem(@Validated RegisteredItemDto registeredItemDto){
+    public AjaxResult addRegisteredItem(@RequestBody @Validated RegisteredItemDto registeredItemDto){
         registeredItemDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.registeredItemService.addRegisteredItem(registeredItemDto));
     }
