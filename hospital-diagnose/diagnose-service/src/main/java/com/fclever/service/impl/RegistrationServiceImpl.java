@@ -5,6 +5,7 @@ import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.fclever.constants.Constants;
 import com.fclever.domain.Registration;
 import com.fclever.domain.SimpleUser;
 import com.fclever.dto.RegistrationDto;
@@ -152,5 +153,19 @@ public class RegistrationServiceImpl implements RegistrationService{
         qw.orderByAsc(Registration.COL_REGISTRATION_NUMBER);
         // 执行查询
         return this.registrationMapper.selectList(qw);
+    }
+
+    /**
+     * 完成就诊
+     * @param registrationId    待修改的挂号单据id
+     * @return  返回结果
+     */
+    @Override
+    public int visitComplete(String registrationId) {
+        Registration registration = new Registration();
+        registration.setRegistrationId(registrationId);
+        registration.setRegistrationStatus(Constants.REG_STATUS_3);
+        // 执行查询，返回结果
+        return this.registrationMapper.updateById(registration);
     }
 }

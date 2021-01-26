@@ -7,13 +7,16 @@ import com.fclever.constants.Constants;
 import com.fclever.controller.BaseController;
 import com.fclever.domain.*;
 import com.fclever.dto.CareHistoryDto;
+import com.fclever.dto.CareOrderFormDto;
 import com.fclever.service.*;
 import com.fclever.utils.DateUtils;
+import com.fclever.utils.IdGeneratorSnowflake;
 import com.fclever.utils.ShiroSecurityUtils;
 import com.fclever.vo.AjaxResult;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -226,5 +229,64 @@ public class CareController extends BaseController {
             res.add(map);
         }
         return AjaxResult.success(res);
+    }
+
+    /**
+     * 保存处方和处方详情信息
+     * @param careOrderFormDto  待保存的数据
+     * @return  返回结果
+     */
+    @PostMapping("saveCareOrderAndItem")
+    @HystrixCommand
+    public AjaxResult saveCareOrderAndItem(@RequestBody @Validated CareOrderFormDto careOrderFormDto){
+        //根据病例ID查询病历信息
+        CareHistory careHistory=this.careHistoryService.queryCareHistoryByChId(careOrderFormDto.getCareOrder().getChId());
+        if(null==careHistory){
+            return AjaxResult.fail("病历ID不存在，请核对后再提交");
+        }
+        careOrderFormDto.getCareOrder().setCoId(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PROFIX_CO));
+        careOrderFormDto.getCareOrder().setPatientId(careHistory.getPatientId());
+        careOrderFormDto.getCareOrder().setPatientName(careHistory.getPatientName());
+        careOrderFormDto.getCareOrder().setUserId(ShiroSecurityUtils.getCurrentUser().getUserId());
+        careOrderFormDto.getCareOrder().setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
+        return AjaxResult.toAjax(this.careOrderService.saveCareOrderAndItem(careOrderFormDto));
+    }
+
+    /**
+     * 根据处方详情id删除对应的处方详情信息
+     * @param itemId    处方详情id
+     * @return  返回结果
+     */
+    @DeleteMapping("deleteCareOrderItemById/{itemId}")
+    @HystrixCommand
+    @Log(title = "根据处方详情id删除对应的处方详情信息", businessType = BusinessType.DELETE)
+    public AjaxResult deleteCareOrderItemById(@PathVariable String itemId) {
+        CareOrderItem careOrderItem=this.careOrderItemService.queryCareOrderItemByItemId(itemId);
+        if(null==careOrderItem){
+            return AjaxResult.fail("处方详情ID不存在");
+        }
+        if(!careOrderItem.getStatus().equals(Constants.ORDER_DETAILS_STATUS_0)){
+            return AjaxResult.fail("【"+itemId+"】不是未支付状态，不能删除");
+        }
+        return AjaxResult.toAjax(this.careOrderItemService.deleteCareOrderItemByItemId(itemId));
+    }
+
+    /**
+     * 完成就诊
+     * @param registrationId    挂号单据id
+     * @return  返回结果
+     */
+    @PutMapping("visitComplete/{registrationId}")
+    @HystrixCommand
+    public AjaxResult visitComplete(@PathVariable String registrationId){
+        Registration registration=this.registrationService.queryRegistrationById(registrationId);
+        if(null==registration){
+            return AjaxResult.fail("【"+registrationId+"】挂号单号不存在，请核对后再提交");
+        }
+        if(!registration.getRegistrationStatus().equals(Constants.REG_STATUS_2)){
+            return AjaxResult.fail("【"+registrationId+"】状态不是就诊中状态，不能完成就诊");
+        }
+        //更改挂号单的状态
+        return AjaxResult.toAjax(this.registrationService.visitComplete(registrationId));
     }
 }

@@ -60,24 +60,14 @@ public interface Constants {
     String STOCK_PURCHASE_STATUS_6 = "6";
 
     /**
-     * 生产入库单据id的前缀
+     * 主键前缀
      */
-    String ID_PREFIX_CG = "CG";
-
-    /**
-     * 患者信息id的前缀
-     */
-    String ID_PREFIX_HZ = "HZ";
-
-    /**
-     * 挂号主键id的前缀
-     */
-    String ID_PREFIX_GH = "GH";
-
-    /**
-     * 病历主键id的前缀
-     */
-    String ID_PREFIX_CH = "CH";
+    String ID_PREFIX_CG = "CG"; // 生产入库单据id的前缀
+    String ID_PREFIX_HZ = "HZ"; // 患者信息id的前缀
+    String ID_PREFIX_GH = "GH"; // 挂号主键id的前缀
+    String ID_PREFIX_CH = "CH"; // 病历主键id的前缀
+    String ID_PROFIX_CO = "CO"; // 处方id前缀
+    String ID_PROFIX_ITEM = "ITEM"; // 处方项目id前缀
 
     /**
      * 是否需要排班标志
@@ -99,4 +89,13 @@ public interface Constants {
      */
     String IS_FINAL_FALSE = "0";
     String IS_FINAL_TRUE = "1";
+
+    /**
+     * 处方详情状态
+     * 0未支付，1已支付，2，已退费  3，已完成
+     */
+    String ORDER_DETAILS_STATUS_0 = "0";
+    String ORDER_DETAILS_STATUS_1 = "1";
+    String ORDER_DETAILS_STATUS_2 = "2";
+    String ORDER_DETAILS_STATUS_3 = "3";
 }

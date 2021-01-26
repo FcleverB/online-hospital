@@ -4,6 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.fclever.constants.Constants;
+import com.fclever.domain.Registration;
 import com.fclever.dto.CareHistoryDto;
 import com.fclever.utils.IdGeneratorSnowflake;
 import org.apache.dubbo.config.annotation.Service;
@@ -71,5 +72,16 @@ public class CareHistoryServiceImpl implements CareHistoryService{
         // 封装查询条件
         qw.eq(registrationId != null, CareHistory.COL_REGISTRATION_ID, registrationId);
         return this.careHistoryMapper.selectOne(qw);
+    }
+
+    /**
+     * 根据病历id查询对应的病历信息
+     * @param chId  病历id
+     * @return  返回结果
+     */
+    @Override
+    public CareHistory queryCareHistoryByChId(String chId) {
+        // 病历id是主键
+        return this.careHistoryMapper.selectById(chId);
     }
 }

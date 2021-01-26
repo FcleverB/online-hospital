@@ -17,4 +17,18 @@ public interface CareOrderItemService{
      * @return  返回结果
      */
     List<CareOrderItem> queryCareOrderItemsByCoId(String coId);
+
+    /**
+     * 根据处方项目id查询对应的处方项目
+     * @param itemId    处方项目id
+     * @return  返回结果
+     */
+    CareOrderItem queryCareOrderItemByItemId(String itemId);
+
+    /**
+     * 根据处方项目id删除对应的处方项目
+     * @param itemId    待删除的处方项目
+     * @return  返回结果
+     */
+    int deleteCareOrderItemByItemId(String itemId);
 }

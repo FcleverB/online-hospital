@@ -72,4 +72,11 @@ public interface RegistrationService{
      * @return  返回结果
      */
     List<Registration> queryRegistration(String schedulingType, Long deptId, String registrationStatus, String subsectionType, Long userId);
+
+    /**
+     * 完成就诊
+     * @param registrationId    待修改的挂号单据id
+     * @return  返回结果
+     */
+    int visitComplete(String registrationId);
 }

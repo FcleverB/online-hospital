@@ -33,4 +33,11 @@ public interface CareHistoryService{
      * @return  返回结果
      */
     CareHistory queryCareHistoryByRegistrationId(String registrationId);
+
+    /**
+     * 根据病历id查询对应的病历信息
+     * @param chId  病历id
+     * @return  返回结果
+     */
+    CareHistory queryCareHistoryByChId(String chId);
 }
