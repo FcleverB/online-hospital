@@ -25,6 +25,7 @@ import java.util.Date;
  */
 @ApiModel(value="com-fclever-dto-CareOrderDto")
 @Data
+@EqualsAndHashCode(callSuper=true)
 @AllArgsConstructor
 @NoArgsConstructor
 public class CareOrderDto extends BaseDto {

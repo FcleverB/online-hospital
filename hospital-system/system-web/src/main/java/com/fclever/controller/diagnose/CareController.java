@@ -187,6 +187,13 @@ public class CareController extends BaseController {
     @HystrixCommand
     @Log(title = "保存病历信息",businessType = BusinessType.INSERT)
     public AjaxResult saveCareHistory(@RequestBody CareHistoryDto careHistoryDto) {
+        Registration registration=this.registrationService.queryRegistrationById(careHistoryDto.getRegistrationId());
+        if(null==registration){
+            return AjaxResult.fail("【"+careHistoryDto.getRegistrationId()+"】挂号单号不存在，请核对后再提交");
+        }
+        if(!registration.getRegistrationStatus().equals(Constants.REG_STATUS_2)){
+            return AjaxResult.fail("【"+careHistoryDto.getRegistrationId()+"】状态不是就诊中状态，不能保存病历信息");
+        }
         // 封装数据
         careHistoryDto.setUserId(ShiroSecurityUtils.getCurrentUser().getUserId());
         careHistoryDto.setUserName(ShiroSecurityUtils.getCurrentUser().getUserName());
