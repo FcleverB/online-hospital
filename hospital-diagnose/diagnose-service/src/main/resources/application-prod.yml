@@ -43,6 +43,6 @@ dubbo:
     check: false # 是否检查消费者
   protocol:
     name: dubbo # name 指定的是传输协议的名称：dubbo rmi hessian webservice
-    port: 20881
+    port: -1 # 设置为-1，让dubbo自行找一个可用的port
 
 
