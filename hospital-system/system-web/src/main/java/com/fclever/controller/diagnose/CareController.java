@@ -162,6 +162,19 @@ public class CareController extends BaseController {
     }
 
     /**
+     * 根据患者id查询患者历史病历信息
+     * @param patientId 患者id
+     * @return  返回结果
+     */
+    @GetMapping("getCareHistoryListByPatientId/{patientId}")
+    @HystrixCommand
+    public AjaxResult getCareHistoryListByPatientId(@PathVariable String patientId){
+        //查询病历表
+        List<CareHistory> careHistories=this.careHistoryService.queryCareHistoryByPatientId(patientId);
+        return AjaxResult.success(careHistories);
+    }
+
+    /**
      * 保存或更新病历信息
      *      如果病历id已经存在则进行更新
      * @param careHistoryDto    待保存数据
