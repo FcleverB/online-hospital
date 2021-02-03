@@ -1003,15 +1003,15 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="259" parent="22" name="his_care_history">
-      <Comment>病历信息表</Comment>
+      <Comment>1病历信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="260" parent="22" name="his_care_order">
-      <Comment>处方信息表</Comment>
+      <Comment>1处方信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="261" parent="22" name="his_care_order_item">
-      <Comment>处方项目详细信息表</Comment>
+      <Comment>1处方项目详细信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="262" parent="22" name="his_check_result">
@@ -1026,11 +1026,11 @@
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="265" parent="22" name="his_order_charge">
-      <Comment>收费表</Comment>
+      <Comment>支付订单信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="266" parent="22" name="his_order_charge_item">
-      <Comment>支付订单详情表</Comment>
+      <Comment>支付订单信息详情表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="267" parent="22" name="his_patient">
@@ -1179,7 +1179,7 @@
       <DataType>varchar(15)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="259" name="reg_id">
+    <column id="302" parent="259" name="registration_id">
       <Position>12</Position>
       <Comment>挂号单号</Comment>
       <DataType>varchar(25)|0s</DataType>
@@ -1187,7 +1187,7 @@
     </column>
     <column id="303" parent="259" name="case_title">
       <Position>13</Position>
-      <Comment>主诉</Comment>
+      <Comment>主诉(尽可能用病人自己描述的症状)</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1292,7 +1292,7 @@
     </key>
     <column id="320" parent="261" name="item_id">
       <Position>1</Position>
-      <Comment>开诊明细ID</Comment>
+      <Comment>处方项目ID</Comment>
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
@@ -1627,7 +1627,7 @@
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="374" parent="265" name="reg_id">
+    <column id="374" parent="265" name="registration_id">
       <Position>4</Position>
       <Comment>挂号单</Comment>
       <DataType>varchar(25)|0s</DataType>
@@ -1737,7 +1737,7 @@
     </column>
     <column id="391" parent="266" name="order_id">
       <Position>7</Position>
-      <Comment>订单IDhis_oder_charge主键</Comment>
+      <Comment>订单ID  his_oder_charge主键</Comment>
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>

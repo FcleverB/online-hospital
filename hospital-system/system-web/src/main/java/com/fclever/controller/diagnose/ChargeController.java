@@ -13,10 +13,7 @@ import com.fclever.service.RegistrationService;
 import com.fclever.vo.AjaxResult;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -94,5 +91,17 @@ public class ChargeController extends BaseController {
         }
         res.put("careOrders", mapList);
         return AjaxResult.success(res);
+    }
+
+    /**
+     * 创建订单并现金支付
+     *      支付信息表his_order_charge\支付信息详情表his_order_charge_item\处方详情表his_care_order_item
+     * @return  返回结果
+     */
+    @PostMapping("createOrderChargeWithCash")
+    @HystrixCommand
+    public AjaxResult createOrderChargeWithCash(){
+
+        return AjaxResult.success();
     }
 }

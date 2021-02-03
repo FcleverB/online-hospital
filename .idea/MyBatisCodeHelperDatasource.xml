@@ -23,7 +23,7 @@
                   <option name="javaMapperPath" value="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-diagnose\diagnose-mapper\src\main\java" />
                   <option name="javaModelPacakge" value="com.fclever.domain" />
                   <option name="javaModelPath" value="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-diagnose\diagnose-domain\src\main\java" />
-                  <option name="javaServiceInterfacePackage" value="com.fclever.service" />
+                  <option name="javaServiceInterfacePackage" value="com.fclever.service.impl" />
                   <option name="javaServiceInterfacePath" value="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-diagnose\diagnose-interface\src\main\java" />
                   <option name="javaServicePackage" value="com.fclever.service.impl" />
                   <option name="javaServicePath" value="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-diagnose\diagnose-service\src\main\java" />
@@ -97,6 +97,30 @@
                 <TableGenerateConfig>
                   <option name="generatedKey" value="" />
                   <option name="javaModelName" value="CareOrderItem" />
+                  <option name="moduleName" value="hospital-diagnose" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="onlinehospital:his_order_charge">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="OrderCharge" />
+                  <option name="moduleName" value="hospital-diagnose" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="onlinehospital:his_order_charge_item">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="OrderChargeItem" />
                   <option name="moduleName" value="hospital-diagnose" />
                   <option name="sequenceColumn" value="" />
                   <option name="sequenceId" value="" />
