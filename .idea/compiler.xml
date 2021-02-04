@@ -20,6 +20,7 @@
         <module name="system-domain" />
         <module name="statistics-interface" />
         <module name="statistics-mapper" />
+        <module name="hospital-alipay" />
         <module name="system-interface" />
         <module name="diagnose-mapper" />
         <module name="system-service" />
@@ -29,6 +30,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="diagnose-domain" target="1.8" />
+      <module name="hospital-alipay" target="1.8" />
       <module name="hospital-commons" target="1.8" />
       <module name="hospitalcommons" target="1.8" />
       <module name="system-service" target="1.8" />
@@ -45,6 +47,7 @@
       <module name="erp-interface" options="-parameters" />
       <module name="erp-mapper" options="-parameters" />
       <module name="erp-service" options="-parameters" />
+      <module name="hospital-alipay" options="-parameters" />
       <module name="hospital-commons" options="-parameters" />
       <module name="hospital-diagnose" options="-parameters" />
       <module name="hospital-erp" options="-parameters" />

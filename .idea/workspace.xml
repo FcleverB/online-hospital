@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-domain/src/main/java/com/fclever/domain/OrderCharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-domain/src/main/java/com/fclever/domain/OrderCharge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-domain/src/main/java/com/fclever/dto/RegistrationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-domain/src/main/java/com/fclever/dto/RegistrationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/impl/OrderChargeItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/OrderChargeItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/impl/OrderChargeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/OrderChargeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/OrderChargeItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/OrderChargeItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/OrderChargeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/OrderChargeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/ChargeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/OrderChargeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <list id="0a8bab89-bf34-481f-9475-97873582964d" name="系统管理hospital-system中挂号费用管理后端增删改查功能实现" comment="" />
     <list id="cf4d9d9c-abbd-4c72-be5e-5aa5cef5e5f1" name="系统管理hospital-system中挂号费用管理后端增删改查功能是吸纳" comment="" />
@@ -42,6 +38,7 @@
     <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-domain/target/" />
     <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-mapper/target/" />
     <ignored path="$PROJECT_DIR$/hospital-statistics/statistics-service/target/" />
+    <ignored path="$PROJECT_DIR$/hospital-alipay/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,34 +81,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/OrderChargeController.java">
+        <entry file="file://$PROJECT_DIR$/hospital-alipay/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="124" selection-start-line="124" selection-end-line="124" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/OrderChargeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/OrderChargeServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-259">
-              <caret line="63" column="11" lean-forward="true" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="176">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -191,8 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/utils/DateUtils.java" />
-        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/RegistrationController.java" />
         <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-mapper/src/main/resources/mapper/CareHistoryMapper.xml" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DictTypeController.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/RegisteredItemController.java" />
@@ -242,6 +213,8 @@
         <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-domain/src/main/java/com/fclever/dto/OrderChargeFormDto.java" />
         <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-domain/src/main/java/com/fclever/dto/RegistrationDto.java" />
         <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/OrderChargeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/hospital-alipay/pom.xml" />
       </list>
     </option>
   </component>
@@ -313,322 +286,26 @@
             <path>
               <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
               <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-alipay" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
               <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-alipay" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-alipay" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
               <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-commons" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-alipay" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fclever" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fclever" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fclever" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fclever" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fclever" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-interface" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-interface" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-interface" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-interface" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-interface" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fclever" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fclever" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-diagnose" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="system-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fclever" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fclever" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
-              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
-              <item name="system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fclever" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnose" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -654,7 +331,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/hospital-erp/erp-service/src/main/java/com/fclever/service" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hospital-alipay/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -664,10 +341,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-commons\src\main\java\com\fclever\constants" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.fclever.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-alipay\lib" />
       <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-statistics\statistics-service\src\main\resources" />
       <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-diagnose\diagnose-service\src\main\resources" />
       <recent name="G:\IdeaProjects\LastTerminal\后端项目代码\online-hospital\hospital-erp\erp-service\src\main\resources" />
@@ -679,8 +357,8 @@
       <recent name="com.fclever.controller.system" />
       <recent name="com.fclever.domain" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.fclever.dto" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-commons\src\main\java\com\fclever\constants" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -945,14 +623,7 @@
       <workItem from="1611821671407" duration="807000" />
       <workItem from="1612144988561" duration="1756000" />
       <workItem from="1612349062327" duration="5937000" />
-      <workItem from="1612403721047" duration="12677000" />
-    </task>
-    <task id="LOCAL-00101" summary="进销存管理hospital-erp中采购入库中修改PurchaseItemServiceImpl中@Service导入包">
-      <created>1607994544031</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1607994544031</updated>
+      <workItem from="1612403721047" duration="17396000" />
     </task>
     <task id="LOCAL-00102" summary="公共模块hospital-commons中雪花算法生成id报错问题">
       <created>1608404557691</created>
@@ -1290,7 +961,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612353264894</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary="收费管理hospital-diagnose中处方收费中现金收费功能实现">
+      <created>1612432027871</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1612432027873</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1305,7 +983,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="689041000" />
+    <option name="totallyTimeSpent" value="693760000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1327,9 +1005,9 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.3032491" visible="true" weight="0.17643923" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="0" sideWeight="0.8357909" visible="true" weight="0.47104678" />
-      <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.49932975" weight="0.33184856" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.3032491" visible="true" weight="0.14872068" />
+      <window_info anchor="bottom" id="Run Dashboard" order="0" sideWeight="0.8357909" weight="0.36525613" />
+      <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.49932975" visible="true" weight="0.30178174" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
@@ -1421,7 +1099,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="看病就诊管理hospital-doctor中挂号功能中分页条件查询科室信息实现" />
     <MESSAGE value="看病就诊管理hospital-doctor中挂号功能中根据身份证号查询患者信息实现" />
     <MESSAGE value="online-hospital中修改各个服务启动的端口" />
     <MESSAGE value="看病就诊管理hospital-doctor中后端挂号功能实现" />
@@ -1446,7 +1123,8 @@
     <MESSAGE value="看病就诊管理hospital-diagnose中患者信息管理中查看就诊信息功能实现" />
     <MESSAGE value="收费管理hospital-diagnose中处方收费中查询为支付的处方|处方详情信息实现" />
     <MESSAGE value="收费管理hospital-diagnose中处方收费中支付订单信息表和详情表后端代码生成" />
-    <option name="LAST_COMMIT_MESSAGE" value="收费管理hospital-diagnose中处方收费中支付订单信息表和详情表后端代码生成" />
+    <MESSAGE value="收费管理hospital-diagnose中处方收费中现金收费功能实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="收费管理hospital-diagnose中处方收费中现金收费功能实现" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1454,6 +1132,7 @@
         <watch expression="schedulingDays" />
         <watch expression="schedulingFormDto.data.get(1).subsectionType" />
         <watch expression="schedulingFormDto.data.get(1)" />
+        <watch expression="orderChargeFormDto.orderChargeItemDtoList" />
       </configuration>
     </watches-manager>
   </component>
@@ -1478,40 +1157,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1076">
-          <caret line="123" column="107" selection-start-line="123" selection-start-column="107" selection-end-line="123" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/DeptController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="90" column="42" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/dto/DeptDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-domain/src/main/java/com/fclever/domain/CareHistory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -1867,7 +1512,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/OrderChargeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-259">
+        <state relative-caret-position="-234">
           <caret line="63" column="11" lean-forward="true" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1877,18 +1522,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/OrderChargeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="336">
           <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/OrderChargeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="124" selection-start-line="124" selection-end-line="124" />
+        <state relative-caret-position="358">
+          <caret line="125" column="28" lean-forward="true" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-diagnose/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-erp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-alipay/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>

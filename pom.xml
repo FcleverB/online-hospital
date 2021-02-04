@@ -10,6 +10,8 @@
         <module>hospital-erp</module>
         <module>hospital-diagnose</module>
         <module>hospital-statistics</module>
+        <!--注释掉该Module，否则最终打包整个项目的时候，会把该项目一起打包了-->
+<!--        <module>hospital-alipay</module>-->
     </modules>
     <!--依赖SpringBoot-->
     <parent>
