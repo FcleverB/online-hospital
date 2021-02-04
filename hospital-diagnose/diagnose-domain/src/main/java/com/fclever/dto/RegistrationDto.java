@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
@@ -21,6 +22,7 @@ import java.util.Date;
  */
 @ApiModel(value="com-fclever-dto-RegistrationDto")
 @Data
+@EqualsAndHashCode(callSuper=true)
 @AllArgsConstructor
 @NoArgsConstructor
 public class RegistrationDto extends BaseDto{

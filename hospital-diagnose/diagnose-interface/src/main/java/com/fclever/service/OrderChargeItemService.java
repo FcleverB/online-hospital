@@ -1,4 +1,4 @@
-package com.fclever.service.impl;
+package com.fclever.service;
 
 import com.fclever.domain.OrderChargeItem;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 @author Fclever
 @create 2021-02-03 19:53
 */
-public interface OrderChargeItemService extends IService<OrderChargeItem>{
+public interface OrderChargeItemService{
 
 
 }

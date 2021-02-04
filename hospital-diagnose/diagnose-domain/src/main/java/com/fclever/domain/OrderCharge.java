@@ -52,7 +52,7 @@ public class OrderCharge extends BaseEntity {
      * 挂号单
      */
     @TableField(value = "registration_id")
-    @ApiModelProperty(value="挂号单")
+    @ApiModelProperty(value="挂号单id")
     private String registrationId;
 
     /**

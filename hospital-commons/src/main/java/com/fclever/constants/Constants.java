@@ -68,12 +68,14 @@ public interface Constants {
     String ID_PREFIX_CH = "CH"; // 病历主键id的前缀
     String ID_PROFIX_CO = "CO"; // 处方id前缀
     String ID_PROFIX_ITEM = "ITEM"; // 处方项目id前缀
+    String ID_PROFIX_ORDER = "ORDER"; // 支付订单id前缀
 
     /**
      * 是否需要排班标志
      */
     String SCHEDULING_FLAG_FALSE = "0";
     String SCHEDULING_FLAG_TRUE = "1";
+
     /**
      * 挂号单状态
      */
@@ -91,11 +93,28 @@ public interface Constants {
     String IS_FINAL_TRUE = "1";
 
     /**
-     * 处方详情状态
+     * 支付订单状态
+     * 0 未支付 1已支付 2支付超时
+     */
+    String ORDER_STATUS_0 = "0";
+    String ORDER_STATUS_1 = "1";
+    String ORDER_STATUS_2 = "2";
+
+    /**
+     * 处方详情状态+支付订单详情状态
      * 0未支付，1已支付，2，已退费  3，已完成
+     * his_order_details_status
      */
     String ORDER_DETAILS_STATUS_0 = "0";
     String ORDER_DETAILS_STATUS_1 = "1";
     String ORDER_DETAILS_STATUS_2 = "2";
     String ORDER_DETAILS_STATUS_3 = "3";
+
+    /**
+     * 支付订单状态
+     * 0 现金  1 支付宝
+     * his_pay_type_status
+     */
+    String PAY_TYPE_STATUS_0 = "0";
+    String PAY_TYPE_STATUS_1 = "1";
 }
