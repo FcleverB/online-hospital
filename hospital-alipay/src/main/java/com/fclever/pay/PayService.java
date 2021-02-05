@@ -22,7 +22,7 @@ import java.util.Map;
 public class PayService {
 
     // 输出日志
-    static Log log = LogFactory.getLog("trade_precreate");
+    static Log log = LogFactory.getLog("PayService");
     // 支付宝当面付的对象
     static AlipayTradeService tradeService;
 
