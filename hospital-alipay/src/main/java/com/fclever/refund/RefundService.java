@@ -1,5 +1,6 @@
 package com.fclever.refund;
 
+import com.alipay.api.response.AlipayTradePrecreateResponse;
 import com.alipay.demo.trade.config.Configs;
 import com.alipay.demo.trade.model.builder.AlipayTradeRefundRequestBuilder;
 import com.alipay.demo.trade.model.result.AlipayF2FRefundResult;
@@ -7,6 +8,9 @@ import com.alipay.demo.trade.service.AlipayTradeService;
 import com.alipay.demo.trade.service.impl.AlipayTradeServiceImpl;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 支付宝退费
@@ -46,7 +50,7 @@ public class RefundService {
      * @param outRequestNo  商户退款请求号，相同支付宝交易号下的不同退款请求号对应同一笔交易的不同退款申请，对于相同支付宝交易号下多笔相同商户退款请求号的退款交易，支付宝只会进行一次退款
      * @param refundReason  退款原因，可以说明用户退款原因，方便为商家后台提供统计
      */
-    public static void payRefund(String tradeNo,String outTradeNo,String refundAmount,String outRequestNo,String refundReason) {
+    public static Map<String, Object> payRefund(String tradeNo, String outTradeNo, String refundAmount, String outRequestNo, String refundReason) {
         AlipayTradeRefundRequestBuilder builder = new AlipayTradeRefundRequestBuilder()
                 .setOutTradeNo(outTradeNo)
                 .setTradeNo(tradeNo)
@@ -57,19 +61,33 @@ public class RefundService {
                 .setStoreId(storeId);
         // 执行退款方法
         AlipayF2FRefundResult result = tradeService.tradeRefund(builder);
+        // 定义返回值
+        Map<String, Object> map = new HashMap<>();
+        // 定义状态码
+        Integer code;
+        // 定义消息
+        String msg = result.getResponse().getSubMsg();
         switch (result.getTradeStatus()) {
             case SUCCESS:
                 log.info("支付宝退款成功: )");
+                code = 200;
                 break;
             case FAILED:
                 log.error("支付宝退款失败!!!");
+                String subMsg = result.getResponse().getSubMsg();
+                code = 500;
                 break;
             case UNKNOWN:
                 log.error("系统异常，订单退款状态未知!!!");
+                code = 404;
                 break;
             default:
                 log.error("不支持的交易状态，交易返回异常!!!");
+                code = 404;
                 break;
         }
+        map.put("code", code);
+        map.put("msg", msg);
+        return map;
     }
 }

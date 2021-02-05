@@ -71,7 +71,7 @@ public class PayService {
         // 定义状态码
         Integer code;
         // 定义消息
-        String msg;
+        String msg = result.getResponse().getSubMsg();
         switch (result.getTradeStatus()) {
             case SUCCESS:
                 log.info("支付宝预下单成功: )");
@@ -80,22 +80,18 @@ public class PayService {
                 String qrCode = res.getQrCode();
                 map.put("qrCode", qrCode);
                 code = 200;
-                msg = "支付宝支付成功";
                 break;
             case FAILED:
                 log.error("支付宝预下单失败!!!");
                 code = 500;
-                msg = "支付宝支付失败";
                 break;
             case UNKNOWN:
                 log.error("系统异常，预下单状态未知!!!");
                 code = 404;
-                msg = "系统异常，预下单状态未知!!!";
                 break;
             default:
                 log.error("不支持的交易状态，交易返回异常!!!");
                 code = 404;
-                msg = "不支持的交易状态，交易返回异常!!!";
                 break;
         }
         map.put("code", code);

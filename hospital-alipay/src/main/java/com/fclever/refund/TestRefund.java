@@ -1,6 +1,10 @@
 package com.fclever.refund;
 
 
+import com.fclever.pay.PayService;
+
+import java.util.Map;
+
 /**
  * 测试支付宝退费
  * @author Fclever
@@ -10,11 +14,11 @@ public class TestRefund {
 
     public static void main(String[] args) {
         // 支付成功之后返回的内容【属于支付宝平台的id】---可以从收费返回数据中获得
-        String tradeNo = "2021020522001428510501232038";
+        String tradeNo = "2021020522001428510501231661";
         // 外部订单号，需要退款交易的商户外部订单号---可以从收费返回数据中获得
-        String outTradeNo = "ORDER19981122";
+        String outTradeNo = "ORDER19990829fc";
         // 退款金额，该金额必须小于等于订单的支付金额，单位为元
-        String refundAmount = "10";
+        String refundAmount = "15";
         // 商户退款请求号，相同支付宝交易号下的不同退款请求号对应同一笔交易的不同退款申请，对于相同支付宝交易号下多笔相同商户退款请求号的退款交易，支付宝只会进行一次退款
         String outRequestNo = "BK232423423";
         // 退款原因，可以说明用户退款原因，方便为商家后台提供统计
@@ -24,6 +28,7 @@ public class TestRefund {
 //        String notifyUrl = "http://j29i754289.51vip.biz/pay/callback2/" + outTradeNo;
         // 执行退款操作
 //        RefundService.payRefund(tradeNo, outTradeNo, refundAmount, outRequestNo, refundReason, notifyUrl);
-        RefundService.payRefund(tradeNo, outTradeNo, refundAmount, outRequestNo, refundReason);
+        Map<String, Object> result = RefundService.payRefund(tradeNo, outTradeNo, refundAmount, outRequestNo, refundReason);
+        System.out.println(result);
     }
 }
