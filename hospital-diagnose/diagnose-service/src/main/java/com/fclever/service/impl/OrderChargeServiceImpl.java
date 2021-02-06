@@ -103,4 +103,14 @@ public class OrderChargeServiceImpl implements OrderChargeService{
             this.careOrderItemMapper.updateById(careOrderItem);
         }
     }
+
+    /**
+     * 根据支付订单主表id查询订单信息（通过订单状态判断是否支付成功）
+     * @param orderId   订单主表id
+     * @return  订单信息
+     */
+    @Override
+    public OrderCharge queryOrderChargeByOrderId(String orderId) {
+        return this.orderChargeMapper.selectById(orderId);
+    }
 }

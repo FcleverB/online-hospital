@@ -2,14 +2,14 @@ package com.fclever.controller.diagnose;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateUtil;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.fclever.aspectj.annotation.Log;
 import com.fclever.aspectj.enums.BusinessType;
+import com.fclever.config.alipay.AlipayConfig;
+import com.fclever.config.alipay.PayService;
 import com.fclever.constants.Constants;
 import com.fclever.controller.BaseController;
-import com.fclever.domain.CareHistory;
-import com.fclever.domain.CareOrder;
-import com.fclever.domain.CareOrderItem;
-import com.fclever.domain.Registration;
+import com.fclever.domain.*;
 import com.fclever.dto.OrderChargeDto;
 import com.fclever.dto.OrderChargeFormDto;
 import com.fclever.dto.OrderChargeItemDto;
@@ -126,6 +126,75 @@ public class OrderChargeController extends BaseController {
         // 现金支付直接更新支付详情的数据状态
         String orderId = orderChargeFormDto.getOrderChargeDto().getOrderId();
         this.orderChargeService.paySuccess(orderId, null);
-        return AjaxResult.success("创建订单并现金支付");
+        return AjaxResult.success("创建订单并现金支付成功");
+    }
+
+    /**
+     * 创建订单并支付宝支付
+     *      支付信息表his_order_charge\支付信息详情表his_order_charge_item\处方详情表his_care_order_item
+     * @param orderChargeFormDto 待保存的支付信息和支付详情信息
+     * @return  返回结果
+     */
+    @PostMapping("createOrderChargeWithZfb")
+    @HystrixCommand
+    @Log(title = "创建订单并支付宝支付", businessType = BusinessType.INSERT)
+    public AjaxResult createOrderChargeWithZfb(@RequestBody @Validated OrderChargeFormDto orderChargeFormDto){
+        // 保存支付订单和详情信息
+        orderChargeFormDto.getOrderChargeDto().setPayType(Constants.PAY_TYPE_STATUS_1); // 支付类型，支付宝
+        orderChargeFormDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
+        orderChargeFormDto.getOrderChargeDto().setOrderId(IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PROFIX_ORDER));
+        this.orderChargeService.saveOrderChargeAndItems(orderChargeFormDto);
+        // 支付宝支付需要返回给页面一个二维码
+        // 调用支付方法
+        // (必填) 订单标题，粗略描述用户的支付目的。如“喜士多（浦东店）消费”
+        String subject = "online-hospital系统处方收费";
+        // (必填) 订单总金额，单位为元，不能超过1亿元
+        String totalAmount = orderChargeFormDto.getOrderChargeDto().getOrderAmount().toString();
+        // (必填) 商户网站订单系统中唯一订单号，64个字符以内，只能包含字母、数字、下划线，需保证商户系统端不能重复------对应支付订单信息表中的orderId即可
+        // ！！！！每个订单号对应生成一个二维码，如果订单号一样，多次运行程序产生的二维码只能用一次
+        String orderId = orderChargeFormDto.getOrderChargeDto().getOrderId();
+        String outTradeNo = orderId;
+        // (可选) 订单不可打折金额，可以配合商家平台配置折扣活动，如果酒水不参与打折，则将对应金额填写至此字段，如果该值未传入,但传入了【订单总金额】,【打折金额】,则该值默认为【订单总金额】-【打折金额】
+        String undiscountableAmount = null;
+        // 订单描述，可以对交易或商品进行一个详细地描述，比如填写"购买商品2件共15.00元"
+        String body = "";
+        List<OrderChargeItemDto> orderChargeItemDtoList = orderChargeFormDto.getOrderChargeItemDtoList();
+        for (OrderChargeItemDto orderChargeItemDto : orderChargeItemDtoList) {
+            body += orderChargeItemDto.getItemName() + "(" + orderChargeItemDto.getItemPrice()+"元) ";
+        }
+        // 支付宝服务器主动通知商户服务器里指定的页面http路径,根据需要设置
+        String notifyUrl = AlipayConfig.notifyUrl + outTradeNo;
+        Map<String, Object> result = PayService.pay(subject, totalAmount, outTradeNo, undiscountableAmount, body, notifyUrl);
+        // 从支付成功信息中获取二维码
+        String qrCode = result.get("qrCode").toString();
+        if (StringUtils.isNotBlank(qrCode)) {
+            // 支付成功，组装返回数据
+            Map<String, Object> map = new HashMap<>();
+            map.put("orderId", orderId);
+            map.put("allAmount", totalAmount);
+            map.put("payUrl", qrCode);
+            return AjaxResult.success(map);
+        } else {
+            // 支付失败
+            return AjaxResult.fail(result.get("msg").toString());
+        }
+    }
+
+    /**
+     * 根据支付订单主表id查询订单信息（通过订单状态判断是否支付成功）
+     * @param orderId   订单主表id
+     * @return  返回结果
+     */
+    @GetMapping("queryOrderChargeByOrderId/{orderId}")
+    @HystrixCommand
+    public AjaxResult queryOrderChargeByOrderId(@PathVariable String orderId) {
+        OrderCharge orderCharge = this.orderChargeService.queryOrderChargeByOrderId(orderId);
+        if (null == orderCharge) {
+            return AjaxResult.fail("[" + orderId + "]订单号所对应的支付订单不存在，请核对后操作");
+        }
+        if (orderCharge.getPayType().equals(Constants.PAY_TYPE_STATUS_0)){
+            return AjaxResult.fail("[" + orderId + "]订单号所对应的订单不是支付宝支付的订单，请核对后操作");
+        }
+        return AjaxResult.success(orderCharge);
     }
 }

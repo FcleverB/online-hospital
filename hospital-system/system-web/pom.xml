@@ -105,5 +105,31 @@
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
             <version>2.2.1.RELEASE</version>
         </dependency>
+        <!--引入支付宝相关jar包-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+            <version>3.3.0</version>
+            <scope>system</scope><!--指定为本地其他路径的jar包-->
+            <systemPath>${project.basedir}/lib/alipay-sdk-java-3.3.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>alipay-trade-sdk-java</artifactId>
+            <version>1.0</version>
+            <scope>system</scope><!--指定为本地其他路径的jar包-->
+            <systemPath>${project.basedir}/lib/alipay-trade-sdk-20161215.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.10</version>
+        </dependency>
+        <!--gson相关包-->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.6</version>
+        </dependency>
     </dependencies>
 </project>

@@ -26,7 +26,7 @@ public class SystemApplication {
         System.out.println("系统模块hospital-system启动成功");
     }
 
-    // 解决高版本Tomcat助攻出现RFC 7230和RFC 3986错误，即解决对接口参数字符的限制
+    // 解决高版本Tomcat中出现RFC 7230和RFC 3986错误，即解决对接口参数字符的限制
     @Bean
     public ConfigurableServletWebServerFactory webServerFactory() {
         TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();

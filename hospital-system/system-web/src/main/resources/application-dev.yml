@@ -40,6 +40,7 @@ shiro:
     - /login/captcha* # 获取验证码
     - /login/logout* # 退出
     - /druid/**
+    - /pay/callback/** # 支付宝支付回调
   authc-urls: # 其他路径都需要拦截
     - /**
 # Mybatis-plus配置

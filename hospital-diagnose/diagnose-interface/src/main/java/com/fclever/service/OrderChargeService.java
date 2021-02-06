@@ -22,4 +22,11 @@ public interface OrderChargeService{
      * @param payPlatformId 支付平台id  这里是支付宝
      */
     void paySuccess(String orderId, String payPlatformId);
+
+    /**
+     * 根据支付订单主表id查询订单信息（通过订单状态判断是否支付成功）
+     * @param orderId   订单主表id
+     * @return  订单信息
+     */
+    OrderCharge queryOrderChargeByOrderId(String orderId);
 }
