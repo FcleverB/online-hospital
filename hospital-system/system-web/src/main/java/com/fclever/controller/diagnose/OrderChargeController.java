@@ -1,7 +1,6 @@
 package com.fclever.controller.diagnose;
 
 import cn.hutool.core.bean.BeanUtil;
-import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.fclever.aspectj.annotation.Log;
 import com.fclever.aspectj.enums.BusinessType;
@@ -23,8 +22,6 @@ import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -126,7 +123,7 @@ public class OrderChargeController extends BaseController {
         this.orderChargeService.saveOrderChargeAndItems(orderChargeFormDto);
         // 现金支付直接更新支付详情的数据状态
         String orderId = orderChargeFormDto.getOrderChargeDto().getOrderId();
-        this.orderChargeService.paySuccess(orderId, null);
+        this.orderChargeService.paySuccess(orderId, null, Constants.PAY_TYPE_STATUS_0);
         return AjaxResult.success("创建订单并现金支付成功");
     }
 
@@ -233,7 +230,7 @@ public class OrderChargeController extends BaseController {
         if (!orderCharge.getOrderStatus().equals(Constants.ORDER_STATUS_0)) {
             return AjaxResult.fail("[" + orderId + "]订单号所对应的订单不是未支付的订单，请核对后操作");
         }
-        this.orderChargeService.paySuccess(orderId, null);
+        this.orderChargeService.paySuccess(orderId, null, Constants.PAY_TYPE_STATUS_0);
         return AjaxResult.success();
     }
 

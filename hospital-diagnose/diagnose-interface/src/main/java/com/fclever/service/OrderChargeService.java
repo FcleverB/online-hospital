@@ -1,7 +1,6 @@
 package com.fclever.service;
 
 import com.fclever.domain.OrderCharge;
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.fclever.dto.OrderChargeDto;
 import com.fclever.dto.OrderChargeFormDto;
 import com.fclever.vo.DataGridView;
@@ -22,8 +21,9 @@ public interface OrderChargeService{
      * 支付成功后更新订单状态
      * @param orderId 支付订单主表id
      * @param payPlatformId 支付平台id  这里是支付宝
+     * @param payType    支付类型
      */
-    void paySuccess(String orderId, String payPlatformId);
+    void paySuccess(String orderId, String payPlatformId, String payType);
 
     /**
      * 根据支付订单主表id查询订单信息（通过订单状态判断是否支付成功）

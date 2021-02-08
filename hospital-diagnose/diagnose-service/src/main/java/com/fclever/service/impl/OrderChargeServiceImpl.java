@@ -5,7 +5,6 @@ import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fclever.constants.Constants;
 import com.fclever.domain.CareOrderItem;
 import com.fclever.domain.OrderCharge;
@@ -21,7 +20,6 @@ import com.fclever.vo.DataGridView;
 import org.apache.dubbo.config.annotation.Method;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import sun.security.provider.certpath.OCSP;
 
 import java.util.List;
 
@@ -82,15 +80,17 @@ public class OrderChargeServiceImpl implements OrderChargeService{
      * 支付成功后更新订单状态
      * @param orderId 支付订单主表id
      * @param payPlatformId 支付平台id  这里是支付宝
+     * @param payType   支付类型
      */
     @Override
-    public void paySuccess(String orderId, String payPlatformId) {
+    public void paySuccess(String orderId, String payPlatformId, String payType) {
         // 根据支付订单id查询支付订单主表数据
         OrderCharge orderCharge = this.orderChargeMapper.selectById(orderId);
         // 修改状态  支付成功
         orderCharge.setOrderStatus(Constants.ORDER_STATUS_1);
         orderCharge.setPayPlatformId(payPlatformId);
         orderCharge.setPayTime(DateUtil.date());
+        orderCharge.setPayType(payType);
         this.orderChargeMapper.updateById(orderCharge);
         // 根据支付订单id查询对应订单详情集合信息
         QueryWrapper<OrderChargeItem> qw = new QueryWrapper<>();

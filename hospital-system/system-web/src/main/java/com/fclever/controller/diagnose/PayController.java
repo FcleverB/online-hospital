@@ -2,9 +2,8 @@ package com.fclever.controller.diagnose;
 
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.internal.util.AlipaySignature;
-import com.fclever.aspectj.annotation.Log;
-import com.fclever.aspectj.enums.BusinessType;
 import com.fclever.config.alipay.AlipayConfig;
+import com.fclever.constants.Constants;
 import com.fclever.service.OrderChargeService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import lombok.extern.log4j.Log4j2;
@@ -58,7 +57,7 @@ public class PayController {
                     // 更新支付订单主表数据的状态||支付订单详情表数据状态||处方详情表数据状态
                     // 涉及三张表数据状态的修改
                     String trade_no = parameterMap.get("trade_no");
-                    this.orderChargeService.paySuccess(orderId, trade_no);
+                    this.orderChargeService.paySuccess(orderId, trade_no, Constants.PAY_TYPE_STATUS_1);
                 }
             } catch (AlipayApiException e) {
                 // 如果不是支付宝的请求，就会抛出异常被catch捕获
