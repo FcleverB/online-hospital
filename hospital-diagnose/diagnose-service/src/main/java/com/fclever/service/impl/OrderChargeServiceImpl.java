@@ -3,6 +3,8 @@ package com.fclever.service.impl;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fclever.constants.Constants;
 import com.fclever.domain.CareOrderItem;
@@ -15,9 +17,11 @@ import com.fclever.mapper.CareOrderItemMapper;
 import com.fclever.mapper.OrderChargeItemMapper;
 import com.fclever.mapper.OrderChargeMapper;
 import com.fclever.service.OrderChargeService;
+import com.fclever.vo.DataGridView;
 import org.apache.dubbo.config.annotation.Method;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import sun.security.provider.certpath.OCSP;
 
 import java.util.List;
 
@@ -112,5 +116,25 @@ public class OrderChargeServiceImpl implements OrderChargeService{
     @Override
     public OrderCharge queryOrderChargeByOrderId(String orderId) {
         return this.orderChargeMapper.selectById(orderId);
+    }
+
+    /**
+     * 分页查询所有支付订单信息
+     * @param orderChargeDto    查询条件
+     * @return  查询结果
+     */
+    @Override
+    public DataGridView queryAllOrderChargeForPage(OrderChargeDto orderChargeDto) {
+        // 创建分页对象
+        Page<OrderCharge> page = new Page<>(orderChargeDto.getPageNum(), orderChargeDto.getPageSize());
+        // 创建查询对象
+        QueryWrapper<OrderCharge> qw = new QueryWrapper<>();
+        // 封装查询条件
+        qw.like(StringUtils.isNotBlank(orderChargeDto.getOrderId()), OrderCharge.COL_ORDER_ID, orderChargeDto.getOrderId());
+        qw.like(StringUtils.isNotBlank(orderChargeDto.getPatientName()), OrderCharge.COL_PATIENT_NAME, orderChargeDto.getPatientName());
+        qw.orderByDesc(OrderCharge.COL_CREATE_TIME);
+        // 执行查询
+        this.orderChargeMapper.selectPage(page, qw);
+        return new DataGridView(page.getTotal(), page.getRecords());
     }
 }

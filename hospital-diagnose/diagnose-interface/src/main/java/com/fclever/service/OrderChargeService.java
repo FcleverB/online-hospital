@@ -2,7 +2,9 @@ package com.fclever.service;
 
 import com.fclever.domain.OrderCharge;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.fclever.dto.OrderChargeDto;
 import com.fclever.dto.OrderChargeFormDto;
+import com.fclever.vo.DataGridView;
 
 /**
 @author Fclever
@@ -29,4 +31,11 @@ public interface OrderChargeService{
      * @return  订单信息
      */
     OrderCharge queryOrderChargeByOrderId(String orderId);
+
+    /**
+     * 分页查询所有支付订单信息
+     * @param orderChargeDto    查询条件
+     * @return  查询结果
+     */
+    DataGridView queryAllOrderChargeForPage(OrderChargeDto orderChargeDto);
 }

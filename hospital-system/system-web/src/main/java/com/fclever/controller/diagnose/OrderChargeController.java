@@ -17,6 +17,7 @@ import com.fclever.service.*;
 import com.fclever.utils.IdGeneratorSnowflake;
 import com.fclever.utils.ShiroSecurityUtils;
 import com.fclever.vo.AjaxResult;
+import com.fclever.vo.DataGridView;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.validation.annotation.Validated;
@@ -192,9 +193,93 @@ public class OrderChargeController extends BaseController {
         if (null == orderCharge) {
             return AjaxResult.fail("[" + orderId + "]订单号所对应的支付订单不存在，请核对后操作");
         }
-        if (orderCharge.getPayType().equals(Constants.PAY_TYPE_STATUS_0)){
-            return AjaxResult.fail("[" + orderId + "]订单号所对应的订单不是支付宝支付的订单，请核对后操作");
-        }
         return AjaxResult.success(orderCharge);
+    }
+
+    /**
+     * 分页查询所有支付订单信息
+     * @param orderChargeDto    查询条件
+     * @return  查询结果
+     */
+    @GetMapping("queryAllOrderChargeForPage")
+    public AjaxResult queryAllOrderChargeForPage(OrderChargeDto orderChargeDto) {
+        DataGridView dataGridView = this.orderChargeService.queryAllOrderChargeForPage(orderChargeDto);
+        return AjaxResult.success("分页查询支付订单信息成功",dataGridView.getData(), dataGridView.getTotal());
+    }
+
+    /**
+     * 根据支付订单id查询对应的支付订单详情信息
+     * @param orderId   支付订单id
+     * @return  查询结果
+     */
+    @GetMapping("queryOrderChargeItemByOrderId/{orderId}")
+    public AjaxResult queryOrderChargeItemByOrderId(@PathVariable String orderId) {
+        List<OrderChargeItem> orderChargeItemList = this.orderChargeItemService.queryOrderChargeItemByOrderId(orderId);
+        return AjaxResult.success(orderChargeItemList);
+    }
+
+    /**
+     * 收费查询列表中现金支付
+     * @param orderId   支付订单id
+     * @return  返回结果
+     */
+    @PutMapping("payWithCash/{orderId}")
+    public AjaxResult payWithCash(@PathVariable String orderId) {
+        // 查询该支付订单id对应的订单是否存在
+        OrderCharge orderCharge = this.orderChargeService.queryOrderChargeByOrderId(orderId);
+        if (orderCharge == null) {
+            return AjaxResult.fail("[" + orderId + "]订单号所对应的支付订单不存在，请核对后操作");
+        }
+        if (!orderCharge.getOrderStatus().equals(Constants.ORDER_STATUS_0)) {
+            return AjaxResult.fail("[" + orderId + "]订单号所对应的订单不是未支付的订单，请核对后操作");
+        }
+        this.orderChargeService.paySuccess(orderId, null);
+        return AjaxResult.success();
+    }
+
+    /**
+     * 收费查询列表中支付宝支付
+     * @param orderId   支付订单id
+     * @return  返回结果
+     */
+    @PutMapping("payWithZfb/{orderId}")
+    public AjaxResult payWithZfb(@PathVariable String orderId) {
+        // 查询该支付订单id对应的订单是否存在
+        OrderCharge orderCharge = this.orderChargeService.queryOrderChargeByOrderId(orderId);
+        if (orderCharge == null) {
+            return AjaxResult.fail("该支付订单id对应的支付订单信息不存在，请核对后再查询！");
+        }
+        if (!orderCharge.getOrderStatus().equals(Constants.ORDER_STATUS_0)) {
+            return AjaxResult.fail("[" + orderId + "]订单号所对应的订单不是未支付的订单，请核对后操作");
+        }
+        // 支付宝支付需要返回给页面一个二维码
+        // 调用支付方法
+        // (必填) 订单标题，粗略描述用户的支付目的。如“喜士多（浦东店）消费”
+        String subject = "online-hospital系统处方收费";
+        // (必填) 订单总金额，单位为元，不能超过1亿元
+        String totalAmount = orderCharge.getOrderAmount().toString();
+        // (必填) 商户网站订单系统中唯一订单号，64个字符以内，只能包含字母、数字、下划线，需保证商户系统端不能重复------对应支付订单信息表中的orderId即可
+        // ！！！！每个订单号对应生成一个二维码，如果订单号一样，多次运行程序产生的二维码只能用一次
+        String outTradeNo = orderId;
+        // (可选) 订单不可打折金额，可以配合商家平台配置折扣活动，如果酒水不参与打折，则将对应金额填写至此字段，如果该值未传入,但传入了【订单总金额】,【打折金额】,则该值默认为【订单总金额】-【打折金额】
+        String undiscountableAmount = null;
+        // 订单描述，可以对交易或商品进行一个详细地描述，比如填写"购买商品2件共15.00元"
+        String body = "";
+        // 支付宝服务器主动通知商户服务器里指定的页面http路径,根据需要设置
+        String notifyUrl = AlipayConfig.notifyUrl + outTradeNo;
+        Map<String, Object> result = PayService.pay(subject, totalAmount, outTradeNo, undiscountableAmount, body, notifyUrl);
+        // 从支付成功信息中获取二维码
+        String qrCode = result.get("qrCode").toString();
+        if (StringUtils.isNotBlank(qrCode)) {
+            // 支付成功，组装返回数据
+            Map<String, Object> map = new HashMap<>();
+            map.put("orderId", orderId);
+            map.put("allAmount", totalAmount);
+            map.put("payUrl", qrCode);
+            return AjaxResult.success(map);
+        } else {
+            // 支付失败
+            return AjaxResult.fail(result.get("msg").toString());
+        }
     }
 }
