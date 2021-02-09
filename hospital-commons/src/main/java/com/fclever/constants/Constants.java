@@ -69,6 +69,7 @@ public interface Constants {
     String ID_PROFIX_CO = "CO"; // 处方id前缀
     String ID_PROFIX_ITEM = "ITEM"; // 处方项目id前缀
     String ID_PROFIX_ORDER = "ORDER"; // 支付订单id前缀
+    String ID_PROFIX_BACK = "BACK"; // 退费订单id前缀
 
     /**
      * 是否需要排班标志

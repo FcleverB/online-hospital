@@ -104,6 +104,30 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="onlinehospital:his_order_backfee">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="OrderBackfee" />
+                  <option name="moduleName" value="hospital-diagnose" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="onlinehospital:his_order_backfee_item">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="OrderBackfeeItem" />
+                  <option name="moduleName" value="hospital-diagnose" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="onlinehospital:his_order_charge">
               <value>
                 <TableGenerateConfig>

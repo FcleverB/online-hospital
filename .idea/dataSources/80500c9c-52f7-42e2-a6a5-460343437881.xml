@@ -1018,11 +1018,11 @@
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="263" parent="22" name="his_order_backfee">
-      <Comment>1退费主表</Comment>
+      <Comment>1退费订单信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="264" parent="22" name="his_order_backfee_item">
-      <Comment>1退费订单详情表</Comment>
+      <Comment>1退费订单信息详情表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="265" parent="22" name="his_order_charge">
