@@ -1018,19 +1018,19 @@
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="263" parent="22" name="his_order_backfee">
-      <Comment>退费主表</Comment>
+      <Comment>1退费主表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="264" parent="22" name="his_order_backfee_item">
-      <Comment>退费订单详情表</Comment>
+      <Comment>1退费订单详情表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="265" parent="22" name="his_order_charge">
-      <Comment>支付订单信息表</Comment>
+      <Comment>1支付订单信息表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="266" parent="22" name="his_order_charge_item">
-      <Comment>支付订单信息详情表</Comment>
+      <Comment>1支付订单信息详情表</Comment>
       <Collation>utf8mb4_general_ci</Collation>
     </table>
     <table id="267" parent="22" name="his_patient">
@@ -1471,7 +1471,7 @@
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="349" parent="263" name="reg_id">
+    <column id="349" parent="263" name="registration_id">
       <Position>4</Position>
       <Comment>挂号单</Comment>
       <DataType>varchar(25)|0s</DataType>
@@ -1737,7 +1737,7 @@
     </column>
     <column id="391" parent="266" name="order_id">
       <Position>7</Position>
-      <Comment>订单ID  his_oder_charge主键</Comment>
+      <Comment>订单IDhis_oder_charge主键</Comment>
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>

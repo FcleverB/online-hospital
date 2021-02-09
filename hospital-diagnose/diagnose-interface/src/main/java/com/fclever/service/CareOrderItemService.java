@@ -38,4 +38,11 @@ public interface CareOrderItemService{
      * @return  返回结果
      */
     List<CareOrderItem> queryCareOrderItemsNoChargeByCoId(String coId);
+
+    /**
+     * 根据处方id，查询已支付的处方详情信息
+     * @param coId  处方id
+     * @return  返回结果
+     */
+    List<CareOrderItem> queryCareOrderItemsChargedByCoId(String coId);
 }

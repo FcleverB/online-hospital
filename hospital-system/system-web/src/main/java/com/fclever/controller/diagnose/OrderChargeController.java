@@ -199,6 +199,7 @@ public class OrderChargeController extends BaseController {
      * @return  查询结果
      */
     @GetMapping("queryAllOrderChargeForPage")
+    @HystrixCommand
     public AjaxResult queryAllOrderChargeForPage(OrderChargeDto orderChargeDto) {
         DataGridView dataGridView = this.orderChargeService.queryAllOrderChargeForPage(orderChargeDto);
         return AjaxResult.success("分页查询支付订单信息成功",dataGridView.getData(), dataGridView.getTotal());
@@ -210,6 +211,7 @@ public class OrderChargeController extends BaseController {
      * @return  查询结果
      */
     @GetMapping("queryOrderChargeItemByOrderId/{orderId}")
+    @HystrixCommand
     public AjaxResult queryOrderChargeItemByOrderId(@PathVariable String orderId) {
         List<OrderChargeItem> orderChargeItemList = this.orderChargeItemService.queryOrderChargeItemByOrderId(orderId);
         return AjaxResult.success(orderChargeItemList);
@@ -221,6 +223,8 @@ public class OrderChargeController extends BaseController {
      * @return  返回结果
      */
     @PutMapping("payWithCash/{orderId}")
+    @HystrixCommand
+    @Log(title = "收费查询列表中现金支付", businessType = BusinessType.UPDATE)
     public AjaxResult payWithCash(@PathVariable String orderId) {
         // 查询该支付订单id对应的订单是否存在
         OrderCharge orderCharge = this.orderChargeService.queryOrderChargeByOrderId(orderId);
@@ -240,6 +244,8 @@ public class OrderChargeController extends BaseController {
      * @return  返回结果
      */
     @PutMapping("payWithZfb/{orderId}")
+    @HystrixCommand
+    @Log(title = "收费查询列表中支付宝支付", businessType = BusinessType.UPDATE)
     public AjaxResult payWithZfb(@PathVariable String orderId) {
         // 查询该支付订单id对应的订单是否存在
         OrderCharge orderCharge = this.orderChargeService.queryOrderChargeByOrderId(orderId);
