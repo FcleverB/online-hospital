@@ -30,6 +30,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="diagnose-domain" target="1.8" />
+      <module name="hospital-alipay" target="1.8" />
       <module name="hospital-commons" target="1.8" />
       <module name="hospitalcommons" target="1.8" />
       <module name="system-service" target="1.8" />

@@ -27,7 +27,7 @@ import java.util.List;
 @author Fclever
 @create 2021-02-03 19:53
 */
-@Service(methods = {@Method(name = "saveOrderChargeAndItems", retries = 1)})
+@Service(methods = {@Method(name = "saveOrderChargeAndItems", retries = 1),@Method(name = "paySuccess", retries = 1)})
 public class OrderChargeServiceImpl implements OrderChargeService{
 
     @Autowired

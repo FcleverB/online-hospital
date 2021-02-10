@@ -17,4 +17,11 @@ public interface OrderChargeItemService{
      * @return  查询结果
      */
     List<OrderChargeItem> queryOrderChargeItemByOrderId(String orderId);
+
+    /**
+     * 根据支付订单详情id查询对应的详情信息
+     * @param itemId    支付订单详情id
+     * @return  查询结果
+     */
+    OrderChargeItem queryOrderChargeItemByItemId(String itemId);
 }

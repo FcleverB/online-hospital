@@ -102,7 +102,7 @@ public interface Constants {
     String ORDER_STATUS_2 = "2";
 
     /**
-     * 处方详情状态+支付订单详情状态
+     * 处方详情状态+支付订单详情状态+退费订单详情状态
      * 0未支付，1已支付，2，已退费  3，已完成
      * his_order_details_status
      */
@@ -118,4 +118,13 @@ public interface Constants {
      */
     String PAY_TYPE_STATUS_0 = "0";
     String PAY_TYPE_STATUS_1 = "1";
+
+    /**
+     * 退费单状态
+     * 0 未退费    1 退费成功  2 退费失败
+     * his_backfee_status
+     */
+    String ORDER_BACKFEE_STATUS_0 = "0";
+    String ORDER_BACKFEE_STATUS_1 = "1";
+    String ORDER_BACKFEE_STATUS_2 = "2";
 }

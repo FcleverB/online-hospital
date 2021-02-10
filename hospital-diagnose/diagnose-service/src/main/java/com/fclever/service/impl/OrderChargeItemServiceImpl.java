@@ -35,4 +35,14 @@ public class OrderChargeItemServiceImpl implements OrderChargeItemService{
         // 执行查询返回结果
         return this.orderChargeItemMapper.selectList(qw);
     }
+
+    /**
+     * 根据支付订单详情id查询对应的详情信息
+     * @param itemId    支付订单详情id
+     * @return  查询结果
+     */
+    @Override
+    public OrderChargeItem queryOrderChargeItemByItemId(String itemId) {
+        return this.orderChargeItemMapper.selectById(itemId);
+    }
 }
