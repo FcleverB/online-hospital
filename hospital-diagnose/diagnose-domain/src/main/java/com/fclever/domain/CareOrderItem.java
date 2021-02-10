@@ -98,6 +98,20 @@ public class CareOrderItem extends BaseEntity {
     private String status;
 
     /**
+     * 支付类型 0 现金 1 支付宝 字典表	his_pay_type_status
+     */
+    @TableField(value = "pay_type")
+    @ApiModelProperty(value="支付类型 0 现金 1 支付宝 字典表 his_pay_type_status")
+    private String payType;
+
+    /**
+     * 退费类型 0 现金 1 支付宝 字典表	his_pay_type_status
+     */
+    @TableField(value = "back_type")
+    @ApiModelProperty(value="退费类型 0 现金 1 支付宝 字典表 his_pay_type_status")
+    private String backType;
+
+    /**
      * 创建时间
      */
     @TableField(value = "create_time")
@@ -123,6 +137,10 @@ public class CareOrderItem extends BaseEntity {
     public static final String COL_REMARK = "remark";
 
     public static final String COL_STATUS = "status";
+
+    public static final String COL_PAY_TYPE = "payType";
+
+    public static final String COL_BACK_TYPE = "backType";
 
     public static final String COL_CREATE_TIME = "create_time";
 }

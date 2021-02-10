@@ -14,11 +14,13 @@
     <result column="amount" jdbcType="DECIMAL" property="amount" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="status" jdbcType="CHAR" property="status" />
+    <result column="pay_type" jdbcType="CHAR" property="payType" />
+    <result column="back_type" jdbcType="CHAR" property="backType" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
     item_id, co_id, item_ref_id, item_name, item_type, num, price, amount, remark, `status`, 
-    create_time
+    pay_type, back_type, create_time
   </sql>
 </mapper>

@@ -102,6 +102,7 @@ public class OrderBackfeeServiceImpl implements OrderBackfeeService{
             // 设置对应的处方详情数据的状态为支付完成
             CareOrderItem careOrderItem = this.careOrderItemMapper.selectById(orderBackfeeItem.getItemId());
             careOrderItem.setStatus(Constants.ORDER_DETAILS_STATUS_2);
+            careOrderItem.setBackType(backType);
             this.careOrderItemMapper.updateById(careOrderItem);
             // 更新收费单状态为已退费
             OrderChargeItem orderChargeItem = this.orderChargeItemMapper.selectById(orderBackfeeItem.getItemId());

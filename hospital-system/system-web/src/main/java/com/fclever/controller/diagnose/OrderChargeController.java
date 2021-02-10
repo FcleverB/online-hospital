@@ -109,6 +109,8 @@ public class OrderChargeController extends BaseController {
     /**
      * 创建订单并现金支付
      *      支付信息表his_order_charge\支付信息详情表his_order_charge_item\处方详情表his_care_order_item
+     *      第一次调用方法，如果因为服务调用失败出现异常时，第二次调用也会继续出错，因为每次都会执行保存方法，主表的id每次自动生成，但是详情表的id是固定的，会出现主键重复异常
+     *      所以第一次出现异常后，需要到收费列表中进行再次支付
      * @param orderChargeFormDto 待保存的支付信息和支付详情信息
      * @return  返回结果
      */

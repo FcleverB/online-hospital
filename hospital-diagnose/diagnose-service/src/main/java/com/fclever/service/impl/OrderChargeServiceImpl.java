@@ -104,6 +104,7 @@ public class OrderChargeServiceImpl implements OrderChargeService{
             // 设置对应的处方详情数据的状态为支付完成
             CareOrderItem careOrderItem = this.careOrderItemMapper.selectById(orderChargeItem.getItemId());
             careOrderItem.setStatus(Constants.ORDER_DETAILS_STATUS_1);
+            careOrderItem.setPayType(payType);
             this.careOrderItemMapper.updateById(careOrderItem);
         }
     }

@@ -87,4 +87,22 @@ public class CareOrderItemDto implements Serializable {
      */
     @ApiModelProperty(value = "备注")
     private String remark;
+
+    /**
+     * 状态，0未支付，1已支付，2，已退费  3，已完成 字典表his_order_details_status
+     */
+    @ApiModelProperty(value="状态，0未支付，1已支付，2，已退费  3，已完成 字典表his_order_details_status")
+    private String status;
+
+    /**
+     * 支付类型 0 现金 1 支付宝 字典表	his_pay_type_status
+     */
+    @ApiModelProperty(value="支付类型 0 现金 1 支付宝 字典表\this_pay_type_status")
+    private String payType;
+
+    /**
+     * 退费类型 0 现金 1 支付宝 字典表	his_pay_type_status
+     */
+    @ApiModelProperty(value="退费类型 0 现金 1 支付宝 字典表 his_pay_type_status")
+    private String backType;
 }
