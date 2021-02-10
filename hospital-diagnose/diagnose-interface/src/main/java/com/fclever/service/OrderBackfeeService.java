@@ -2,7 +2,9 @@ package com.fclever.service;
 
 import com.fclever.domain.OrderBackfee;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.fclever.dto.OrderBackfeeDto;
 import com.fclever.dto.OrderBackfeeFormDto;
+import com.fclever.vo.DataGridView;
 
 /**
 @author Fclever
@@ -23,4 +25,11 @@ public interface OrderBackfeeService{
      * @param backType   退费类型
      */
     void backSuccess(String backId, String backPlatformId, String backType);
+
+    /**
+     * 分页查询所有退费订单信息
+     * @param orderBackfeeDto   查询条件
+     * @return  返回结果
+     */
+    DataGridView queryAllOrderBackfeeForPage(OrderBackfeeDto orderBackfeeDto);
 }

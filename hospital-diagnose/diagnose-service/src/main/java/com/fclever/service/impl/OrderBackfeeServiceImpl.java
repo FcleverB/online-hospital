@@ -3,11 +3,14 @@ package com.fclever.service.impl;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fclever.constants.Constants;
 import com.fclever.domain.*;
 import com.fclever.dto.*;
 import com.fclever.mapper.*;
 import com.fclever.service.OrderBackfeeService;
+import com.fclever.vo.DataGridView;
 import org.apache.dubbo.config.annotation.Method;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -109,5 +112,22 @@ public class OrderBackfeeServiceImpl implements OrderBackfeeService{
             orderChargeItem.setStatus(Constants.ORDER_DETAILS_STATUS_2);
             this.orderChargeItemMapper.updateById(orderChargeItem);
         }
+    }
+
+    /**
+     * 分页查询所有退费订单信息
+     * @param orderBackfeeDto   查询条件
+     * @return  返回结果
+     */
+    @Override
+    public DataGridView queryAllOrderBackfeeForPage(OrderBackfeeDto orderBackfeeDto) {
+        Page<OrderBackfee> page = new Page<>(orderBackfeeDto.getPageNum(), orderBackfeeDto.getPageSize());
+        QueryWrapper<OrderBackfee> qw = new QueryWrapper<>();
+        qw.eq(StringUtils.isNotBlank(orderBackfeeDto.getRegistrationId()), OrderBackfee.COL_REGISTRATION_ID, orderBackfeeDto.getRegistrationId());
+        qw.eq(StringUtils.isNotBlank(orderBackfeeDto.getPatientName()), OrderBackfee.COL_PATIENT_NAME, orderBackfeeDto.getPatientName());
+        qw.orderByDesc(OrderBackfee.COL_CREATE_TIME);
+        // 执行查询
+        this.orderBackfeeMapper.selectPage(page, qw);
+        return new DataGridView(page.getTotal(), page.getRecords());
     }
 }

@@ -3,18 +3,19 @@ package com.fclever.controller.diagnose;
 import cn.hutool.core.bean.BeanUtil;
 import com.fclever.aspectj.annotation.Log;
 import com.fclever.aspectj.enums.BusinessType;
+import com.fclever.config.alipay.PayService;
+import com.fclever.config.alipay.RefundService;
 import com.fclever.constants.Constants;
 import com.fclever.controller.BaseController;
-import com.fclever.domain.CareHistory;
-import com.fclever.domain.CareOrder;
-import com.fclever.domain.CareOrderItem;
-import com.fclever.domain.OrderChargeItem;
+import com.fclever.domain.*;
 import com.fclever.dto.BaseDto;
+import com.fclever.dto.OrderBackfeeDto;
 import com.fclever.dto.OrderBackfeeFormDto;
 import com.fclever.service.*;
 import com.fclever.utils.IdGeneratorSnowflake;
 import com.fclever.utils.ShiroSecurityUtils;
 import com.fclever.vo.AjaxResult;
+import com.fclever.vo.DataGridView;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.validation.annotation.Validated;
@@ -47,6 +48,12 @@ public class OrderBackfeeController extends BaseController {
 
     @Reference
     private OrderBackfeeService orderBackfeeService;
+
+    @Reference
+    private OrderBackfeeItemService orderBackfeeItemService;
+
+    @Reference
+    private OrderChargeService orderChargeService;
 
     /**
      * 根据挂号单id查询病历|已支付处方信息|处方详情信息
@@ -125,5 +132,65 @@ public class OrderBackfeeController extends BaseController {
         // 更新订单状态
         this.orderBackfeeService.backSuccess(backId, null, Constants.PAY_TYPE_STATUS_0);
         return AjaxResult.success("创建现金退费订单成功");
+    }
+
+    /**
+     * 创建支付宝退费订单        每次最好选一个支付宝的订单
+     * @param orderBackfeeFormDto   待保存的退费主表数据和退费详情数据
+     * @return  返回数据
+     */
+    @PostMapping("createOrderBackfeeWithZfb")
+    @HystrixCommand
+    @Log(title = "创建支付宝退费订单", businessType = BusinessType.INSERT)
+    public AjaxResult createOrderBackfeeWithZfb(@RequestBody @Validated OrderBackfeeFormDto orderBackfeeFormDto) {
+        // 保存订单
+        orderBackfeeFormDto.getOrderBackfeeDto().setBackType(Constants.PAY_TYPE_STATUS_1);
+        orderBackfeeFormDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
+        // 生成退费单号
+        String backId = IdGeneratorSnowflake.generatorIdWithProfix(Constants.ID_PROFIX_BACK);
+        orderBackfeeFormDto.getOrderBackfeeDto().setBackId(backId);
+        // 找到当前退费单之前收费单的Id
+        String itemId = orderBackfeeFormDto.getOrderBackfeeItemDtoList().get(0).getItemId();
+        OrderChargeItem orderChargeItem = this.orderChargeItemService.queryOrderChargeItemByItemId(itemId);
+        orderBackfeeFormDto.getOrderBackfeeDto().setOrderId(orderChargeItem.getOrderId());
+        this.orderBackfeeService.saveOrderBackfeeAndItem(orderBackfeeFormDto);
+        // 调用支付宝接口
+        OrderCharge orderCharge = this.orderChargeService.queryOrderChargeByOrderId(orderChargeItem.getOrderId());
+        String tradeNo = orderCharge.getPayPlatformId();
+        String outTradeNo = orderCharge.getOrderId();
+        String refundAmount = orderBackfeeFormDto.getOrderBackfeeDto().getBackAmount().toString();
+        String outRequestNo = backId;
+        String refundReason = "不再需要";
+        Map<String, Object> refund = RefundService.refund(tradeNo, outTradeNo, refundAmount, outRequestNo, refundReason);
+        if (refund.get("code").toString().equals("200")){
+            // 更新订单状态
+            this.orderBackfeeService.backSuccess(backId, refund.get("tradeNo").toString(), Constants.PAY_TYPE_STATUS_1);
+            return AjaxResult.success();
+        }
+        return AjaxResult.fail(refund.get("msg").toString());
+    }
+
+    /**
+     * 分页查询所有退费订单信息
+     * @param orderBackfeeDto   查询条件
+     * @return  返回结果
+     */
+    @GetMapping("queryAllOrderBackfeeForPage")
+    @HystrixCommand
+    public AjaxResult queryAllOrderBackfeeForPage(OrderBackfeeDto orderBackfeeDto){
+        DataGridView dataGridView = this.orderBackfeeService.queryAllOrderBackfeeForPage(orderBackfeeDto);
+        return AjaxResult.success("分页查询数据成功", dataGridView.getData(),dataGridView.getTotal());
+    }
+
+    /**
+     * 根据退费单主表id查询对应的详情信息
+     * @param backId    退费单主表id
+     * @return  查询结果
+     */
+    @GetMapping("queryOrderBackfeeItemByBackId/{backId}")
+    @HystrixCommand
+    public AjaxResult queryOrderBackfeeItemByBackId(@PathVariable String backId) {
+        List<OrderBackfeeItem> orderBackfeeItemList = this.orderBackfeeItemService.queryOrderBackfeeItemByBackId(backId);
+        return AjaxResult.success(orderBackfeeItemList);
     }
 }
