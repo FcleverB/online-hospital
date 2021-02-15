@@ -39,6 +39,7 @@ public class CheckResultController extends BaseController {
 
     /**
      * 根据挂号单号和检查项目Id集合查询要检查的项目（已支付的检查项）
+     *      这里传递的是JSON对象，需要使用POST请求方式
      * @param checkResultDto    查询条件    挂号单据Id | 检查项目Id集合
      * @return  返回结果
      */
@@ -77,5 +78,36 @@ public class CheckResultController extends BaseController {
             }
             return AjaxResult.success(result);
         }
+    }
+
+    /**
+     * 根据详情Id查询对应病历|处方|处方详情
+     * @param itemId    处方详情Id
+     * @return  查询结果
+     */
+    @GetMapping("queryCheckItemByItemId/{itemId}")
+    @HystrixCommand
+    public AjaxResult queryCheckItemByItemId(@PathVariable String itemId) {
+        // 根据详情Id获取详情信息
+        CareOrderItem careOrderItem = this.careOrderItemService.queryCareOrderItemByItemId(itemId);
+        if(careOrderItem==null){
+            return AjaxResult.fail("【"+itemId+"】的检查单号的详情数据不存在，请核对后再查询");
+        }
+        if(!careOrderItem.getStatus().equals(Constants.ORDER_DETAILS_STATUS_1)){
+            return AjaxResult.fail("【"+itemId+"】的检查单号没有支付，请支付后再查询");
+        }
+        if(!careOrderItem.getItemType().equals(Constants.ITEM_TYPE_CHECK)){
+            return AjaxResult.fail("【"+itemId+"】的单号不是检查项目，请核对再查询");
+        }
+        // 根据处方id查询处方信息
+        CareOrder careOrder = this.careOrderService.queryCareOrderByCoId(careOrderItem.getCoId());
+        // 根据病历Id查询病历信息
+        CareHistory careHistory = this.careHistoryService.queryCareHistoryByChId(careOrder.getChId());
+        // 封装返回数据
+        Map<String, Object> map = new HashMap<>();
+        map.put("careHistory", careHistory);
+        map.put("careOrder", careOrder);
+        map.put("careOrderItem", careOrderItem);
+        return AjaxResult.success(map);
     }
 }

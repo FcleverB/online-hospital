@@ -149,4 +149,14 @@ public class CareOrderServiceImpl implements CareOrderService{
             return sb.toString();
         }
     }
+
+    /**
+     * 根据处方id查询对应处方信息
+     * @param coId  处方Id
+     * @return  查询结果
+     */
+    @Override
+    public CareOrder queryCareOrderByCoId(String coId) {
+        return this.careOrderMapper.selectById(coId);
+    }
 }

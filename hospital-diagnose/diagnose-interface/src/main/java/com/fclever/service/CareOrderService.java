@@ -36,4 +36,11 @@ public interface CareOrderService{
      * @return  返回结果
      */
     String doMedicine(List<String> itemIds);
+
+    /**
+     * 根据处方id查询对应处方信息
+     * @param coId  处方Id
+     * @return  查询结果
+     */
+    CareOrder queryCareOrderByCoId(String coId);
 }
