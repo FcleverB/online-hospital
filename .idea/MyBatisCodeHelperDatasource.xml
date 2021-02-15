@@ -104,6 +104,18 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="onlinehospital:his_check_result">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="CheckResult" />
+                  <option name="moduleName" value="hospital-diagnose" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="onlinehospital:his_order_backfee">
               <value>
                 <TableGenerateConfig>
