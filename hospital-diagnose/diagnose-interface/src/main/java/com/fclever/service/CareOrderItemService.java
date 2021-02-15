@@ -45,4 +45,12 @@ public interface CareOrderItemService{
      * @return  返回结果
      */
     List<CareOrderItem> queryCareOrderItemsChargedByCoId(String coId);
+
+    /**
+     * 查询已支付的检查项目
+     * @param coType 检查项
+     * @param status    已支付
+     * @return  返回结果
+     */
+    List<CareOrderItem> queryCareOrderItemsChargedAndChecked(String coType, String status);
 }

@@ -1,6 +1,7 @@
 package com.fclever.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.fclever.constants.Constants;
 import com.fclever.domain.CareOrder;
 import com.fclever.mapper.CareOrderMapper;
@@ -115,6 +116,20 @@ public class CareOrderItemServiceImpl implements CareOrderItemService{
         // 封装查询条件
         qw.eq(coId != null, CareOrderItem.COL_CO_ID, coId);
         qw.eq(CareOrderItem.COL_STATUS, Constants.ORDER_DETAILS_STATUS_1);
+        return this.careOrderItemMapper.selectList(qw);
+    }
+
+    /**
+     * 查询已支付的检查项目
+     * @param coType 检查项
+     * @param status    已支付
+     * @return  返回结果
+     */
+    @Override
+    public List<CareOrderItem> queryCareOrderItemsChargedAndChecked(String coType, String status) {
+        QueryWrapper<CareOrderItem> qw = new QueryWrapper<>();
+        qw.eq(StringUtils.isNotBlank(coType), CareOrderItem.COL_ITEM_TYPE, coType);
+        qw.eq(StringUtils.isNotBlank(status), CareOrderItem.COL_STATUS, status);
         return this.careOrderItemMapper.selectList(qw);
     }
 }
