@@ -103,7 +103,7 @@ public interface Constants {
 
     /**
      * 处方详情状态+支付订单详情状态+退费订单详情状态
-     * 0未支付，1已支付，2，已退费  3，已完成
+     * 0未支付，1已支付，2，已退费  3，已完成（已检查或者已发药）
      * his_order_details_status
      */
     String ORDER_DETAILS_STATUS_0 = "0";
@@ -127,4 +127,12 @@ public interface Constants {
     String ORDER_BACKFEE_STATUS_0 = "0";
     String ORDER_BACKFEE_STATUS_1 = "1";
     String ORDER_BACKFEE_STATUS_2 = "2";
+
+    /**
+     * 处方类型
+     * 0 药品  1 检查项
+     * his_item_type
+     */
+    String ITEM_TYPE_MEDICINES = "0";
+    String ITEM_TYPE_CHECK = "1";
 }

@@ -23,7 +23,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @create 2020-12-12 22:11
 */
 // 指定该类中的addMedicines方法的请求重试次数为0
-@Service(methods = {@Method(name = "addMedicines", retries = 0)})
+@Service(methods = {@Method(name = "addMedicines", retries = 0), @Method(name = "deductMedicines", retries = 0)})
 public class MedicinesServiceImpl implements MedicinesService {
 
     @Autowired
@@ -152,5 +152,16 @@ public class MedicinesServiceImpl implements MedicinesService {
         // 设置修改人----未实现
         // 执行更新操作
         return this.medicinesMapper.updateById(medicines);
+    }
+
+    /**
+     * 扣减库存
+     * @param medicinesId   药品Id
+     * @param num   需要扣减的数量
+     * @return  操作结果
+     */
+    @Override
+    public int deductMedicines(Long medicinesId, long num) {
+        return this.medicinesMapper.deductMedicines(medicinesId, num);
     }
 }

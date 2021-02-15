@@ -60,4 +60,12 @@ public interface MedicinesService{
      * @return 是否修改成功标志
      */
     int updateMedicinesStock(String userName, Long medicinesId, Long medicinesStockNum);
+
+    /**
+     * 扣减库存
+     * @param medicinesId   药品Id
+     * @param num   需要扣减的数量
+     * @return  操作结果
+     */
+    int deductMedicines(Long medicinesId, long num);
 }

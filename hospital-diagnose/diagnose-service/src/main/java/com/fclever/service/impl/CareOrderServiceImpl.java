@@ -1,22 +1,30 @@
 package com.fclever.service.impl;
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 import java.util.List;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fclever.constants.Constants;
 import com.fclever.domain.CareOrder;
 import com.fclever.domain.CareOrderItem;
+import com.fclever.domain.Medicines;
+import com.fclever.domain.OrderChargeItem;
 import com.fclever.dto.CareOrderDto;
 import com.fclever.dto.CareOrderFormDto;
 import com.fclever.dto.CareOrderItemDto;
 import com.fclever.mapper.CareOrderItemMapper;
 import com.fclever.mapper.CareOrderMapper;
+import com.fclever.mapper.OrderChargeItemMapper;
 import com.fclever.service.CareOrderService;
+import com.fclever.service.MedicinesService;
+import com.fclever.service.OrderChargeItemService;
 import com.fclever.utils.IdGeneratorSnowflake;
+import org.apache.dubbo.config.annotation.Reference;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -32,6 +40,13 @@ public class CareOrderServiceImpl implements CareOrderService{
 
     @Autowired
     private CareOrderItemMapper careOrderItemMapper;
+
+    @Reference
+    private MedicinesService medicinesService;
+
+    @Autowired
+    private OrderChargeItemMapper orderChargeItemMapper;
+
 
     /**
      * 根据病历id查询处方列表数据
@@ -88,5 +103,50 @@ public class CareOrderServiceImpl implements CareOrderService{
             this.careOrderItemMapper.insert(careOrderItem);
         }
         return i;
+    }
+
+    /**
+     * 发药
+     * 1、根据处方详情Id查询处方详情
+     * 2、扣减药品库存（库存够-》扣减并返回影响行数；库存不够-》返回0）
+     * 3、如果返回0，表示库存不够，停止发药
+     * 4、如果返回大于0，更新处方详情和支付详情状态为3，已发药
+     * @param itemIds   待发药的药品项Id
+     * @return  返回结果
+     */
+    @Override
+    public String doMedicine(List<String> itemIds) {
+        QueryWrapper<CareOrderItem> qw = new QueryWrapper<>();
+        qw.in(CareOrderItem.COL_ITEM_ID, itemIds);
+        List<CareOrderItem> careOrderItemList = this.careOrderItemMapper.selectList(qw);
+        StringBuffer sb = new StringBuffer();
+        for (CareOrderItem careOrderItem : careOrderItemList) {
+            // 获取药品Id
+            String medicinesId = careOrderItem.getItemRefId();
+            // 获取需要发药的数量
+            BigDecimal num = careOrderItem.getNum();
+            // 扣减库存
+            int result = this.medicinesService.deductMedicines(Long.valueOf(medicinesId), num.longValue());
+            if (result > 0) {
+                // 库存够
+                // 更新处方详情状态
+                careOrderItem.setStatus(Constants.ORDER_DETAILS_STATUS_3);
+                this.careOrderItemMapper.updateById(careOrderItem);
+                // 更新支付订单详情状态
+                OrderChargeItem orderChargeItem = new OrderChargeItem();
+                orderChargeItem.setItemId(careOrderItem.getItemId());
+                orderChargeItem.setStatus(Constants.ORDER_DETAILS_STATUS_3);
+                this.orderChargeItemMapper.updateById(orderChargeItem);
+            } else {
+                // 库存不够
+                sb.append("[" + careOrderItem.getItemName() + "]发药失败\n");
+            }
+        }
+        if (StringUtils.isBlank(sb.toString())) {
+            return null;
+        } else {
+            sb.append("原因：药品库存不足");
+            return sb.toString();
+        }
     }
 }

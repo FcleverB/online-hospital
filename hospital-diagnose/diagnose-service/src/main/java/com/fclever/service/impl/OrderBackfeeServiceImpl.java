@@ -123,7 +123,7 @@ public class OrderBackfeeServiceImpl implements OrderBackfeeService{
     public DataGridView queryAllOrderBackfeeForPage(OrderBackfeeDto orderBackfeeDto) {
         Page<OrderBackfee> page = new Page<>(orderBackfeeDto.getPageNum(), orderBackfeeDto.getPageSize());
         QueryWrapper<OrderBackfee> qw = new QueryWrapper<>();
-        qw.eq(StringUtils.isNotBlank(orderBackfeeDto.getRegistrationId()), OrderBackfee.COL_REGISTRATION_ID, orderBackfeeDto.getRegistrationId());
+        qw.like(StringUtils.isNotBlank(orderBackfeeDto.getBackId()), OrderBackfee.COL_BACK_ID, orderBackfeeDto.getBackId());
         qw.eq(StringUtils.isNotBlank(orderBackfeeDto.getPatientName()), OrderBackfee.COL_PATIENT_NAME, orderBackfeeDto.getPatientName());
         qw.orderByDesc(OrderBackfee.COL_CREATE_TIME);
         // 执行查询
