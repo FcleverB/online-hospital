@@ -30,9 +30,9 @@ public class CheckResult extends BaseEntity {
     /**
      * 处方检查项ID
      */
-    @TableId(value = "coc_id", type = IdType.INPUT)
+    @TableId(value = "item_id", type = IdType.INPUT)
     @ApiModelProperty(value="处方检查项ID")
-    private String cocId;
+    private String itemId;
 
     /**
      * 检查项目ID
@@ -125,7 +125,7 @@ public class CheckResult extends BaseEntity {
     @ApiModelProperty(value="更新者")
     private String updateBy;
 
-    public static final String COL_COC_ID = "coc_id";
+    public static final String COL_ITEM_ID = "item_id";
 
     public static final String COL_CHECK_ITEM_ID = "check_item_id";
 

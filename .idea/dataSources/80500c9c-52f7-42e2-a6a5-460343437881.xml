@@ -1375,7 +1375,7 @@
       <ColNames>item_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="334" parent="262" name="coc_id">
+    <column id="334" parent="262" name="check_id">
       <Position>1</Position>
       <Comment>处方检查项ID</Comment>
       <DataType>varchar(25)|0s</DataType>
@@ -1468,7 +1468,7 @@
     </column>
     <key id="348" parent="262" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>coc_id</ColNames>
+      <ColNames>check_id</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="349" parent="263" name="back_id">

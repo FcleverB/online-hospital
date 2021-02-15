@@ -8,5 +8,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface CheckResultService{
 
-
+    /**
+     * 开始检查的方法
+     * @param checkResult   待保存的数据
+     */
+    void startCheck(CheckResult checkResult);
 }

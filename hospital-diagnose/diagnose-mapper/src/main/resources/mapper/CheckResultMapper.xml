@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.fclever.domain.CheckResult">
     <!--@mbg.generated-->
     <!--@Table his_check_result-->
-    <id column="coc_id" jdbcType="VARCHAR" property="cocId" />
+    <id column="item_id" jdbcType="VARCHAR" property="itemId" />
     <result column="check_item_id" jdbcType="INTEGER" property="checkItemId" />
     <result column="check_item_name" jdbcType="VARCHAR" property="checkItemName" />
     <result column="price" jdbcType="DECIMAL" property="price" />
@@ -21,7 +21,7 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    coc_id, check_item_id, check_item_name, price, result_msg, result_img, patient_id, 
+    item_id, check_item_id, check_item_name, price, result_msg, result_img, patient_id,
     patient_name, registration_id, result_status, create_time, update_time, create_by, 
     update_by
   </sql>

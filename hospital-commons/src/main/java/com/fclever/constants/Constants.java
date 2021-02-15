@@ -135,4 +135,12 @@ public interface Constants {
      */
     String ITEM_TYPE_MEDICINES = "0";
     String ITEM_TYPE_CHECK = "1";
+
+    /**
+     * 检查项检查进度
+     * 0 检查中  1检查完成
+     * his_check_result_status
+     */
+    String CHECK_RESULT_STATUS_0 = "0";
+    String CHECK_RESULT_STATUS_1 = "1";
 }
