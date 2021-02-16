@@ -2,7 +2,10 @@ package com.fclever.service;
 
 import com.fclever.domain.CheckResult;
 import com.baomidou.mybatisplus.extension.service.IService;
-    /**
+import com.fclever.dto.CheckResultDto;
+import com.fclever.vo.DataGridView;
+
+/**
 @author Fclever
 @create 2021-02-15 13:11
 */
@@ -13,4 +16,11 @@ public interface CheckResultService{
      * @param checkResult   待保存的数据
      */
     void startCheck(CheckResult checkResult);
+
+    /**
+     * 查询所有检查中的项目
+     * @param checkResultDto    查询条件
+     * @return  返回结果
+     */
+    DataGridView queryAllCheckingResultForPage(CheckResultDto checkResultDto);
 }

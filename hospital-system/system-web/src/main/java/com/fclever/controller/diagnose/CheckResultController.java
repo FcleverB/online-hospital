@@ -19,6 +19,7 @@ import com.fclever.service.CheckResultService;
 import com.fclever.utils.IdGeneratorSnowflake;
 import com.fclever.utils.ShiroSecurityUtils;
 import com.fclever.vo.AjaxResult;
+import com.fclever.vo.DataGridView;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import io.swagger.models.auth.In;
 import org.apache.dubbo.config.annotation.Reference;
@@ -160,5 +161,17 @@ public class CheckResultController extends BaseController {
         checkResult.setResultStatus(Constants.CHECK_RESULT_STATUS_0); // 检查中
         this.checkResultService.startCheck(checkResult);
         return AjaxResult.success();
+    }
+
+    /**
+     * 查询所有检查中的项目
+     * @param checkResultDto    查询条件
+     * @return  返回结果
+     */
+    @PostMapping("queryAllCheckingResultForPage")
+    @HystrixCommand
+    public AjaxResult queryAllCheckingResultForPage(@RequestBody CheckResultDto checkResultDto) {
+        DataGridView dataGridView = this.checkResultService.queryAllCheckingResultForPage(checkResultDto);
+        return AjaxResult.success("分页查询检查中项目成功", dataGridView.getData(),dataGridView.getTotal());
     }
 }
