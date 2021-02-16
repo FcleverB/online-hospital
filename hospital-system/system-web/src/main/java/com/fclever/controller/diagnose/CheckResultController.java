@@ -189,4 +189,16 @@ public class CheckResultController extends BaseController {
         checkResultFormDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
         return AjaxResult.toAjax(this.checkResultService.completeCheckResult(checkResultFormDto));
     }
+
+    /**
+     * 查询所有检查项目（检查中和检查完成）
+     * @param checkResultDto    查询条件
+     * @return  返回结果
+     */
+    @PostMapping("queryAllCheckResultForPage")
+    @HystrixCommand
+    public AjaxResult queryAllCheckResultForPage(@RequestBody CheckResultDto checkResultDto) {
+        DataGridView dataGridView = this.checkResultService.queryAllCheckResultForPage(checkResultDto);
+        return AjaxResult.success("分页查询检查中项目成功", dataGridView.getData(),dataGridView.getTotal());
+    }
 }

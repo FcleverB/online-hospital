@@ -31,4 +31,11 @@ public interface CheckResultService{
      * @return  返回结果
      */
     int completeCheckResult(CheckResultFormDto checkResultFormDto);
+
+    /**
+     * 查询所有检查项目（检查中和检查完成）
+     * @param checkResultDto    查询条件
+     * @return  返回结果
+     */
+    DataGridView queryAllCheckResultForPage(CheckResultDto checkResultDto);
 }

@@ -95,4 +95,23 @@ public class CheckResultServiceImpl implements CheckResultService{
         checkResult.setUpdateBy(checkResultFormDto.getSimpleUser().getUserName());
         return this.checkResultMapper.updateById(checkResult);
     }
+
+    /**
+     * 查询所有检查项目（检查中和检查完成）
+     * @param checkResultDto    查询条件
+     * @return  返回结果
+     */
+    @Override
+    public DataGridView queryAllCheckResultForPage(CheckResultDto checkResultDto) {
+        // 创建分页对象
+        Page<CheckResult> page = new Page<>(checkResultDto.getPageNum(), checkResultDto.getPageSize());
+        // 创建查询条件对象
+        QueryWrapper<CheckResult> qw = new QueryWrapper<>();
+        // 封装查询条件
+        qw.eq(StringUtils.isNotBlank(checkResultDto.getRegistrationId()), CheckResult.COL_REGISTRATION_ID, checkResultDto.getRegistrationId());
+        qw.like(StringUtils.isNotBlank(checkResultDto.getPatientName()), CheckResult.COL_PATIENT_NAME, checkResultDto.getPatientName());
+        qw.in(!checkResultDto.getCheckItemIds().isEmpty(), CheckResult.COL_CHECK_ITEM_ID, checkResultDto.getCheckItemIds());
+        this.checkResultMapper.selectPage(page, qw);
+        return new DataGridView(page.getTotal(), page.getRecords());
+    }
 }
