@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc561a9-b288-4e7b-81fc-61735d93cffb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/CheckResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/CheckResultService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/CheckResultServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/CheckResultServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/CheckResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/CheckResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-dev.yml" afterDir="false" />
     </list>
     <list id="ea063404-6069-42ff-866b-93a684f48ebb" name="收费管理hospital-diagnose中处方检查结果信息表后端代码生成" comment="收费管理hospital-diagnose中新开检查中条件查询已支付的检查项目详情功能实现" />
     <list id="0a8bab89-bf34-481f-9475-97873582964d" name="系统管理hospital-system中挂号费用管理后端增删改查功能实现" comment="" />
@@ -92,6 +90,75 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="56" column="25" lean-forward="true" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/UploadController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/upload/UploadService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/HandleMedicineController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1552">
+              <caret line="97" column="74" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/upload/UploadProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/OrderBackfeeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2720">
+              <caret line="180" column="76" selection-start-line="180" selection-start-column="76" selection-end-line="180" selection-end-column="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/CheckResultService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
@@ -100,7 +167,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/CheckResultServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
@@ -113,31 +180,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/utils/ShiroSecurityUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hospital-system/system-domain/src/main/java/com/fclever/domain/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1942">
               <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-domain/src/main/java/com/fclever/dto/CheckResultFormDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -219,16 +265,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hospital-alipay/pom.xml" />
-        <option value="$PROJECT_DIR$/hospital-alipay/src/main/java/com/fclever/pay/TestPay.java" />
-        <option value="$PROJECT_DIR$/hospital-alipay/src/main/java/com/fclever/controller/PayController.java" />
         <option value="$PROJECT_DIR$/hospital-alipay/src/main/java/com/fclever/refund/RefundService.java" />
         <option value="$PROJECT_DIR$/hospital-alipay/src/main/java/com/fclever/pay/PayService.java" />
         <option value="$PROJECT_DIR$/hospital-alipay/src/main/java/com/fclever/refund/TestRefund.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/pom.xml" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/alipay/PayService.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/SystemApplication.java" />
-        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/alipay/AlipayConfig.java" />
         <option value="$PROJECT_DIR$/hospital-commons/src/main/java/com/fclever/config/mybatisplus/MybatisPlusConfig.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/PayController.java" />
@@ -270,6 +312,10 @@
         <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/CheckResultService.java" />
         <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/CheckResultController.java" />
         <option value="$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/CheckResultServiceImpl.java" />
+        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/upload/UploadProperties.java" />
+        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/UploadController.java" />
+        <option value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/upload/UploadService.java" />
       </list>
     </option>
   </component>
@@ -653,6 +699,29 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="fclever" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
+              <item name="system-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fclever" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
+              <item name="system-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fclever" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -666,6 +735,27 @@
               <item name="fclever" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="diagnose" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
+              <item name="system-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fclever" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-hospital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital-system" type="462c0819:PsiDirectoryNode" />
+              <item name="system-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -691,28 +781,29 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/hospital-erp/erp-service/src/main/java/com/fclever/service" />
-    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/com/fclever/hospital-commons/1.0/hospital-commons-1.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15306123" />
     <property name="project.structure.side.proportion" value="0.47257385" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.fclever.dto" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-alipay\src\main\resources" />
+      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-commons\src\main\java\com\fclever\constants" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-system\system-web\src\main\java\com\fclever\config" />
+      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-system\system-web\src\main\java\com\fclever\controller\system" />
       <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-system\system-web\src\main\resources" />
       <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-system\system-web\src\main\java\com\fclever\config\alipay" />
       <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-system\system-web\lib" />
-      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-alipay\src" />
-      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-alipay\lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.fclever.dto" />
@@ -721,9 +812,8 @@
       <recent name="com.fclever.controller.system" />
       <recent name="com.fclever.domain" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-alipay\src\main\resources" />
-      <recent name="G:\IdeaProjects\LastTerminal\Back\online-hospital\hospital-commons\src\main\java\com\fclever\constants" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.fclever.dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1006,14 +1096,7 @@
       <workItem from="1613351501431" duration="3668000" />
       <workItem from="1613366301214" duration="63000" />
       <workItem from="1613367939742" duration="12512000" />
-      <workItem from="1613440563799" duration="5368000" />
-    </task>
-    <task id="LOCAL-00122" summary="看病就诊管理hospital-doctor中患者信息数据列表显示顺序规则调整">
-      <created>1610449826386</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1610449826386</updated>
+      <workItem from="1613440563799" duration="6803000" />
     </task>
     <task id="LOCAL-00123" summary="公共模块hospital-commons中常量添加挂号单状态">
       <created>1610602868863</created>
@@ -1351,7 +1434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613447377848</updated>
     </task>
-    <option name="localTasksCounter" value="171" />
+    <task id="LOCAL-00171" summary="收费管理hospital-diagnose中检查结果录入中完成检查功能实现">
+      <created>1613454617382</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1613454617382</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1366,7 +1456,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="821735000" />
+    <option name="totallyTimeSpent" value="823170000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1389,7 +1479,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="7" sideWeight="0.3032491" visible="true" weight="0.19829424" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="0" sideWeight="0.6242004" visible="true" weight="0.33407572" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="0" sideWeight="0.6242004" visible="true" weight="0.21603563" />
       <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.4989339" weight="0.47772828" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" show_stripe_button="false" weight="0.32962137" />
       <window_info anchor="bottom" id="Message" order="3" />
@@ -1482,7 +1572,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="看病就诊管理hospital-diagnose中患者信息管理中查看就诊信息功能实现" />
     <MESSAGE value="收费管理hospital-diagnose中处方收费中查询为支付的处方|处方详情信息实现" />
     <MESSAGE value="收费管理hospital-diagnose中处方收费中支付订单信息表和详情表后端代码生成" />
     <MESSAGE value="收费管理hospital-diagnose中处方收费中现金收费功能实现" />
@@ -1507,7 +1596,8 @@
     <MESSAGE value="收费管理hospital-diagnose中新开检查中根据详情Id查询病历|处方|处方详情信息实现" />
     <MESSAGE value="收费管理hospital-diagnose中新开检查中开始检查功能实现" />
     <MESSAGE value="收费管理hospital-diagnose中新开检查中分页查询检查中项目功能实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="收费管理hospital-diagnose中新开检查中分页查询检查中项目功能实现" />
+    <MESSAGE value="收费管理hospital-diagnose中检查结果录入中完成检查功能实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="收费管理hospital-diagnose中检查结果录入中完成检查功能实现" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1540,40 +1630,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-domain/src/main/java/com/fclever/dto/OrderBackfeeFormDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/OrderChargeItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/OrderChargeItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/OrderChargeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -1670,16 +1726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/OrderBackfeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2512">
-          <caret line="180" column="76" selection-start-line="180" selection-start-column="76" selection-end-line="180" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1804,16 +1850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/HandleMedicineController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="97" column="74" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-interface/src/main/java/com/fclever/service/CareOrderItemService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
@@ -1922,6 +1958,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/CheckResultServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/OrderBackfeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2720">
+          <caret line="180" column="76" selection-start-line="180" selection-start-column="76" selection-end-line="180" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/HandleMedicineController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1552">
+          <caret line="97" column="74" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/upload/UploadProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/diagnose/CheckResultController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
@@ -1932,10 +2008,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hospital-diagnose/diagnose-service/src/main/java/com/fclever/service/impl/CheckResultServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/resources/application-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+        <state relative-caret-position="256">
+          <caret line="56" column="25" lean-forward="true" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/controller/system/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hospital-system/system-web/src/main/java/com/fclever/config/upload/UploadService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
