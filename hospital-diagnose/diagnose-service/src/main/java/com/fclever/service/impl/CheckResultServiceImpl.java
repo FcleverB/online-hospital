@@ -1,5 +1,6 @@
 package com.fclever.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -8,6 +9,7 @@ import com.fclever.domain.CareOrderItem;
 import com.fclever.domain.CheckResult;
 import com.fclever.domain.OrderChargeItem;
 import com.fclever.dto.CheckResultDto;
+import com.fclever.dto.CheckResultFormDto;
 import com.fclever.mapper.CareOrderItemMapper;
 import com.fclever.mapper.CheckResultMapper;
 import com.fclever.mapper.OrderChargeItemMapper;
@@ -76,5 +78,21 @@ public class CheckResultServiceImpl implements CheckResultService{
         qw.in(!checkResultDto.getCheckItemIds().isEmpty(), CheckResult.COL_CHECK_ITEM_ID, checkResultDto.getCheckItemIds());
         this.checkResultMapper.selectPage(page, qw);
         return new DataGridView(page.getTotal(), page.getRecords());
+    }
+
+    /**
+     * 完成检查
+     * @param checkResultFormDto    待更新的数据
+     * @return  返回结果
+     */
+    @Override
+    public int completeCheckResult(CheckResultFormDto checkResultFormDto) {
+        // 创建实体对象
+        CheckResult checkResult = new CheckResult();
+        // 值拷贝
+        BeanUtil.copyProperties(checkResultFormDto, checkResult);
+        checkResult.setResultStatus(Constants.CHECK_RESULT_STATUS_1);
+        checkResult.setUpdateBy(checkResultFormDto.getSimpleUser().getUserName());
+        return this.checkResultMapper.updateById(checkResult);
     }
 }

@@ -12,6 +12,7 @@ import com.fclever.domain.CareOrder;
 import com.fclever.domain.CareOrderItem;
 import com.fclever.domain.CheckResult;
 import com.fclever.dto.CheckResultDto;
+import com.fclever.dto.CheckResultFormDto;
 import com.fclever.service.CareHistoryService;
 import com.fclever.service.CareOrderItemService;
 import com.fclever.service.CareOrderService;
@@ -23,6 +24,7 @@ import com.fclever.vo.DataGridView;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import io.swagger.models.auth.In;
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
@@ -173,5 +175,18 @@ public class CheckResultController extends BaseController {
     public AjaxResult queryAllCheckingResultForPage(@RequestBody CheckResultDto checkResultDto) {
         DataGridView dataGridView = this.checkResultService.queryAllCheckingResultForPage(checkResultDto);
         return AjaxResult.success("分页查询检查中项目成功", dataGridView.getData(),dataGridView.getTotal());
+    }
+
+    /**
+     * 完成检查
+     * @param checkResultFormDto    待更新的数据
+     * @return  返回结果
+     */
+    @PostMapping("completeCheckResult")
+    @HystrixCommand
+    @Log(title = "完成检查", businessType = BusinessType.UPDATE)
+    public AjaxResult completeCheckResult(@RequestBody @Validated CheckResultFormDto checkResultFormDto) {
+        checkResultFormDto.setSimpleUser(ShiroSecurityUtils.getCurrentSimpleUser());
+        return AjaxResult.toAjax(this.checkResultService.completeCheckResult(checkResultFormDto));
     }
 }
