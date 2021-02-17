@@ -63,4 +63,10 @@
         on m.menu_id = rmtwo.menu_id and rmtwo.role_id = #{roleId}
     )
   </select>
+  <!--根据用户Id查询用户所拥有的菜单 一个用户有多个角色，多个角色中的菜单可能有重复，distinct会去除重复的菜单-->
+  <select id="selectMenuListByUserId" resultMap="BaseResultMap">
+    select distinct t1.* from sys_menu t1 inner join sys_role_menu t2 inner join sys_role_user t3
+    on (t1.menu_id = t2.menu_id and t2.role_id = t3.role_id)
+    where t3.user_id = #{userId}
+  </select>
 </mapper>

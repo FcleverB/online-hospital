@@ -52,7 +52,7 @@ public class MenuServiceImpl implements MenuService{
             return menuMapper.selectList(qw);
         }else{
             //根据用户id查询用户拥有的菜单信息
-            return menuMapper.selectList(qw);
+            return menuMapper.selectMenuListByUserId(simpleUser.getUserId());
         }
     }
 
